@@ -6,7 +6,6 @@ import pytest
 from src.kinematics import forward_kinematics, joint_positions
 from src.parameters import DEFAULT_PARAMETERS, FiveBarParameters
 
-
 LEGAL_ANGLES = [
     (-2.5, -0.6),
     (-2.2, -0.9),

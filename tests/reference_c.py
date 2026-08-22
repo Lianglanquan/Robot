@@ -5,7 +5,6 @@ from pathlib import Path
 import numpy as np
 from numpy.typing import NDArray
 
-
 FloatArray = NDArray[np.float64]
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 

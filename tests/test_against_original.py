@@ -8,7 +8,6 @@ from src.kinematics import analytic_jacobian, forward_kinematics
 from src.vmc import joint_torques, leg_velocity
 from tests.reference_c import CReference, build_reference_library
 
-
 OUTPUT_NAMES = ("l0", "phi0", "dL", "dPhi", "T1", "T2")
 PASS_THRESHOLDS = np.array([2e-7, 5e-6, 1e-4, 3e-3, 3e-3, 2e-3])
 NOTICEABLE_THRESHOLDS = np.array([5e-8, 1e-6, 1e-5, 1e-4, 1e-4, 1e-4])
