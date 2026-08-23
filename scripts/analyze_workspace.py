@@ -2,6 +2,7 @@
 import argparse
 import csv
 import gzip
+import io
 import json
 import sys
 from pathlib import Path
@@ -341,11 +342,17 @@ def plot_workspace_classification(scan: WorkspaceScan, output: Path) -> None:
 
 
 def write_csv(scan: WorkspaceScan, output: Path) -> None:
-    with gzip.open(output, "wt", encoding="ascii", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow(SCAN_COLUMNS)
-        for row in scan.values:
-            writer.writerow(f"{value:.12g}" for value in row)
+    with output.open("wb") as raw_file:
+        with gzip.GzipFile(
+            filename="", fileobj=raw_file, mode="wb", mtime=0
+        ) as compressed_file:
+            with io.TextIOWrapper(
+                compressed_file, encoding="ascii", newline=""
+            ) as file:
+                writer = csv.writer(file)
+                writer.writerow(SCAN_COLUMNS)
+                for row in scan.values:
+                    writer.writerow(f"{value:.12g}" for value in row)
 
 
 def _posture_snapshot(scan: WorkspaceScan, index: int) -> dict[str, Any]:

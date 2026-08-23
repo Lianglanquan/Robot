@@ -60,6 +60,7 @@ def test_workspace_analysis_cli_writes_data_and_five_figures(tmp_path: Path) -> 
         rows = file.readlines()
     assert len(rows) == 24**2 + 1
     assert rows[0].startswith("phi1,phi4,xc,yc,l0,phi0,")
+    assert (tmp_path / "workspace_scan.csv.gz").read_bytes()[4:8] == b"\x00" * 4
 
     summary = json.loads((tmp_path / "summary.json").read_text())
     assert summary["resolution"] == 24
