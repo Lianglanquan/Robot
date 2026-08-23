@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "platform": "Linux x86_64",
+  "overall_status": "BLOCKED_BEFORE_COLLISION_SCAN",
+  "collision_claim": "NOT_EVALUATED",
+  "original_assembly": {
+    "sha256_verified": true,
+    "document_type": "assembly",
+    "solidworks_internal_model_version": 12000,
+    "configuration": "默认",
+    "component_occurrences": 76,
+    "hidden_occurrences": 0,
+    "suppressed_occurrences": 0,
+    "component_references_recovered": true,
+    "occurrence_transforms_recovered": false,
+    "exact_brep_recovered": false
+  },
+  "official_edulite_05_step": {
+    "sha256_verified": true,
+    "step_import_valid": true,
+    "solid_count": 18,
+    "replacement_collision_scan_evaluated": false
+  },
+  "tools": {
+    "openswx": {
+      "commit": "30bd63845d3532cdecfdf2654e9cc0871229c45a",
+      "accepted_use": "assembly metadata and component-reference audit only"
+    },
+    "cadmpeg": {
+      "version": "0.5.3",
+      "commit": "ab0bc65d5aee50f462462acb15593c6c40b501dc",
+      "accepted_use": "diagnostic inspection only",
+      "rejected_for_collision_evidence": true,
+      "reason": "converted large-link STEP is invalid in FreeCAD/OpenCascade and crashes a second OpenCascade importer"
+    },
+    "freecad": {
+      "version": "1.1.1 revision 44227+647",
+      "accepted_use": "neutral-CAD validity checks and future collision processing"
+    }
+  },
+  "missing_qualified_input": {
+    "description": "original assembly exact solids, occurrence hierarchy, names and saved occurrence transforms",
+    "accepted_format": "AP242/AP214 STEP assembly or an equivalent exact-B-Rep assembly export",
+    "required_properties": [
+      "all 76 unsuppressed occurrences represented or explicitly accounted for",
+      "assembly occurrence names and transforms retained",
+      "all collision-relevant bodies import as valid solids",
+      "no blocking or silent geometry loss"
+    ]
+  }
+}

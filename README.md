@@ -4,9 +4,9 @@
 [`Skythinker616/foc-wheel-legged-robot`](https://github.com/Skythinker616/foc-wheel-legged-robot)
 五连杆腿部数学模型的独立 Python 复现与机械特性分析。参考版本固定为上游
 提交 `e2444395dd3a76c20b0683fbb1e123c21186a502`。工程目前包含第一阶段的
-数学/C 对照验证、第二阶段的原结构全局工作空间分析，以及第三阶段的正常
-装配模式连续伸缩研究；不涉及杆长优化、EduLite 参数、执行器选型、MuJoCo、
-强化学习或 ROS。
+数学/C 对照验证、第二阶段的原结构全局工作空间分析、第三阶段的正常
+装配模式连续伸缩研究，以及正在进行的真实机械包络验证；不涉及杆长优化、
+执行器动力学、MuJoCo、强化学习或 ROS。
 
 ## 验证结论
 
@@ -417,10 +417,24 @@ python3 scripts/analyze_stroke.py --resolution 1201
 
 ## 下一步
 
-最值得先做的是封闭“运动学适合”与“真实 CAD 无干涉”之间的证据缺口：在
-原 SolidWorks 总装中沿正常分支扫描，导出主动关节硬限位、碰撞和最小间隙，
-并用一次实机 70--120 mm 慢速伸缩的关节角日志验证装配分支和编码器零位。
-只有得到这条真实机械包络后，才值得进入执行器包络、整机质量、跳跃、落地
-和台阶动力学。本阶段到此停止，没有改变杆长，也没有加入 EduLite 参数。
+真实机械包络工作包已经开始，当前证据审计和精确 CAD 姿态表见
+[`docs/research/2026-08-23-real-mechanical-envelope.md`](docs/research/2026-08-23-real-mechanical-envelope.md)。
+原总装的源文件、BOM 和引用已验证完整，官方 EduLite 05 STEP 也已固定；
+但当前 Linux 开源读取链尚未可靠恢复原总装实例变换和有效实体，所以原 CAD
+及 EduLite 替换后的无碰撞范围仍为 `UNKNOWN`，不能把脚本运行成功写成
+`70--120 mm CLEAR`。
+
+重新生成并校验 1 mm CAD 姿态表和输入指纹：
+
+```bash
+python3 scripts/prepare_mechanical_envelope.py \
+  --upstream-dir .worktrees/upstream-reference \
+  --edulite-step /path/to/official/el05.stp
+```
+
+下一证据门是取得 Linux 可读、保留实例名与实例变换、全部碰撞相关实体有效的
+AP242/AP214 STEP 总装或等价精确 B-Rep 总装。只有通过中性 CAD 输入验收后，
+才执行 70--120 mm 优先扫描、两端扩展和 EduLite 几何替换；之后才进入执行器
+包络、整机质量、跳跃、落地和台阶动力学。
 
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。

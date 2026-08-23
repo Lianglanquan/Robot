@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "purpose": "immutable inputs and pose schedule for real mechanical validation",
+  "mathematical_vertical_stroke_mm": {
+    "lower_open": 46.09772228646443,
+    "upper_open": 152.06906325745547
+  },
+  "scan": {
+    "step_mm": 1,
+    "short_end_exploration_mm": [
+      47,
+      69
+    ],
+    "baseline_mm": [
+      70,
+      120
+    ],
+    "long_end_exploration_mm": [
+      121,
+      152
+    ],
+    "pose_count": 106
+  },
+  "original_cad": {
+    "repository": "https://github.com/Skythinker616/foc-wheel-legged-robot",
+    "commit": "e2444395dd3a76c20b0683fbb1e123c21186a502",
+    "path": "solidworks/总装.SLDASM",
+    "sha256": "24fdfd78dad6243235ad09fe32328f37442979fbae6191bfd7d7b444b13a299d",
+    "verification": {
+      "verified": true,
+      "bytes": 35513640,
+      "sha256": "24fdfd78dad6243235ad09fe32328f37442979fbae6191bfd7d7b444b13a299d"
+    }
+  },
+  "edulite_05": {
+    "repository": "https://github.com/RobStride/Product_Information",
+    "commit": "6ad12f50006273b7ea4eea88980f927d97c22f0d",
+    "path": "产品资料/EL05/el05.stp",
+    "sha256": "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3",
+    "step_standard": "ISO 10303-203 CONFIG_CONTROL_DESIGN",
+    "solid_count": 18,
+    "stepcontrol_compound_bbox_mm": [
+      46.0000002,
+      46.0000002,
+      47.0000001
+    ],
+    "verification": {
+      "verified": true,
+      "bytes": 2430955,
+      "sha256": "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3"
+    }
+  }
+}
