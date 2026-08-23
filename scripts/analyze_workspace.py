@@ -27,6 +27,7 @@ from src.analysis import (  # noqa: E402
     USABLE_CONDITION_MAX,
     USABLE_SIGMA_MIN,
     WorkspaceScan,
+    best_class_xy_grid,
     scan_workspace,
     summarize_scan,
 )
@@ -247,15 +248,15 @@ def plot_upright_condition(scan: WorkspaceScan, output: Path) -> None:
 def plot_force_speed_transmission(scan: WorkspaceScan, output: Path) -> None:
     figure, axes = plt.subplots(1, 2, figsize=(12.8, 5.6))
     size = _scatter_size(scan)
-    x = scan.column("xc")
-    y = scan.column("yc")
+    q1 = np.rad2deg(scan.column("phi1"))
+    q4 = np.rad2deg(scan.column("phi4"))
     force = scan.column("max_axial_force")
     speed = scan.column("max_extension_speed")
 
     force_low, force_high = np.percentile(force[np.isfinite(force)], [1, 99])
     force_plot = axes[0].scatter(
-        x,
-        y,
+        q1,
+        q4,
         c=np.clip(force, force_low, force_high),
         s=size,
         cmap="cividis",
@@ -264,14 +265,14 @@ def plot_force_speed_transmission(scan: WorkspaceScan, output: Path) -> None:
         rasterized=True,
     )
     figure.colorbar(force_plot, ax=axes[0], label="Max pure axial force [N] at 1 N m")
-    axes[0].set_title("Axial force capacity (colors clipped p1-p99)")
-    _equal_xy(axes[0])
+    axes[0].set_title("Axial force by joint posture (clipped p1-p99)")
+    _joint_axes(axes[0])
 
     positive_speed = speed[speed > 0.0]
     speed_low, speed_high = np.percentile(positive_speed, [1, 99])
     speed_plot = axes[1].scatter(
-        x,
-        y,
+        q1,
+        q4,
         c=np.clip(speed, speed_low, speed_high),
         s=size,
         cmap="plasma",
@@ -282,8 +283,8 @@ def plot_force_speed_transmission(scan: WorkspaceScan, output: Path) -> None:
     figure.colorbar(
         speed_plot, ax=axes[1], label="Max |dL| [m/s] at 1 rad/s per joint"
     )
-    axes[1].set_title("Extension-speed capacity (colors clipped p1-p99)")
-    _equal_xy(axes[1])
+    axes[1].set_title("Extension speed by joint posture (clipped p1-p99)")
+    _joint_axes(axes[1])
     figure.suptitle("Normalized force and speed transmission")
     _save(figure, output)
 
@@ -308,17 +309,17 @@ def plot_workspace_classification(scan: WorkspaceScan, output: Path) -> None:
     axes[0].set_title("Joint-space classification")
     _joint_axes(axes[0])
 
-    for code in (2.0, 1.0, 0.0):
-        selected = codes == code
-        axes[1].scatter(
-            scan.column("xc")[selected],
-            scan.column("yc")[selected],
-            s=size,
-            color=CLASS_COLORS[int(code)],
-            linewidths=0,
-            rasterized=True,
-        )
-    axes[1].set_title("Foot workspace (best classes drawn last)")
+    x_edges, y_edges, best_class = best_class_xy_grid(scan)
+    axes[1].pcolormesh(
+        x_edges,
+        y_edges,
+        np.ma.masked_invalid(best_class),
+        cmap=cmap,
+        norm=norm,
+        shading="flat",
+        rasterized=True,
+    )
+    axes[1].set_title("Foot workspace: best class in each XY bin")
     _equal_xy(axes[1])
 
     handles = [
@@ -450,6 +451,7 @@ def _extended_summary(scan: WorkspaceScan) -> dict[str, Any]:
             "joint_scan_range_rad": [-float(np.pi), float(np.pi)],
             "joint_scan_endpoint_included": False,
             "upright_half_width_deg": 5.0,
+            "xy_classification_bins": max(24, scan.resolution // 3),
             "upright_l0_range_m": [
                 float(np.min(scan.column("l0")[upright])),
                 float(np.max(scan.column("l0")[upright])),

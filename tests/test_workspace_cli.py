@@ -4,6 +4,10 @@ import subprocess
 import sys
 from pathlib import Path
 
+import numpy as np
+
+from src.analysis import best_class_xy_grid, scan_workspace
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FIGURE_NAMES = (
     "workspace_pose.png",
@@ -12,6 +16,30 @@ FIGURE_NAMES = (
     "force_speed_transmission.png",
     "workspace_classification.png",
 )
+
+
+def test_best_class_xy_grid_aggregates_all_internal_postures() -> None:
+    scan = scan_workspace(resolution=12)
+    x_edges, y_edges, grid = best_class_xy_grid(scan)
+    expected = np.full_like(grid, np.nan)
+    x_index = np.clip(
+        np.searchsorted(x_edges, scan.column("xc"), side="right") - 1,
+        0,
+        grid.shape[1] - 1,
+    )
+    y_index = np.clip(
+        np.searchsorted(y_edges, scan.column("yc"), side="right") - 1,
+        0,
+        grid.shape[0] - 1,
+    )
+    for row, column, code in zip(
+        y_index, x_index, scan.column("class_code"), strict=True
+    ):
+        previous = expected[row, column]
+        expected[row, column] = code if np.isnan(previous) else min(previous, code)
+
+    np.testing.assert_array_equal(np.isnan(grid), np.isnan(expected))
+    np.testing.assert_array_equal(grid[~np.isnan(grid)], expected[~np.isnan(expected)])
 
 
 def test_workspace_analysis_cli_writes_data_and_five_figures(tmp_path: Path) -> None:

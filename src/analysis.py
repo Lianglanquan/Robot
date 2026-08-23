@@ -247,6 +247,38 @@ def scan_workspace(
     )
 
 
+def best_class_xy_grid(
+    scan: WorkspaceScan, bins: int | None = None
+) -> tuple[FloatArray, FloatArray, FloatArray]:
+    """Aggregate the best available posture class in each foot-space bin."""
+    bin_count = bins if bins is not None else max(24, scan.resolution // 3)
+    if bin_count < 2:
+        raise ValueError("bins must be at least 2")
+    x = scan.column("xc")
+    y = scan.column("yc")
+    x_edges = np.linspace(float(np.min(x)), float(np.max(x)), bin_count + 1)
+    y_edges = np.linspace(float(np.min(y)), float(np.max(y)), bin_count + 1)
+    x_index = np.clip(
+        np.searchsorted(x_edges, x, side="right") - 1,
+        0,
+        bin_count - 1,
+    )
+    y_index = np.clip(
+        np.searchsorted(y_edges, y, side="right") - 1,
+        0,
+        bin_count - 1,
+    )
+    grid = np.full((bin_count, bin_count), 3, dtype=np.int8)
+    np.minimum.at(
+        grid,
+        (y_index, x_index),
+        scan.column("class_code").astype(np.int8),
+    )
+    result = grid.astype(float)
+    result[grid == 3] = np.nan
+    return x_edges, y_edges, result
+
+
 def _distribution(values: FloatArray) -> dict[str, float]:
     return {
         "min": float(np.min(values)),
