@@ -1,0 +1,238 @@
+{
+  "best_isotropy": {
+    "condition_number": 1.000114127449665,
+    "l0_m": 0.05095565041430152,
+    "sigma_min_m_per_rad": 0.014813770845433448
+  },
+  "best_motion_authority": {
+    "condition_number": 1.0306353781737634,
+    "l0_m": 0.10067293288652482,
+    "max_axial_force_n_at_1_nm": 29.550628671940224,
+    "max_extension_speed_m_per_s_at_1_rad_per_s": 0.06768045520124916,
+    "sigma_min_m_per_rad": 0.04785730882659563
+  },
+  "evidence_limits": [
+    "No hard active-joint limits are specified upstream.",
+    "The SolidWorks assembly is available but does not provide a checked collision envelope here.",
+    "Force and speed values are ideal normalized kinematics, not actuator performance."
+  ],
+  "ideal_force_speed_product_w": {
+    "max": 2.0000000000000004,
+    "min": 1.9999999999997746
+  },
+  "landmarks": {
+    "0.050_m": {
+      "condition_number": 1.0322341494030887,
+      "joint_rotation_deg_per_mm": 3.107378569074945,
+      "max_axial_force_n_at_1_nm": 108.46797427253564,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.018438622214653127,
+      "parallel_sine_margin": 0.9994969563322171,
+      "phi1_deg_unwrapped": 210.54983148721016,
+      "phi4_deg_unwrapped": -30.549831487210167,
+      "serial_sine_margin": 0.26486423168198836,
+      "sigma_max_m_per_rad": 0.013458346054869837,
+      "sigma_min_m_per_rad": 0.01303807480371814
+    },
+    "0.054_m": {
+      "condition_number": 1.078321084618592,
+      "joint_rotation_deg_per_mm": 2.005900628596403,
+      "max_axial_force_n_at_1_nm": 70.01914087366227,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.02856361810563574,
+      "parallel_sine_margin": 0.9971637417511423,
+      "phi1_deg_unwrapped": 199.98362703026962,
+      "phi4_deg_unwrapped": -19.983627030269588,
+      "serial_sine_margin": 0.3884520399608421,
+      "sigma_max_m_per_rad": 0.020197528057717882,
+      "sigma_min_m_per_rad": 0.018730532441421987
+    },
+    "0.070_m": {
+      "condition_number": 1.1750140629109223,
+      "joint_rotation_deg_per_mm": 1.0965492835567385,
+      "max_axial_force_n_at_1_nm": 38.27679081690001,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.052250984403764536,
+      "parallel_sine_margin": 0.9871338421568665,
+      "phi1_deg_unwrapped": 177.76717269571301,
+      "phi4_deg_unwrapped": 2.232827304286983,
+      "serial_sine_margin": 0.6772920269691048,
+      "sigma_max_m_per_rad": 0.03694702539557444,
+      "sigma_min_m_per_rad": 0.03144390059812875
+    },
+    "0.090_m": {
+      "condition_number": 1.0661190669468126,
+      "joint_rotation_deg_per_mm": 0.8687666027943963,
+      "max_axial_force_n_at_1_nm": 30.325675300255963,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.06595071602521309,
+      "parallel_sine_margin": 0.9979538936491306,
+      "phi1_deg_unwrapped": 158.69508609376877,
+      "phi4_deg_unwrapped": 21.304913906231246,
+      "serial_sine_margin": 0.9023746701628286,
+      "sigma_max_m_per_rad": 0.0466341985255365,
+      "sigma_min_m_per_rad": 0.04374201716426391
+    },
+    "0.100_m": {
+      "condition_number": 1.0238178313782338,
+      "joint_rotation_deg_per_mm": 0.8466485817559418,
+      "max_axial_force_n_at_1_nm": 29.553610717963153,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.06767362604476508,
+      "parallel_sine_margin": 0.9997230308202363,
+      "phi1_deg_unwrapped": 150.1517814781707,
+      "phi4_deg_unwrapped": 29.84821852182927,
+      "serial_sine_margin": 0.968245836551854,
+      "sigma_max_m_per_rad": 0.048992222180637104,
+      "sigma_min_m_per_rad": 0.047852479883735956
+    },
+    "0.120_m": {
+      "condition_number": 1.3025210880595883,
+      "joint_rotation_deg_per_mm": 0.9222062959387323,
+      "max_axial_force_n_at_1_nm": 32.19107249350418,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.06212902662387464,
+      "parallel_sine_margin": 0.9660608447398572,
+      "phi1_deg_unwrapped": 132.7525904006719,
+      "phi4_deg_unwrapped": 47.2474095993281,
+      "serial_sine_margin": 0.9856078847565755,
+      "sigma_max_m_per_rad": 0.05722216892222324,
+      "sigma_min_m_per_rad": 0.043931856034261314
+    },
+    "0.125_m": {
+      "condition_number": 1.4135488267501823,
+      "joint_rotation_deg_per_mm": 0.9778667587097235,
+      "max_axial_force_n_at_1_nm": 34.13398917057921,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.05859262420238418,
+      "parallel_sine_margin": 0.9429567142694417,
+      "phi1_deg_unwrapped": 127.79336754569844,
+      "phi4_deg_unwrapped": 52.20663245430154,
+      "serial_sine_margin": 0.9566635628369451,
+      "sigma_max_m_per_rad": 0.058565083379991084,
+      "sigma_min_m_per_rad": 0.0414312419010209
+    },
+    "0.140_m": {
+      "condition_number": 1.9436197608098307,
+      "joint_rotation_deg_per_mm": 1.3631936714360893,
+      "max_axial_force_n_at_1_nm": 47.584435817819056,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.042030549813749284,
+      "parallel_sine_margin": 0.8136287078319667,
+      "phi1_deg_unwrapped": 111.14645113788292,
+      "phi4_deg_unwrapped": 68.85354886211708,
+      "serial_sine_margin": 0.747478755414439,
+      "sigma_max_m_per_rad": 0.05776454797861244,
+      "sigma_min_m_per_rad": 0.029720086790301106
+    },
+    "0.150_m": {
+      "condition_number": 3.135702475141324,
+      "joint_rotation_deg_per_mm": 3.212336286433022,
+      "max_axial_force_n_at_1_nm": 112.13168975908772,
+      "max_extension_speed_m_per_s_at_1_rad_per_s": 0.017836171061873338,
+      "parallel_sine_margin": 0.5789365041530774,
+      "phi1_deg_unwrapped": 92.18043088986194,
+      "phi4_deg_unwrapped": 87.81956911013806,
+      "serial_sine_margin": 0.33985958151476603,
+      "sigma_max_m_per_rad": 0.039547722659305985,
+      "sigma_min_m_per_rad": 0.012612077508253904
+    }
+  },
+  "lower_serial_singularity_m": 0.04609772228646443,
+  "mathematical_stroke_m": 0.10597134097099105,
+  "normal_mode_signs": [
+    1,
+    -1
+  ],
+  "normal_phi0_deg": 90.0,
+  "operating_bands": {
+    "upstream_normal_command_70_90_mm": {
+      "condition_number_max": 1.1750140629109223,
+      "joint_excursion_deg_each": 19.072086601944235,
+      "max_axial_force_n_at_1_nm": {
+        "max": 38.27679081690001,
+        "min": 30.325675300255963
+      },
+      "max_extension_speed_m_per_s_at_1_rad_per_s": {
+        "max": 0.06595071602521309,
+        "min": 0.052250984403764536
+      },
+      "parallel_sine_margin_min": 0.9871338421568665,
+      "range_m": [
+        0.07,
+        0.09
+      ],
+      "serial_sine_margin_min": 0.6772920269691048,
+      "sigma_min_m_per_rad": {
+        "max": 0.04374201716426391,
+        "min": 0.03144390059812875
+      },
+      "stroke_m": 0.01999999999999999
+    },
+    "upstream_normal_to_airborne_target_70_120_mm": {
+      "condition_number_max": 1.3025210880595883,
+      "joint_excursion_deg_each": 45.0145822950411,
+      "max_axial_force_n_at_1_nm": {
+        "max": 38.27679081690001,
+        "min": 29.550628671940224
+      },
+      "max_extension_speed_m_per_s_at_1_rad_per_s": {
+        "max": 0.06768045520124916,
+        "min": 0.052250984403764536
+      },
+      "parallel_sine_margin_min": 0.9660608447398572,
+      "range_m": [
+        0.07,
+        0.12
+      ],
+      "serial_sine_margin_min": 0.6772920269691048,
+      "sigma_min_m_per_rad": {
+        "max": 0.04785730882659563,
+        "min": 0.03144390059812875
+      },
+      "stroke_m": 0.04999999999999999
+    }
+  },
+  "resolution": 1201,
+  "sample_endpoint_margin_m": 1e-06,
+  "threshold_intervals": {
+    "serial_sine_min": {
+      "ge_0.5": [
+        0.0594331976919808,
+        0.14729944291376088
+      ],
+      "ge_0.7": [
+        0.07161967190364477,
+        0.14182436029692636
+      ],
+      "ge_0.9": [
+        0.08972276765285575,
+        0.13113911841568474
+      ]
+    },
+    "sigma_min": {
+      "ge_0.01": [
+        0.04857134024245422,
+        0.15074344649531807
+      ],
+      "ge_0.02": [
+        0.05563596297385362,
+        0.14676959620890592
+      ],
+      "ge_0.03": [
+        0.06799905275380258,
+        0.13970497347750652
+      ],
+      "ge_0.04": [
+        0.08354122276288126,
+        0.12769511483412754
+      ]
+    }
+  },
+  "upper_serial_singularity_m": 0.15206906325745548,
+  "upstream_evidence": {
+    "airborne_target_m": 0.12,
+    "normal_command_range_m": [
+      0.07,
+      0.09
+    ],
+    "simscape_saved_scope_display_range_m": [
+      0.05431,
+      0.12523
+    ],
+    "soft_extension_guard_m": 0.12,
+    "wheel_radius_m": 0.026
+  }
+}
