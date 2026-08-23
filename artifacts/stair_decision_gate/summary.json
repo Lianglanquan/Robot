@@ -1,0 +1,374 @@
+{
+  "candidate_hardware": {
+    "edulite05": {
+      "combined_mass_kg": 0.968,
+      "count": 4,
+      "no_load_speed_rpm_at_48v": 430.0,
+      "peak_torque_nm": 6.0,
+      "rated_output_power_w": 19.0,
+      "rated_torque_nm_at_100rpm": 1.8,
+      "rated_voltage_v": 48.0,
+      "unit_mass_kg": 0.242,
+      "voltage_range_v": [
+        15.0,
+        60.0
+      ]
+    },
+    "landing_regeneration_requirement": "EL05 documentation warns that externally driven damping feeds the bus; overvoltage protection or an energy sink is required.",
+    "mass_fraction": {
+      "at_2.0_kg": 0.611,
+      "at_2.3_kg": 0.531304347826087,
+      "at_2.5_kg": 0.4888
+    },
+    "power_architecture_conflict": "EL05 performance is specified at 48 V while QD4310 is limited to 26 V.",
+    "qd4310": {
+      "combined_mass_kg": 0.254,
+      "count": 2,
+      "peak_speed_rpm": 800.0,
+      "peak_torque_nm": 0.3,
+      "rated_speed_rpm": 500.0,
+      "rated_torque_nm": 0.2,
+      "unit_mass_kg": 0.127,
+      "voltage_range_v": [
+        7.0,
+        26.0
+      ]
+    },
+    "six_motor_mass_kg": 1.222,
+    "static_edge_pivot_screen": {
+      "2.0_kg_required_nm_per_wheel": 0.25497289999999995,
+      "2.3_kg_required_nm_per_wheel": 0.29321883499999996,
+      "2.5_kg_required_nm_per_wheel": 0.31871612499999996
+    }
+  },
+  "decision_readout": {
+    "edulite05": "KEEP as a candidate; not approved for bulk purchase",
+    "full_hardware_purchase": "NOT YET",
+    "mujoco": "NOT YET",
+    "next_physical_evidence": "EduLite STEP packaging plus CAD motion/collision envelope, followed by a one-actuator 48 V torque-speed/regeneration bench test",
+    "original_links": "KEEP as the geometric baseline",
+    "stair_strategy": "Prioritize forward jump plus in-flight wheel tuck; treat edge capture as optional and unproven"
+  },
+  "events": {
+    "2.0_kg": {
+      "jump": {
+        "edge_contact_with_90pct_tuck_optimistic": {
+          "actuator_work_j": 1.5494506999999997,
+          "approximate_el05_utilization_48v": 0.09263151803805104,
+          "duration_s": 0.13259454746278532,
+          "external_height_m": 0.07899999999999999,
+          "flight_ascent_time_s": 0.0769048375284155,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 1.3003083188759237,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.6501541594379618,
+          "hypothetical_el05_utilization_24v": 0.09882210976497054,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.0,
+          "max_joint_speed_rpm": 115.91807677179227,
+          "max_joint_torque_nm": 0.5243375920034095,
+          "max_leg_speed_m_per_s": 0.7541788249480358,
+          "max_total_joint_power_w": 23.37125816481823,
+          "total_axial_force_n": 30.989014
+        },
+        "full_clear_no_tuck": {
+          "actuator_work_j": 2.941995,
+          "approximate_el05_utilization_48v": 0.18582079126235285,
+          "duration_s": 0.0714043490614517,
+          "external_height_m": 0.15,
+          "flight_ascent_time_s": 0.14280869812290348,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.7002374597234854,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.3501187298617427,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.0,
+          "max_joint_speed_rpm": 215.25446466971434,
+          "max_joint_torque_nm": 0.9955777063355878,
+          "max_leg_speed_m_per_s": 1.4004749194469712,
+          "max_total_joint_power_w": 82.40380421276787,
+          "total_axial_force_n": 58.839900000000014
+        },
+        "full_clear_with_90pct_tuck": {
+          "actuator_work_j": 2.0593964999999996,
+          "approximate_el05_utilization_48v": 0.12605041764087951,
+          "duration_s": 0.09628160463301615,
+          "external_height_m": 0.10499999999999998,
+          "flight_ascent_time_s": 0.10590976509631778,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.9441999980743679,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.47209999903718397,
+          "hypothetical_el05_utilization_24v": 0.22422927419774058,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.0,
+          "max_joint_speed_rpm": 159.63698352241218,
+          "max_joint_torque_nm": 0.6969043944349114,
+          "max_leg_speed_m_per_s": 1.0386199978818047,
+          "max_total_joint_power_w": 42.77860776935592,
+          "total_axial_force_n": 41.18793
+        }
+      },
+      "landing": {
+        "20_mm_compression": {
+          "actuator_work_j": 3.3342609999999997,
+          "approximate_el05_utilization_48v": 0.5827923549020445,
+          "duration_s": 0.023320562748818073,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.09,
+            0.07
+          ],
+          "mass_kg": 2.0,
+          "max_joint_speed_rpm": 248.35495671116152,
+          "max_joint_torque_nm": 2.748711254561789,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 285.95030367944156,
+          "total_axial_force_n": 166.71305000000007
+        },
+        "50_mm_compression": {
+          "actuator_work_j": 3.9226599999999987,
+          "approximate_el05_utilization_48v": 0.2839762733666846,
+          "duration_s": 0.0583014068720452,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.12,
+            0.07
+          ],
+          "mass_kg": 2.0,
+          "max_joint_speed_rpm": 263.63180164837456,
+          "max_joint_torque_nm": 1.3274369417807834,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 134.56484879032536,
+          "total_axial_force_n": 78.4532
+        }
+      }
+    },
+    "2.3_kg": {
+      "jump": {
+        "edge_contact_with_90pct_tuck_optimistic": {
+          "actuator_work_j": 1.7818683049999993,
+          "approximate_el05_utilization_48v": 0.10652624574375869,
+          "duration_s": 0.13259454746278532,
+          "external_height_m": 0.07899999999999999,
+          "flight_ascent_time_s": 0.07690483752841548,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 1.300308318875924,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.650154159437962,
+          "hypothetical_el05_utilization_24v": 0.1136454262297161,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.3,
+          "max_joint_speed_rpm": 115.91807677179227,
+          "max_joint_torque_nm": 0.6029882308039208,
+          "max_leg_speed_m_per_s": 0.7541788249480357,
+          "max_total_joint_power_w": 26.876946889540957,
+          "total_axial_force_n": 35.637366099999994
+        },
+        "full_clear_no_tuck": {
+          "actuator_work_j": 3.3832942499999996,
+          "approximate_el05_utilization_48v": 0.21369390995170573,
+          "duration_s": 0.07140434906145171,
+          "external_height_m": 0.15,
+          "flight_ascent_time_s": 0.14280869812290345,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.7002374597234855,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.35011872986174275,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.3,
+          "max_joint_speed_rpm": 215.2544646697143,
+          "max_joint_torque_nm": 1.144914362285926,
+          "max_leg_speed_m_per_s": 1.400474919446971,
+          "max_total_joint_power_w": 94.76437484468302,
+          "total_axial_force_n": 67.665885
+        },
+        "full_clear_with_90pct_tuck": {
+          "actuator_work_j": 2.3683059749999993,
+          "approximate_el05_utilization_48v": 0.1449579802870114,
+          "duration_s": 0.09628160463301615,
+          "external_height_m": 0.10499999999999998,
+          "flight_ascent_time_s": 0.10590976509631778,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.9441999980743679,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.47209999903718397,
+          "hypothetical_el05_utilization_24v": 0.2578636653274016,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.3,
+          "max_joint_speed_rpm": 159.63698352241218,
+          "max_joint_torque_nm": 0.8014400536001479,
+          "max_leg_speed_m_per_s": 1.0386199978818047,
+          "max_total_joint_power_w": 49.195398934759304,
+          "total_axial_force_n": 47.366119499999996
+        }
+      },
+      "landing": {
+        "20_mm_compression": {
+          "actuator_work_j": 3.8344001499999996,
+          "approximate_el05_utilization_48v": 0.6702112081373512,
+          "duration_s": 0.023320562748818073,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.09,
+            0.07
+          ],
+          "mass_kg": 2.3,
+          "max_joint_speed_rpm": 248.35495671116152,
+          "max_joint_torque_nm": 3.1610179427460574,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 328.8428492313578,
+          "total_axial_force_n": 191.72000750000007
+        },
+        "50_mm_compression": {
+          "actuator_work_j": 4.511058999999999,
+          "approximate_el05_utilization_48v": 0.3265727143716872,
+          "duration_s": 0.0583014068720452,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.12,
+            0.07
+          ],
+          "mass_kg": 2.3,
+          "max_joint_speed_rpm": 263.63180164837456,
+          "max_joint_torque_nm": 1.526552483047901,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 154.74957610887412,
+          "total_axial_force_n": 90.22117999999999
+        }
+      }
+    },
+    "2.5_kg": {
+      "jump": {
+        "edge_contact_with_90pct_tuck_optimistic": {
+          "actuator_work_j": 1.9368133749999994,
+          "approximate_el05_utilization_48v": 0.11578939754756379,
+          "duration_s": 0.13259454746278532,
+          "external_height_m": 0.07899999999999999,
+          "flight_ascent_time_s": 0.07690483752841548,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 1.300308318875924,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.650154159437962,
+          "hypothetical_el05_utilization_24v": 0.12352763720621315,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.5,
+          "max_joint_speed_rpm": 115.91807677179227,
+          "max_joint_torque_nm": 0.6554219900042618,
+          "max_leg_speed_m_per_s": 0.7541788249480357,
+          "max_total_joint_power_w": 29.214072706022783,
+          "total_axial_force_n": 38.7362675
+        },
+        "full_clear_no_tuck": {
+          "actuator_work_j": 3.67749375,
+          "approximate_el05_utilization_48v": 0.23227598907794106,
+          "duration_s": 0.0714043490614517,
+          "external_height_m": 0.15,
+          "flight_ascent_time_s": 0.14280869812290348,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.7002374597234854,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.3501187298617427,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.5,
+          "max_joint_speed_rpm": 215.25446466971434,
+          "max_joint_torque_nm": 1.2444721329194848,
+          "max_leg_speed_m_per_s": 1.4004749194469712,
+          "max_total_joint_power_w": 103.00475526595983,
+          "total_axial_force_n": 73.54987500000001
+        },
+        "full_clear_with_90pct_tuck": {
+          "actuator_work_j": 2.574245624999999,
+          "approximate_el05_utilization_48v": 0.15756302205109934,
+          "duration_s": 0.09628160463301616,
+          "external_height_m": 0.10499999999999998,
+          "flight_ascent_time_s": 0.10590976509631776,
+          "horizontal_speed_for_100mm_standoff_m_per_s": 0.944199998074368,
+          "horizontal_speed_for_50mm_standoff_m_per_s": 0.472099999037184,
+          "hypothetical_el05_utilization_24v": 0.2802865927471755,
+          "length_range_m": [
+            0.07,
+            0.12
+          ],
+          "mass_kg": 2.5,
+          "max_joint_speed_rpm": 159.63698352241212,
+          "max_joint_torque_nm": 0.871130493043639,
+          "max_leg_speed_m_per_s": 1.0386199978818045,
+          "max_total_joint_power_w": 53.47325971169488,
+          "total_axial_force_n": 51.48491249999999
+        }
+      },
+      "landing": {
+        "20_mm_compression": {
+          "actuator_work_j": 4.167826249999999,
+          "approximate_el05_utilization_48v": 0.7284904436275557,
+          "duration_s": 0.023320562748818073,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.09,
+            0.07
+          ],
+          "mass_kg": 2.5,
+          "max_joint_speed_rpm": 248.35495671116152,
+          "max_joint_torque_nm": 3.4358890682022363,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 357.43787959930194,
+          "total_axial_force_n": 208.39131250000005
+        },
+        "50_mm_compression": {
+          "actuator_work_j": 4.903324999999999,
+          "approximate_el05_utilization_48v": 0.35497034170835573,
+          "duration_s": 0.0583014068720452,
+          "external_height_m": 0.15,
+          "hypothetical_el05_utilization_24v": null,
+          "length_range_m": [
+            0.12,
+            0.07
+          ],
+          "mass_kg": 2.5,
+          "max_joint_speed_rpm": 263.63180164837456,
+          "max_joint_torque_nm": 1.659296177225979,
+          "max_leg_speed_m_per_s": 1.7152244751052266,
+          "max_total_joint_power_w": 168.20606098790668,
+          "total_axial_force_n": 98.06649999999999
+        }
+      }
+    }
+  },
+  "evidence_class": "screening model; not a feasibility proof",
+  "model_assumptions": [
+    "One-dimensional point mass with symmetric 50/50 leg loading.",
+    "Constant axial force, rigid ground, no losses, no pitch, and no impact peak.",
+    "Wheel tuck changes wheel height relative to COM by 90% of retraction.",
+    "Edge contact is only an optimistic geometric lower bound, not a stable maneuver.",
+    "The 48 V EL05 curve is visually digitized; 24 V speed scaling is hypothetical."
+  ],
+  "task": {
+    "com_rise_benchmarks_m": {
+      "edge_contact_no_tuck": 0.124,
+      "edge_contact_with_tuck": 0.07899999999999999,
+      "full_clear_no_tuck": 0.15,
+      "full_clear_with_tuck": 0.10499999999999998
+    },
+    "full_candidate_stroke_m": 0.05,
+    "step_height_m": 0.15,
+    "tuck_effectiveness_assumption": 0.9,
+    "wheel_radius_m": 0.026
+  }
+}

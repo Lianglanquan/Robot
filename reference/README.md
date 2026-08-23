@@ -52,3 +52,11 @@ These distinctions are used in the Phase 3 report: 70--90 mm is an
 evidence-backed user command range, 120 mm is an evidence-backed controller
 target/soft guard, while the actual collision-free continuous stroke remains
 unverified without CAD collision checks or hardware measurements.
+
+One further system-level discrepancy matters for later control work:
+[`matlab/sys_calc.m` lines 18--20](https://github.com/Skythinker616/foc-wheel-legged-robot/blob/e2444395dd3a76c20b0683fbb1e123c21186a502/matlab/sys_calc.m#L18-L20)
+uses wheel radius `R=0.02 m`, while
+[`main.cpp` lines 529--533](https://github.com/Skythinker616/foc-wheel-legged-robot/blob/e2444395dd3a76c20b0683fbb1e123c21186a502/esp32-controller/software/src/main.cpp#L529-L533)
+uses `wheelRadius=0.026 m`. Its mass parameters also do not represent the new
+2.0--2.5 kg target. The upstream LQR structure is useful reference, but its
+numeric gains are not a validated controller for this project.
