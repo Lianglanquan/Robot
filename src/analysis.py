@@ -6,7 +6,6 @@ from numpy.typing import NDArray
 
 from .parameters import DEFAULT_PARAMETERS, FiveBarParameters
 
-
 FloatArray = NDArray[np.float64]
 RECOMMENDED_CONDITION_MAX = 5.0
 RECOMMENDED_SIGMA_MIN = 0.010
@@ -92,6 +91,8 @@ class ScanSummary(TypedDict):
     l0_range_m: list[float]
     classification_counts: dict[str, int]
     classification_percent: dict[str, float]
+    raw_sigma_min: dict[str, float]
+    raw_condition_number: dict[str, float]
     sigma_min_m_per_rad: dict[str, float]
     condition_number: dict[str, float]
     max_axial_force_n: dict[str, float]
@@ -285,6 +286,10 @@ def summarize_scan(scan: WorkspaceScan) -> ScanSummary:
         "classification_percent": {
             name: count / valid_count * 100.0 for name, count in counts.items()
         },
+        "raw_sigma_min": _distribution(scan.column("raw_sigma_min")),
+        "raw_condition_number": _distribution(
+            scan.column("raw_condition_number")
+        ),
         "sigma_min_m_per_rad": _distribution(scan.column("sigma_min")),
         "condition_number": _distribution(scan.column("condition_number")),
         "max_axial_force_n": _distribution(scan.column("max_axial_force")),

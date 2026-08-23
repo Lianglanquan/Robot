@@ -9,7 +9,6 @@ from typing import Any
 
 import numpy as np
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -31,7 +30,6 @@ from src.analysis import (  # noqa: E402
     scan_workspace,
     summarize_scan,
 )
-
 
 FIGURE_NAMES = (
     "workspace_pose.png",
@@ -345,12 +343,108 @@ def write_csv(scan: WorkspaceScan, output: Path) -> None:
     with gzip.open(output, "wt", encoding="ascii", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(SCAN_COLUMNS)
-        writer.writerows(scan.values)
+        for row in scan.values:
+            writer.writerow(f"{value:.12g}" for value in row)
+
+
+def _posture_snapshot(scan: WorkspaceScan, index: int) -> dict[str, Any]:
+    return {
+        "row_index": index,
+        "phi1_rad": float(scan.column("phi1")[index]),
+        "phi4_rad": float(scan.column("phi4")[index]),
+        "phi1_deg": float(np.rad2deg(scan.column("phi1")[index])),
+        "phi4_deg": float(np.rad2deg(scan.column("phi4")[index])),
+        "xc_m": float(scan.column("xc")[index]),
+        "yc_m": float(scan.column("yc")[index]),
+        "l0_m": float(scan.column("l0")[index]),
+        "phi0_deg": float(np.rad2deg(scan.column("phi0")[index])),
+        "sigma_min_m_per_rad": float(scan.column("sigma_min")[index]),
+        "condition_number": float(scan.column("condition_number")[index]),
+        "max_axial_force_n": float(scan.column("max_axial_force")[index]),
+        "max_extension_speed_m_per_s": float(
+            scan.column("max_extension_speed")[index]
+        ),
+        "class_code": int(scan.column("class_code")[index]),
+    }
+
+
+def _upright_length_bins(scan: WorkspaceScan) -> list[dict[str, Any]]:
+    upright = scan.upright_mask()
+    length = scan.column("l0")
+    condition = scan.column("condition_number")
+    class_code = scan.column("class_code")
+    force = scan.column("max_axial_force")
+    speed = scan.column("max_extension_speed")
+    edges_mm = (45.0, 60.0, 80.0, 100.0, 120.0, 140.0, 153.0)
+    result: list[dict[str, Any]] = []
+    for low_mm, high_mm in zip(edges_mm[:-1], edges_mm[1:], strict=True):
+        selected = upright & (length >= low_mm / 1000.0) & (
+            length < high_mm / 1000.0
+        )
+        if high_mm == edges_mm[-1]:
+            selected |= upright & (length == high_mm / 1000.0)
+        count = int(np.count_nonzero(selected))
+        if count == 0:
+            continue
+        result.append(
+            {
+                "l0_low_mm": low_mm,
+                "l0_high_mm": high_mm,
+                "samples": count,
+                "condition_median": float(np.median(condition[selected])),
+                "condition_p90": float(np.percentile(condition[selected], 90)),
+                "condition_max": float(np.max(condition[selected])),
+                "recommended_percent": float(
+                    np.count_nonzero(
+                        class_code[selected] == CLASS_CODES["recommended"]
+                    )
+                    / count
+                    * 100.0
+                ),
+                "axial_force_median_n": float(np.median(force[selected])),
+                "extension_speed_median_m_per_s": float(
+                    np.median(speed[selected])
+                ),
+            }
+        )
+    return result
+
+
+def _classification_metrics(scan: WorkspaceScan) -> dict[str, Any]:
+    class_code = scan.column("class_code")
+    result: dict[str, Any] = {}
+    for name, code in CLASS_CODES.items():
+        selected = class_code == code
+        metrics: dict[str, Any] = {"samples": int(np.count_nonzero(selected))}
+        for output_name, column_name in (
+            ("condition_number", "condition_number"),
+            ("sigma_min_m_per_rad", "sigma_min"),
+            ("max_axial_force_n", "max_axial_force"),
+            ("max_extension_speed_m_per_s", "max_extension_speed"),
+        ):
+            values = scan.column(column_name)[selected]
+            metrics[output_name] = {
+                "min": float(np.min(values)),
+                "median": float(np.median(values)),
+                "p95": float(np.percentile(values, 95)),
+                "max": float(np.max(values)),
+            }
+        result[name] = metrics
+    return result
 
 
 def _extended_summary(scan: WorkspaceScan) -> dict[str, Any]:
     summary: dict[str, Any] = dict(summarize_scan(scan))
     upright = scan.upright_mask()
+    class_code = scan.column("class_code")
+    extreme_columns = {
+        "maximum_condition_number": ("condition_number", np.argmax),
+        "minimum_sigma_min": ("sigma_min", np.argmin),
+        "minimum_axial_force": ("max_axial_force", np.argmin),
+        "maximum_axial_force": ("max_axial_force", np.argmax),
+        "minimum_extension_speed": ("max_extension_speed", np.argmin),
+        "maximum_extension_speed": ("max_extension_speed", np.argmax),
+    }
     summary.update(
         {
             "joint_scan_range_rad": [-float(np.pi), float(np.pi)],
@@ -367,6 +461,18 @@ def _extended_summary(scan: WorkspaceScan) -> dict[str, Any]:
                     np.percentile(scan.column("condition_number")[upright], 90)
                 ),
                 "max": float(np.max(scan.column("condition_number")[upright])),
+            },
+            "upright_length_bins": _upright_length_bins(scan),
+            "vertical_classification_counts": {
+                name: int(np.count_nonzero(upright & (class_code == code)))
+                for name, code in CLASS_CODES.items()
+            },
+            "classification_metrics": _classification_metrics(scan),
+            "extreme_postures": {
+                name: _posture_snapshot(
+                    scan, int(selector(scan.column(column_name)))
+                )
+                for name, (column_name, selector) in extreme_columns.items()
             },
             "classification_thresholds": {
                 "recommended_condition_max": RECOMMENDED_CONDITION_MAX,

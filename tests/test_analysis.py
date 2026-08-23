@@ -13,7 +13,6 @@ from src.analysis import (
 from src.kinematics import analytic_jacobian, forward_kinematics
 from src.parameters import DEFAULT_PARAMETERS
 
-
 REGULAR_POSTURES = [
     (-2.5, -0.6),
     (-2.2, -0.9),
@@ -123,3 +122,8 @@ def test_workspace_scan_exposes_upright_band_and_summary() -> None:
     assert summary["valid_samples"] == len(scan.values)
     assert sum(summary["classification_counts"].values()) == len(scan.values)
     assert summary["l0_range_m"][0] < summary["l0_range_m"][1]
+    assert summary["raw_sigma_min"]["min"] <= summary["raw_sigma_min"]["median"]
+    assert (
+        summary["raw_condition_number"]["median"]
+        <= summary["raw_condition_number"]["max"]
+    )

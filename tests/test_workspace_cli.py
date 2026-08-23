@@ -4,7 +4,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FIGURE_NAMES = (
     "workspace_pose.png",
@@ -37,6 +36,10 @@ def test_workspace_analysis_cli_writes_data_and_five_figures(tmp_path: Path) -> 
     summary = json.loads((tmp_path / "summary.json").read_text())
     assert summary["resolution"] == 24
     assert summary["valid_samples"] == 24**2
+    assert summary["upright_length_bins"]
+    assert "maximum_condition_number" in summary["extreme_postures"]
+    assert summary["vertical_classification_counts"]["recommended"] > 0
+    assert summary["classification_metrics"]["recommended"]["samples"] > 0
 
     for name in FIGURE_NAMES:
         figure = tmp_path / name
