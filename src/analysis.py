@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import TypedDict
 
 import numpy as np
 from numpy.typing import NDArray
@@ -11,6 +12,28 @@ RECOMMENDED_CONDITION_MAX = 5.0
 RECOMMENDED_SIGMA_MIN = 0.010
 USABLE_CONDITION_MAX = 20.0
 USABLE_SIGMA_MIN = 0.002
+CLASS_CODES = {"recommended": 0.0, "usable": 1.0, "near_singular": 2.0}
+SCAN_COLUMNS = (
+    "phi1",
+    "phi4",
+    "xc",
+    "yc",
+    "l0",
+    "phi0",
+    "raw_sigma_min",
+    "raw_condition_number",
+    "sigma_min",
+    "sigma_max",
+    "condition_number",
+    "determinant",
+    "max_axial_force",
+    "max_extension_speed",
+    "class_code",
+    "j11",
+    "j12",
+    "j21",
+    "j22",
+)
 
 
 @dataclass(frozen=True)
@@ -35,6 +58,44 @@ class PostureMetrics:
     max_axial_force: float
     max_extension_speed: float
     classification: str
+
+
+@dataclass(frozen=True)
+class WorkspaceScan:
+    resolution: int
+    values: FloatArray
+    invalid_count: int
+
+    def column(self, name: str) -> FloatArray:
+        try:
+            index = SCAN_COLUMNS.index(name)
+        except ValueError as error:
+            raise KeyError(name) from error
+        return self.values[:, index]
+
+    def upright_mask(self, half_width_degrees: float = 5.0) -> NDArray[np.bool_]:
+        angle_error = np.arctan2(
+            np.sin(self.column("phi0") - np.pi / 2.0),
+            np.cos(self.column("phi0") - np.pi / 2.0),
+        )
+        return np.abs(angle_error) <= np.deg2rad(half_width_degrees)
+
+
+class ScanSummary(TypedDict):
+    resolution: int
+    total_samples: int
+    valid_samples: int
+    invalid_samples: int
+    upright_samples: int
+    x_range_m: list[float]
+    y_range_m: list[float]
+    l0_range_m: list[float]
+    classification_counts: dict[str, int]
+    classification_percent: dict[str, float]
+    sigma_min_m_per_rad: dict[str, float]
+    condition_number: dict[str, float]
+    max_axial_force_n: dict[str, float]
+    max_extension_speed_m_per_s: dict[str, float]
 
 
 def _condition_number(singular_values: FloatArray) -> float:
@@ -134,3 +195,100 @@ def analyze_posture(
         max_extension_speed=float(np.sum(radial_coefficients)),
         classification=classify_posture(sigma_min, condition_number),
     )
+
+
+def _scan_row(metrics: PostureMetrics) -> tuple[float, ...]:
+    return (
+        metrics.phi1,
+        metrics.phi4,
+        metrics.xc,
+        metrics.yc,
+        metrics.l0,
+        metrics.phi0,
+        metrics.raw_sigma_min,
+        metrics.raw_condition_number,
+        metrics.sigma_min,
+        metrics.sigma_max,
+        metrics.condition_number,
+        metrics.determinant,
+        metrics.max_axial_force,
+        metrics.max_extension_speed,
+        CLASS_CODES[metrics.classification],
+        float(metrics.jacobian[0, 0]),
+        float(metrics.jacobian[0, 1]),
+        float(metrics.jacobian[1, 0]),
+        float(metrics.jacobian[1, 1]),
+    )
+
+
+def scan_workspace(
+    resolution: int = 360,
+    parameters: FiveBarParameters = DEFAULT_PARAMETERS,
+) -> WorkspaceScan:
+    """Scan a nonduplicated periodic grid over [-pi, pi) for both joints."""
+    if resolution < 2:
+        raise ValueError("resolution must be at least 2")
+    angles = np.linspace(-np.pi, np.pi, resolution, endpoint=False)
+    rows: list[tuple[float, ...]] = []
+    invalid_count = 0
+    for phi1 in angles:
+        for phi4 in angles:
+            try:
+                metrics = analyze_posture(float(phi1), float(phi4), parameters)
+            except ValueError:
+                invalid_count += 1
+                continue
+            rows.append(_scan_row(metrics))
+    return WorkspaceScan(
+        resolution=resolution,
+        values=np.asarray(rows, dtype=float).reshape(-1, len(SCAN_COLUMNS)),
+        invalid_count=invalid_count,
+    )
+
+
+def _distribution(values: FloatArray) -> dict[str, float]:
+    return {
+        "min": float(np.min(values)),
+        "median": float(np.median(values)),
+        "p95": float(np.percentile(values, 95)),
+        "max": float(np.max(values)),
+    }
+
+
+def summarize_scan(scan: WorkspaceScan) -> ScanSummary:
+    """Return JSON-ready aggregate facts for reports and consistency checks."""
+    class_codes = scan.column("class_code")
+    counts = {
+        name: int(np.count_nonzero(class_codes == code))
+        for name, code in CLASS_CODES.items()
+    }
+    valid_count = len(scan.values)
+    return {
+        "resolution": scan.resolution,
+        "total_samples": scan.resolution**2,
+        "valid_samples": valid_count,
+        "invalid_samples": scan.invalid_count,
+        "upright_samples": int(np.count_nonzero(scan.upright_mask())),
+        "x_range_m": [
+            float(np.min(scan.column("xc"))),
+            float(np.max(scan.column("xc"))),
+        ],
+        "y_range_m": [
+            float(np.min(scan.column("yc"))),
+            float(np.max(scan.column("yc"))),
+        ],
+        "l0_range_m": [
+            float(np.min(scan.column("l0"))),
+            float(np.max(scan.column("l0"))),
+        ],
+        "classification_counts": counts,
+        "classification_percent": {
+            name: count / valid_count * 100.0 for name, count in counts.items()
+        },
+        "sigma_min_m_per_rad": _distribution(scan.column("sigma_min")),
+        "condition_number": _distribution(scan.column("condition_number")),
+        "max_axial_force_n": _distribution(scan.column("max_axial_force")),
+        "max_extension_speed_m_per_s": _distribution(
+            scan.column("max_extension_speed")
+        ),
+    }

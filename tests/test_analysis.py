@@ -3,7 +3,13 @@ import itertools
 import numpy as np
 import pytest
 
-from src.analysis import analyze_posture, classify_posture
+from src.analysis import (
+    SCAN_COLUMNS,
+    analyze_posture,
+    classify_posture,
+    scan_workspace,
+    summarize_scan,
+)
 from src.kinematics import analytic_jacobian, forward_kinematics
 from src.parameters import DEFAULT_PARAMETERS
 
@@ -90,3 +96,30 @@ def test_classification_boundaries(
     sigma_min: float, condition_number: float, expected: str
 ) -> None:
     assert classify_posture(sigma_min, condition_number) == expected
+
+
+def test_workspace_scan_covers_unique_periodic_joint_grid() -> None:
+    scan = scan_workspace(resolution=12)
+
+    assert scan.resolution == 12
+    assert scan.invalid_count == 0
+    assert scan.values.shape == (144, len(SCAN_COLUMNS))
+    assert len(np.unique(scan.values[:, :2], axis=0)) == 144
+    assert np.min(scan.column("phi1")) == pytest.approx(-np.pi)
+    assert np.max(scan.column("phi1")) < np.pi
+    assert np.all(np.isfinite(scan.values))
+    assert set(np.unique(scan.column("class_code"))) <= {0.0, 1.0, 2.0}
+
+
+def test_workspace_scan_exposes_upright_band_and_summary() -> None:
+    scan = scan_workspace(resolution=24)
+    upright = scan.upright_mask(half_width_degrees=5.0)
+    summary = summarize_scan(scan)
+
+    assert upright.dtype == np.bool_
+    assert 0 < np.count_nonzero(upright) < len(upright)
+    assert summary["resolution"] == 24
+    assert summary["total_samples"] == 24**2
+    assert summary["valid_samples"] == len(scan.values)
+    assert sum(summary["classification_counts"].values()) == len(scan.values)
+    assert summary["l0_range_m"][0] < summary["l0_range_m"][1]
