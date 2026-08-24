@@ -1,2 +1,3 @@
 reference/cad/*.step binary
 reference/cad/*.x_t binary
+artifacts/edulite_joint_module/*.step binary

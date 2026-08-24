@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "CONCEPT_GEOMETRY_NOT_PRODUCTION_RELEASE",
+  "pose_mm": 90.0,
+  "inputs": {
+    "original_assembly": {
+      "path": "reference/cad/foc-wheel-legged-robot_full_assembly_AP214.step",
+      "sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4"
+    },
+    "edulite_step": {
+      "path": "el05.stp",
+      "sha256": "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3",
+      "clock_deg": 0.0,
+      "output_face_local_mm": 39.75,
+      "output_rotor_alignment_deg": {
+        "direct": 78.41139384756968,
+        "offset": -19.704673858435868
+      }
+    }
+  },
+  "frozen_interfaces": {
+    "five_bar_lengths_mm": [
+      49.99999999967128,
+      104.99999999972607,
+      104.99999999915984,
+      49.999999999618204,
+      60.0
+    ],
+    "active_axes_yz_mm": [
+      [
+        34.0,
+        -30.0
+      ],
+      [
+        34.0,
+        30.0
+      ]
+    ],
+    "output_center_relief_diameter_mm": 10.0,
+    "output_bolt_pattern": {
+      "count": 6,
+      "pcd_mm": 24.0,
+      "clearance_diameter_mm": 4.3
+    },
+    "output_dowel_pattern": {
+      "count": 3,
+      "pcd_mm": 17.7,
+      "clearance_diameter_mm": 4.2,
+      "clock_from_m4_pattern_deg": 30.0
+    },
+    "rear_mount_pattern": {
+      "count": 4,
+      "pcd_mm": 38.5,
+      "clock_deg": 53.0,
+      "clearance_diameter_mm": 3.4
+    },
+    "reused_base_holes_xz_mm": [
+      [
+        -57.5,
+        -51.5
+      ],
+      [
+        -57.5,
+        -8.5
+      ],
+      [
+        -57.5,
+        8.5
+      ],
+      [
+        -57.5,
+        51.5
+      ],
+      [
+        -37.75,
+        -35.23
+      ],
+      [
+        -37.75,
+        -24.77
+      ],
+      [
+        -37.75,
+        24.77
+      ],
+      [
+        -37.75,
+        35.23
+      ]
+    ]
+  },
+  "checks": {
+    "all_custom_shapes_valid": true,
+    "motor_to_link_common_volume_mm3": {
+      "direct_mm3": 0.0,
+      "offset_stack_mm3": 0.0
+    },
+    "motor_to_link_overlap_details": {
+      "direct": [],
+      "offset_stack": []
+    },
+    "bracket_to_motor_common_volume_mm3": {
+      "lower_mm3": 0.0,
+      "upper_mm3": 0.0
+    },
+    "bracket_to_baseplate_common_volume_mm3": 0.0,
+    "bracket_to_moving_minimum_distance_mm": 6.500000000000014
+  },
+  "exports": {
+    "shared_bracket": {
+      "path": "artifacts/edulite_joint_module/edulite_left_shared_bracket.step",
+      "sha256": "73cdbe2d77a12fa0e0db8b69a48c4303ca42ac28ecf38317c9148054581d79a1",
+      "bytes": 45437
+    },
+    "direct_proximal_link": {
+      "path": "artifacts/edulite_joint_module/edulite_direct_proximal_link.step",
+      "sha256": "b1b1d09a458c0890005aae9be0a9ec6f67811fdd32d345d7d9e8d35e3f4e2e68",
+      "bytes": 82282
+    },
+    "offset_spacer": {
+      "path": "artifacts/edulite_joint_module/edulite_offset_spacer.step",
+      "sha256": "a4c9ef89d26043f2ab40828d632744467fd5faeaf883a942e6cdaa3e1c101f61",
+      "bytes": 25302
+    },
+    "offset_proximal_link": {
+      "path": "artifacts/edulite_joint_module/edulite_offset_proximal_link.step",
+      "sha256": "780e3d1f1805987072b235bc71464d5805c2b671586917d574e398b6d1a59678",
+      "bytes": 80185
+    },
+    "single_leg_reference": {
+      "path": "artifacts/edulite_joint_module/edulite_single_leg_90mm.step",
+      "sha256": "3dc59555996aa291f827bb69ab2e852fcb84bb6d8da744ba2f8e300bbeb0ff9b",
+      "bytes": 1098767
+    }
+  },
+  "single_leg_reference_note": "The assembly STEP contains nominal 46 x 44 mm motor cylinders for display only; all fit checks use the hash-qualified official 18-solid STEP.",
+  "open_items": [
+    "70--120 mm exact collision scan has not yet been run for the custom parts",
+    "fastener strength, bracket stiffness and fatigue are not yet validated",
+    "connector clock and cable keep-out are not frozen",
+    "internal battery and compute layout is intentionally excluded"
+  ]
+}
