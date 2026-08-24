@@ -1,0 +1,25 @@
+l0_mm,state,minimum_nonadjacent_clearance_mm,minimum_clearance_pair,maximum_excess_common_volume_mm3,maximum_excess_pair
+47.0,INTERFERENCE,0.0,fixed:4010电机001 / left_distal_positive:小腿004,1039.5406827912227,right_proximal_negative:大腿垫高001 / right_distal_negative:小腿010
+48.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,926.927556256411,right_proximal_negative:大腿垫高001 / right_distal_negative:小腿010
+49.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,837.7981299629788,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+50.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,829.3235307200166,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+51.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,796.0624469629968,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+52.0,INTERFERENCE,0.0,fixed:4010电机001 / left_distal_positive:小腿004,700.8973938645449,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+53.0,INTERFERENCE,0.0,fixed:4010电机001 / left_distal_positive:小腿004,594.0786149021666,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+54.0,INTERFERENCE,0.0,fixed:4010电机001 / left_distal_positive:小腿004,505.7605727845088,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+55.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,435.20240580063887,right_proximal_negative:大腿垫高001 / right_distal_negative:小腿010
+56.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,343.5215417776973,right_proximal_negative:大腿垫高001 / right_distal_negative:小腿010
+57.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,237.91439954323357,right_proximal_negative:大腿垫高001 / right_distal_negative:小腿010
+58.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,140.19308534023358,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+59.0,INTERFERENCE,0.0,fixed:4010电机001 / left_distal_positive:小腿004,63.16797580704344,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+60.0,INTERFERENCE,0.0,fixed:4010电机003 / right_distal_negative:小腿010,11.156206251436075,left_proximal_positive:大腿垫高 / left_distal_positive:小腿004
+61.0,CONTACT,0.0,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+62.0,CONTACT,1.1234667099445444e-14,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+63.0,CONTACT,0.0,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+64.0,CONTACT,7.944109290391274e-15,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+65.0,CONTACT,7.944109290391274e-15,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+66.0,CONTACT,0.0,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+67.0,CONTACT,7.944109290391274e-15,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+68.0,CLEAR,0.025852248685503416,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+69.0,CLEAR,0.4009768348540081,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+70.0,CLEAR,0.9849075000606671,fixed:4010电机001 / left_distal_positive:小腿004,0.0,

@@ -30,6 +30,24 @@
       "verified": true,
       "bytes": 35513640,
       "sha256": "24fdfd78dad6243235ad09fe32328f37442979fbae6191bfd7d7b444b13a299d"
+    },
+    "neutral_exports": {
+      "ap214": {
+        "sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4",
+        "verification": {
+          "verified": true,
+          "bytes": 2565906,
+          "sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4"
+        }
+      },
+      "parasolid_37_1": {
+        "sha256": "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82",
+        "verification": {
+          "verified": true,
+          "bytes": 790332,
+          "sha256": "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82"
+        }
+      }
     }
   },
   "edulite_05": {
@@ -48,6 +66,15 @@
       "verified": true,
       "bytes": 2430955,
       "sha256": "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3"
+    },
+    "manual": {
+      "path": "产品资料/EL05/EL05使用说明书260713.pdf",
+      "sha256": "a1c258af2b907ff81cb410302bbbc20b2e1f7c6fe1c0b78b02ac7584f27d1cdc",
+      "verification": {
+        "verified": true,
+        "bytes": 1546189,
+        "sha256": "a1c258af2b907ff81cb410302bbbc20b2e1f7c6fe1c0b78b02ac7584f27d1cdc"
+      }
     }
   }
 }

@@ -415,26 +415,46 @@ Phase 2 的全局图仍然有效，但其中“竖直主工作带”的样本不
 python3 scripts/analyze_stroke.py --resolution 1201
 ```
 
-## 下一步
+## 真实机械包络
 
-真实机械包络工作包已经开始，当前证据审计和精确 CAD 姿态表见
+完整工程判定见
 [`docs/research/2026-08-23-real-mechanical-envelope.md`](docs/research/2026-08-23-real-mechanical-envelope.md)。
-原总装的源文件、BOM 和引用已验证完整，官方 EduLite 05 STEP 也已固定；
-但当前 Linux 开源读取链尚未可靠恢复原总装实例变换和有效实体，所以原 CAD
-及 EduLite 替换后的无碰撞范围仍为 `UNKNOWN`，不能把脚本运行成功写成
-`70--120 mm CLEAR`。
+用户提供的 AP214 原总装已通过精确实体验收：80 个导入实体全部有效，从圆柱
+面恢复的五个轴心反算出 `50/105/105/50/60 mm`，与 Phase 1--3 一致。
+
+![Real mechanical envelope](artifacts/mechanical_envelope/mechanical_envelope.png)
+
+原结构 `70--120 mm` 的 51 个 1 mm 姿态全部无互穿和名义接触，最小间隙约
+`0.985 mm`，因此它第一次同时具备“控制意图 + 良好运动学 + 原 CAD 无碰撞”
+三层证据。对机器人实际意味着：这段行程可以继续作为执行器匹配和动力分析
+输入，但 70 mm 附近不足 1 mm 的 STEP 名义间隙仍需公差和实物台架验证。
+
+短端真实限制已被定位：`47--60.4 mm` 有主动杆/小腿互穿，`60.5--67.70 mm`
+仍有 4010 电机/小腿零间隙接触，首个正间隙样本为 `67.71 mm`，但该点只有
+约 25 nm 数值间隙，不能作为实用目标。长端到 152 mm 仍几何 CLEAR，实际先
+遇到的是约 152.069 mm 的串联奇异。
+
+EduLite 05 也不再是简单的“尺寸未知”：官方商品外形与腿系在 70--120 mm
+满足必要的无碰撞条件，但保留原内部布局时会穿入 NanoPi/电池支架和支撑柱，
+原 4010 支架及输出接口也不能复用。因此 EduLite 候选方向继续保留，原位直装
+方案被否定；在新支架、主动杆接口、内部器件重排和线束 CAD 完成前，不能把
+其最终机械行程写成已验证。
+
+重新生成并校验姿态表和全部输入指纹：
 
 重新生成并校验 1 mm CAD 姿态表和输入指纹：
 
 ```bash
 python3 scripts/prepare_mechanical_envelope.py \
   --upstream-dir .worktrees/upstream-reference \
-  --edulite-step /path/to/official/el05.stp
+  --original-step /path/to/full_assembly_AP214.step \
+  --original-parasolid /path/to/full_assembly.x_t \
+  --edulite-step /path/to/official/el05.stp \
+  --edulite-manual /path/to/official/EL05_manual.pdf
 ```
 
-下一证据门是取得 Linux 可读、保留实例名与实例变换、全部碰撞相关实体有效的
-AP242/AP214 STEP 总装或等价精确 B-Rep 总装。只有通过中性 CAD 输入验收后，
-才执行 70--120 mm 优先扫描、两端扩展和 EduLite 几何替换；之后才进入执行器
-包络、整机质量、跳跃、落地和台阶动力学。
+下一证据门不是继续扫描 Jacobian 或修改杆长，而是建立可制造的 EduLite 安装
+CAD并重复同一实体扫描。通过后再进入执行器公开能力匹配、2--2.5 kg 整机和
+150 mm 台阶动力学。
 
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。

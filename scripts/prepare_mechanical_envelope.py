@@ -23,6 +23,16 @@ EDULITE_STEP = "产品资料/EL05/el05.stp"
 EDULITE_STEP_SHA256 = (
     "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3"
 )
+ORIGINAL_AP214_SHA256 = (
+    "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4"
+)
+ORIGINAL_PARASOLID_SHA256 = (
+    "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82"
+)
+EDULITE_MANUAL = "产品资料/EL05/EL05使用说明书260713.pdf"
+EDULITE_MANUAL_SHA256 = (
+    "a1c258af2b907ff81cb410302bbbc20b2e1f7c6fe1c0b78b02ac7584f27d1cdc"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -43,6 +53,21 @@ def parse_args() -> argparse.Namespace:
         "--edulite-step",
         type=Path,
         help="Optional official EL05 STEP path; validates its immutable file hash",
+    )
+    parser.add_argument(
+        "--original-step",
+        type=Path,
+        help="Optional qualified AP214 export of the original full assembly",
+    )
+    parser.add_argument(
+        "--original-parasolid",
+        type=Path,
+        help="Optional Parasolid export retained as a second frozen CAD source",
+    )
+    parser.add_argument(
+        "--edulite-manual",
+        type=Path,
+        help="Optional official EL05 manual used for mounting dimensions",
     )
     return parser.parse_args()
 
@@ -100,6 +125,16 @@ def main() -> None:
             "path": UPSTREAM_ASSEMBLY,
             "sha256": UPSTREAM_ASSEMBLY_SHA256,
             "verification": None,
+            "neutral_exports": {
+                "ap214": {
+                    "sha256": ORIGINAL_AP214_SHA256,
+                    "verification": None,
+                },
+                "parasolid_37_1": {
+                    "sha256": ORIGINAL_PARASOLID_SHA256,
+                    "verification": None,
+                },
+            },
         },
         "edulite_05": {
             "repository": "https://github.com/RobStride/Product_Information",
@@ -114,6 +149,11 @@ def main() -> None:
                 47.0000001,
             ],
             "verification": None,
+            "manual": {
+                "path": EDULITE_MANUAL,
+                "sha256": EDULITE_MANUAL_SHA256,
+                "verification": None,
+            },
         },
     }
 
@@ -125,6 +165,18 @@ def main() -> None:
     if args.edulite_step is not None:
         manifest["edulite_05"]["verification"] = verify_file(
             args.edulite_step, EDULITE_STEP_SHA256
+        )
+    if args.original_step is not None:
+        manifest["original_cad"]["neutral_exports"]["ap214"]["verification"] = (
+            verify_file(args.original_step, ORIGINAL_AP214_SHA256)
+        )
+    if args.original_parasolid is not None:
+        manifest["original_cad"]["neutral_exports"]["parasolid_37_1"][
+            "verification"
+        ] = verify_file(args.original_parasolid, ORIGINAL_PARASOLID_SHA256)
+    if args.edulite_manual is not None:
+        manifest["edulite_05"]["manual"]["verification"] = verify_file(
+            args.edulite_manual, EDULITE_MANUAL_SHA256
         )
 
     manifest_path = args.output_dir / "source_manifest.json"

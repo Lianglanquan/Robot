@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "input": {
+    "path": "foc-wheel-legged-robot_full_assembly_AP214.step",
+    "part_features": 80,
+    "all_features_valid": true,
+    "edulite_replacement": {
+      "path": "edulite05_official.stp",
+      "part_features": 18,
+      "axis_xy_mm": [
+        -12.63235971,
+        3.64217671
+      ],
+      "output_face_mm": 39.75,
+      "clock_deg": 0.0,
+      "removed_original_entities": [
+        "4010电机",
+        "4010电机001",
+        "4010电机002",
+        "4010电机003",
+        "关节电机支架",
+        "关节电机支架001",
+        "关节电机支架002",
+        "关节电机支架003",
+        "驱动板",
+        "驱动板001",
+        "驱动板002",
+        "驱动板003"
+      ],
+      "adapter_geometry_included": false,
+      "packaging_mode": "retained_original_packaging"
+    }
+  },
+  "reference_geometry": {
+    "pivots_yz_mm": {
+      "a": [
+        34.0,
+        -30.0
+      ],
+      "b": [
+        25.94181362,
+        -79.346384186
+      ],
+      "c": [
+        -43.94687043,
+        -0.984583277
+      ],
+      "d": [
+        24.073127644,
+        79.004665137
+      ],
+      "e": [
+        34.0,
+        30.0
+      ]
+    },
+    "lengths": {
+      "l1_mm": 49.99999999967128,
+      "l2_mm": 104.99999999972607,
+      "l3_mm": 104.99999999915984,
+      "l4_mm": 49.999999999618204,
+      "l5_mm": 60.0
+    },
+    "saved_pose": {
+      "l0_mm": 77.95308854728307,
+      "phi0_deg": 90.72369122775676,
+      "phi1_deg": 170.72555042245614,
+      "phi4_deg": 11.451445941868622,
+      "theta_bc_deg": 41.72887238749913,
+      "theta_dc_deg": 139.62334915285123
+    }
+  },
+  "groups": {
+    "fixed": [
+      "底板",
+      "主控板PCB",
+      "电池架",
+      "电池支撑铜柱",
+      "电池支撑铜柱001",
+      "电池支撑铜柱002",
+      "电池支撑铜柱003",
+      "动力锂电池",
+      "主控支撑铜柱",
+      "主控支撑铜柱001",
+      "主控支撑铜柱002",
+      "主控支撑铜柱003",
+      "主控支架",
+      "NanoPi支架",
+      "NanoPi",
+      "电池支撑铜柱004",
+      "电池支撑铜柱005",
+      "电池支撑铜柱006",
+      "电池支撑铜柱007",
+      "OV5640镜头"
+    ],
+    "left_proximal_negative": [
+      "大腿"
+    ],
+    "left_distal_negative": [
+      "推力轴承",
+      "小腿",
+      "小腿001",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承001",
+      "cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C"
+    ],
+    "left_proximal_positive": [
+      "大腿垫高",
+      "大腿001"
+    ],
+    "left_distal_positive": [
+      "小腿003",
+      "小腿004",
+      "推力轴承001",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承002",
+      "cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001"
+    ],
+    "left_wheel": [
+      "推力轴承002",
+      "驱动板004",
+      "2804电机",
+      "轮胎",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C002",
+      "编码器磁铁",
+      "MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）",
+      "车轮"
+    ],
+    "right_proximal_positive": [
+      "大腿002"
+    ],
+    "right_distal_positive": [
+      "推力轴承003",
+      "小腿006",
+      "小腿007",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承003",
+      "cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003"
+    ],
+    "right_proximal_negative": [
+      "大腿垫高001",
+      "大腿003"
+    ],
+    "right_distal_negative": [
+      "推力轴承004",
+      "小腿009",
+      "小腿010",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承005",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",
+      "cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003"
+    ],
+    "right_wheel": [
+      "推力轴承005",
+      "驱动板005",
+      "轮胎001",
+      "2804电机001",
+      "编码器磁铁001",
+      "MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004",
+      "hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C004",
+      "MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001",
+      "车轮001"
+    ],
+    "edulite_left_negative": [
+      "00_1-1305_1_1",
+      "100_1_1_1",
+      "000_1-4238_1_1",
+      "00_1-4459_1_1",
+      "00_1-4459_1_001",
+      "00_1-4459_1_002",
+      "200_1_1_1",
+      "00_1-5178_1_1",
+      "00_1-5178_1_001",
+      "00_1-5178_1_002",
+      "00_1-8689_1_1",
+      "00_1-13413_1_1",
+      "1000_1-541385_1_1",
+      "PRT0001_1",
+      "LUOSI_1_1",
+      "LUOSI_1_001",
+      "LUOSI_1_002",
+      "LUOSI_1_003"
+    ],
+    "edulite_left_positive": [
+      "00_1-1305_1_1",
+      "100_1_1_1",
+      "000_1-4238_1_1",
+      "00_1-4459_1_1",
+      "00_1-4459_1_001",
+      "00_1-4459_1_002",
+      "200_1_1_1",
+      "00_1-5178_1_1",
+      "00_1-5178_1_001",
+      "00_1-5178_1_002",
+      "00_1-8689_1_1",
+      "00_1-13413_1_1",
+      "1000_1-541385_1_1",
+      "PRT0001_1",
+      "LUOSI_1_1",
+      "LUOSI_1_001",
+      "LUOSI_1_002",
+      "LUOSI_1_003"
+    ],
+    "edulite_right_negative": [
+      "00_1-1305_1_1",
+      "100_1_1_1",
+      "000_1-4238_1_1",
+      "00_1-4459_1_1",
+      "00_1-4459_1_001",
+      "00_1-4459_1_002",
+      "200_1_1_1",
+      "00_1-5178_1_1",
+      "00_1-5178_1_001",
+      "00_1-5178_1_002",
+      "00_1-8689_1_1",
+      "00_1-13413_1_1",
+      "1000_1-541385_1_1",
+      "PRT0001_1",
+      "LUOSI_1_1",
+      "LUOSI_1_001",
+      "LUOSI_1_002",
+      "LUOSI_1_003"
+    ],
+    "edulite_right_positive": [
+      "00_1-1305_1_1",
+      "100_1_1_1",
+      "000_1-4238_1_1",
+      "00_1-4459_1_1",
+      "00_1-4459_1_001",
+      "00_1-4459_1_002",
+      "200_1_1_1",
+      "00_1-5178_1_1",
+      "00_1-5178_1_001",
+      "00_1-5178_1_002",
+      "00_1-8689_1_1",
+      "00_1-13413_1_1",
+      "1000_1-541385_1_1",
+      "PRT0001_1",
+      "LUOSI_1_1",
+      "LUOSI_1_001",
+      "LUOSI_1_002",
+      "LUOSI_1_003"
+    ]
+  },
+  "reference_common_volume_mm3": {},
+  "scan": {
+    "start_mm": 70.0,
+    "stop_mm": 70.0,
+    "step_mm": 1.0,
+    "pose_count": 1,
+    "clear_count": 0,
+    "contact_or_interference_count": 0,
+    "contact_count": 0,
+    "interference_count": 1,
+    "common_volume_enabled": false,
+    "contact_volume_classification_enabled": true,
+    "adjacent_excess_check_enabled": false
+  }
+}

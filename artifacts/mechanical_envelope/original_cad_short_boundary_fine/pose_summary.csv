@@ -1,0 +1,12 @@
+l0_mm,state,minimum_nonadjacent_clearance_mm,minimum_clearance_pair,maximum_excess_common_volume_mm3,maximum_excess_pair
+67.7,CONTACT_OR_INTERFERENCE,7.944109290391274e-15,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+67.71000000000001,CLEAR,2.468071628629334e-05,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.72,CLEAR,0.00010807938159428816,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+67.73,CLEAR,0.00025034867483548405,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.74000000000001,CLEAR,0.00045141744466969355,fixed:4010电机003 / right_distal_negative:小腿010,0.0,
+67.75,CLEAR,0.0007112049128202116,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.76,CLEAR,0.0010296194782449437,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.77,CLEAR,0.001406559559498789,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.78,CLEAR,0.0018419135021718917,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.79,CLEAR,0.002335559657811039,fixed:4010电机001 / left_distal_positive:小腿004,0.0,
+67.8,CLEAR,0.0028873664762753544,fixed:4010电机001 / left_distal_positive:小腿004,0.0,

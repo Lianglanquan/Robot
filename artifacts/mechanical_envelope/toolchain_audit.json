@@ -1,51 +1,109 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "platform": "Linux x86_64",
-  "overall_status": "BLOCKED_BEFORE_COLLISION_SCAN",
-  "collision_claim": "NOT_EVALUATED",
+  "overall_status": "ORIGINAL_CAD_VALIDATED_EDULITE_ADAPTER_REQUIRED",
+  "original_collision_claim": "BASELINE_70_120_CLEAR",
   "original_assembly": {
-    "sha256_verified": true,
-    "document_type": "assembly",
-    "solidworks_internal_model_version": 12000,
-    "configuration": "默认",
-    "component_occurrences": 76,
-    "hidden_occurrences": 0,
-    "suppressed_occurrences": 0,
-    "component_references_recovered": true,
-    "occurrence_transforms_recovered": false,
-    "exact_brep_recovered": false
+    "native_sha256_verified": true,
+    "neutral_ap214_sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4",
+    "neutral_ap214_valid_features": 80,
+    "neutral_ap214_invalid_features": 0,
+    "occurrence_names_retained": true,
+    "saved_transforms_baked_into_exact_brep": true,
+    "bbox_mm": [
+      211.0,
+      136.44687043,
+      178.351049323
+    ],
+    "recovered_lengths_mm": [
+      49.99999999967128,
+      104.99999999972607,
+      104.99999999915984,
+      49.999999999618204,
+      60.0
+    ],
+    "parasolid_37_1_sha256": "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82",
+    "parasolid_used_for_collision": false,
+    "parasolid_note": "frozen as a second source export; current open-source geometry chain does not parse it"
   },
-  "official_edulite_05_step": {
-    "sha256_verified": true,
-    "step_import_valid": true,
+  "original_scan": {
+    "baseline_70_120": {
+      "step_mm": 1.0,
+      "pose_count": 51,
+      "clear_count": 51,
+      "minimum_clearance_mm": 0.9849075000606671,
+      "minimum_pose_mm": 70.0,
+      "minimum_pair": "4010电机001 / 小腿004"
+    },
+    "short_end": {
+      "interference_last_sample_mm": 60.4,
+      "interference_last_sample_volume_mm3": 0.601939818398755,
+      "contact_first_sample_mm": 60.5,
+      "contact_last_sample_mm": 67.7,
+      "positive_clearance_first_sample_mm": 67.71,
+      "positive_clearance_first_sample_mm_value": 0.00002468071628629334,
+      "boundary_resolution_mm": 0.01
+    },
+    "long_end": {
+      "sample_step_mm": 2.0,
+      "last_sample_mm": 152.0,
+      "last_sample_clearance_mm": 7.047245836364923,
+      "cad_limit_found": false,
+      "mathematical_upper_open_mm": 152.06906325745547
+    },
+    "designed_joint_contact_method": "saved-pose common volume baseline; only added common volume is interference"
+  },
+  "edulite_05": {
+    "official_step_sha256_verified": true,
     "solid_count": 18,
-    "replacement_collision_scan_evaluated": false
+    "all_solids_valid": true,
+    "official_body_diameter_mm": 46.0,
+    "official_body_length_mm": 44.0,
+    "official_output_protrusion_mm": 3.0,
+    "exact_full_bbox_mm": [
+      49.7043307774,
+      49.6186203399,
+      47.0000000224
+    ],
+    "alignment": "output axis coaxial with original A/E; output mounting plane retained at global x=+/-66.5 mm",
+    "retained_original_packaging": {
+      "state": "INTERFERENCE",
+      "maximum_observed_pair_volume_mm3": 77.16280775494846,
+      "conflicting_entities": [
+        "NanoPi支架",
+        "电池架",
+        "主控支撑铜柱",
+        "电池支撑铜柱"
+      ]
+    },
+    "linkage_only_70_120": {
+      "state": "CLEAR",
+      "evidence_level": "NECESSARY_NOT_SUFFICIENT",
+      "pose_count": 51,
+      "step_mm": 1.0,
+      "minimum_clearance_mm": 0.9151696463916381,
+      "minimum_pose_mm": 70.0,
+      "adapter_geometry_included": false
+    },
+    "final_integrated_envelope": "UNKNOWN"
   },
   "tools": {
+    "freecad": {
+      "version": "1.1.1 revision 44227+647",
+      "accepted_use": "neutral CAD import, exact B-Rep placement, distance and Boolean common-volume checks"
+    },
     "openswx": {
       "commit": "30bd63845d3532cdecfdf2654e9cc0871229c45a",
-      "accepted_use": "assembly metadata and component-reference audit only"
+      "accepted_use": "native assembly BOM and component-reference audit only"
     },
     "cadmpeg": {
       "version": "0.5.3",
-      "commit": "ab0bc65d5aee50f462462acb15593c6c40b501dc",
       "accepted_use": "diagnostic inspection only",
-      "rejected_for_collision_evidence": true,
-      "reason": "converted large-link STEP is invalid in FreeCAD/OpenCascade and crashes a second OpenCascade importer"
-    },
-    "freecad": {
-      "version": "1.1.1 revision 44227+647",
-      "accepted_use": "neutral-CAD validity checks and future collision processing"
+      "rejected_for_collision_evidence": true
     }
   },
-  "missing_qualified_input": {
-    "description": "original assembly exact solids, occurrence hierarchy, names and saved occurrence transforms",
-    "accepted_format": "AP242/AP214 STEP assembly or an equivalent exact-B-Rep assembly export",
-    "required_properties": [
-      "all 76 unsuppressed occurrences represented or explicitly accounted for",
-      "assembly occurrence names and transforms retained",
-      "all collision-relevant bodies import as valid solids",
-      "no blocking or silent geometry loss"
-    ]
+  "remaining_evidence_gate": {
+    "description": "manufacturable EL05 adapter/bracket, revised proximal-link interface, internal packaging and cable keep-out geometry",
+    "decision_unblocked_when_available": "final EL05-integrated continuous mechanical envelope"
   }
 }

@@ -1,0 +1,1131 @@
+l0_mm,group_a,entity_a,group_b,entity_b,adjacent,bbox_lower_bound_mm,distance_mm,common_volume_mm3,reference_common_volume_mm3,excess_common_volume_mm3
+47.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+47.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,17.635257641282845,0.0,0.0,0.0
+47.0,fixed,4010电机001,left_distal_positive,小腿003,False,1.092248931691259,16.85000000067081,0.0,0.0,0.0
+47.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.0,0.0,0.0,0.0
+47.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+47.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,17.63525764164326,0.0,0.0,0.0
+47.0,fixed,4010电机003,right_distal_negative,小腿009,False,1.092248931630408,16.850000000472342,0.0,0.0,0.0
+47.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+47.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+47.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+47.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999951556801,0.0,0.0,0.0
+47.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+47.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,24.758407437419173,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,24.75840743777904,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,24.758407437778878,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,1015.2379164397719,0.0,1015.2379064397719
+47.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.0000000000001137,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999931149624,0.0,0.0,0.0
+47.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+47.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+47.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+47.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+47.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+47.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939021226,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,1039.5406927912227,0.0,1039.5406827912227
+47.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999961517919,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,24.75840743741918,0.0,0.0,0.0
+47.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,24.758407437419173,0.0,0.0,0.0
+47.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,24.75840743777981,0.0,0.0,0.0
+47.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+47.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+47.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999935044138,0.0,0.0,0.0
+47.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+47.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+47.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999975270395,0.0,0.0,0.0
+47.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+47.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+47.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+48.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+48.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,18.479571640951335,0.0,0.0,0.0
+48.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+48.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,18.479571641308446,0.0,0.0,0.0
+48.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+48.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+48.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+48.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999952022734,0.0,0.0,0.0
+48.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+48.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,25.60388679197455,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,25.60388679233107,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,25.603886792330933,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,894.4858390301408,0.0,894.4858290301408
+48.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.0000000000001137,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999923632427,0.0,0.0,0.0
+48.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+48.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+48.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+48.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+48.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+48.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999924960916,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,926.927566256411,0.0,926.927556256411
+48.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999944445834,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,25.603886791974563,0.0,0.0,0.0
+48.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,25.60388679197455,0.0,0.0,0.0
+48.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,25.603886792331874,0.0,0.0,0.0
+48.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+48.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+48.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999931183934,0.0,0.0,0.0
+48.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+48.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+48.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999974543967,0.0,0.0,0.0
+48.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+48.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+48.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+49.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+49.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,19.32894006338911,0.0,0.0,0.0
+49.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+49.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,19.328940063744184,0.0,0.0,0.0
+49.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+49.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+49.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+49.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.0999999995127743,0.0,0.0,0.0
+49.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+49.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,26.454329688538678,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,26.45432968889315,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,26.454329688893008,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,837.7981399629788,0.0,837.7981299629788
+49.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.0999999993509163,0.0,0.0,0.0
+49.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+49.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+49.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+49.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+49.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+49.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.099999999184963,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,807.3525639507858,0.0,807.3525539507858
+49.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.0999999996225431,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,26.454329688538696,0.0,0.0,0.0
+49.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,26.454329688538675,0.0,0.0,0.0
+49.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,26.454329688893946,0.0,0.0,0.0
+49.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+49.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+49.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999939334141,0.0,0.0,0.0
+49.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+49.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+49.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999972675826,0.0,0.0,0.0
+49.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+49.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+49.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+50.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+50.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,20.18313579513778,0.0,0.0,0.0
+50.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+50.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,20.183135795491452,0.0,0.0,0.0
+50.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+50.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+50.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+50.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999953791253,0.0,0.0,0.0
+50.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+50.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,27.309518948105932,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,27.309518948458948,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,27.309518948458827,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,829.3235407200166,0.0,829.3235307200166
+50.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999934884396,0.0,0.0,0.0
+50.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+50.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+50.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+50.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+50.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+50.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999925595052,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,804.2214280477781,0.0,804.2214180477781
+50.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999968710781,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,27.309518948105946,0.0,0.0,0.0
+50.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,27.309518948105918,0.0,0.0,0.0
+50.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,27.309518948459765,0.0,0.0,0.0
+50.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+50.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+50.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999943019725,0.0,0.0,0.0
+50.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+50.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+50.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999971580466,0.0,0.0,0.0
+50.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+50.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+50.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+51.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+51.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,21.041944478148395,0.0,0.0,0.0
+51.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+51.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,21.04194447850116,0.0,0.0,0.0
+51.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+51.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+51.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+51.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999953507321,0.0,0.0,0.0
+51.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+51.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,28.16924876960569,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,28.169248769957818,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,28.1692487699577,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,796.0624569629967,0.0,796.0624469629968
+51.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999936583043,0.0,0.0,0.0
+51.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+51.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+51.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+51.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+51.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+51.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999941160921,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,789.204228161609,0.0,789.204218161609
+51.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999963048707,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,28.16924876960572,0.0,0.0,0.0
+51.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,28.169248769605698,0.0,0.0,0.0
+51.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,28.169248769958628,0.0,0.0,0.0
+51.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+51.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+51.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999936258738,0.0,0.0,0.0
+51.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+51.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+51.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973877445,0.0,0.0,0.0
+51.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+51.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+51.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+52.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+52.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,21.90516362960171,0.0,0.0,0.0
+52.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.0,0.0,0.0,0.0
+52.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+52.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,21.905163629953833,0.0,0.0,0.0
+52.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+52.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+52.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+52.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999954506143,0.0,0.0,0.0
+52.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+52.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,29.033324078875303,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,29.033324079226748,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,29.033324079226645,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,700.8974038645449,0.0,700.8973938645449
+52.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999933779757,0.0,0.0,0.0
+52.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+52.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+52.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+52.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+52.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+52.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999941235307,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,691.7193455207841,0.0,691.7193355207842
+52.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999951030666,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,29.033324078875328,0.0,0.0,0.0
+52.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,29.033324078875307,0.0,0.0,0.0
+52.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,29.03332407922759,0.0,0.0,0.0
+52.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+52.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+52.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999931812972,0.0,0.0,0.0
+52.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+52.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+52.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999974328029,0.0,0.0,0.0
+52.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+52.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+52.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+53.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+53.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,22.77260184221487,0.0,0.0,0.0
+53.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.0,0.0,0.0,0.0
+53.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+53.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,22.7726018425666,0.0,0.0,0.0
+53.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+53.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+53.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+53.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999952239293,0.0,0.0,0.0
+53.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+53.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,29.901559914003187,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,29.901559914354227,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,29.901559914354124,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,594.0786249021666,0.0,594.0786149021666
+53.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999936067815,0.0,0.0,0.0
+53.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+53.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+53.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+53.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+53.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+53.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999941303332,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,587.915426646842,0.0,587.915416646842
+53.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999953007466,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,29.901559914003204,0.0,0.0,0.0
+53.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,29.90155991400318,0.0,0.0,0.0
+53.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,29.901559914355065,0.0,0.0,0.0
+53.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+53.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+53.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999947452368,0.0,0.0,0.0
+53.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+53.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+53.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997427491,0.0,0.0,0.0
+53.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+53.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+53.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+54.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+54.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,23.6440780539956,0.0,0.0,0.0
+54.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.0,0.0,0.0,0.0
+54.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+54.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,23.644078054347162,0.0,0.0,0.0
+54.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+54.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+54.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+54.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999953455263,0.0,0.0,0.0
+54.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+54.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,30.77378084558569,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,30.773780845936532,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,30.77378084593644,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,505.76058278450876,0.0,505.7605727845088
+54.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.5631940186722204e-13,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.0999999994042268,0.0,0.0,0.0
+54.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+54.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+54.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+54.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+54.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+54.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0999999994135771,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,505.7605827724151,0.0,505.7605727724151
+54.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999961796592,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,30.7737808455857,0.0,0.0,0.0
+54.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,30.77378084558568,0.0,0.0,0.0
+54.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,30.77378084593739,0.0,0.0,0.0
+54.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+54.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+54.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999948376899,0.0,0.0,0.0
+54.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+54.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+54.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999974233181,0.0,0.0,0.0
+54.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+54.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+54.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+55.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+55.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,24.519420878641135,0.0,0.0,0.0
+55.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+55.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,24.519420878992644,0.0,0.0,0.0
+55.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+55.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+55.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+55.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999956766203,0.0,0.0,0.0
+55.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+55.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,31.64982043037226,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,31.649820430723032,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,31.64982043072294,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,426.77177609063915,0.0,426.7717660906392
+55.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999941409762,0.0,0.0,0.0
+55.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+55.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+55.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+55.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+55.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+55.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999943996565,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,435.20241580063885,0.0,435.20240580063887
+55.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999971292792,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,31.649820430372273,0.0,0.0,0.0
+55.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,31.64982043037224,0.0,0.0,0.0
+55.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,31.649820430723896,0.0,0.0,0.0
+55.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+55.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+55.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999938730901,0.0,0.0,0.0
+55.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+55.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+55.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997420323,0.0,0.0,0.0
+55.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+55.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+55.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+56.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+56.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,25.398467989442466,0.0,0.0,0.0
+56.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+56.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,25.398467989794064,0.0,0.0,0.0
+56.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+56.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+56.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+56.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999957333815,0.0,0.0,0.0
+56.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+56.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,32.5295206967379,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,32.52952069708876,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,32.52952069708868,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,330.85894049236236,0.0,330.8589304923624
+56.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999941438768,0.0,0.0,0.0
+56.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+56.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+56.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+56.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+56.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+56.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999944265511,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,343.52155177769725,0.0,343.5215417776973
+56.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.0999999997013606,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,32.529520696737926,0.0,0.0,0.0
+56.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,32.5295206967379,0.0,0.0,0.0
+56.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,32.52952069708964,0.0,0.0,0.0
+56.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+56.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+56.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999952427843,0.0,0.0,0.0
+56.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+56.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+56.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999972526871,0.0,0.0,0.0
+56.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+56.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+56.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+57.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+57.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,26.28106555081298,0.0,0.0,0.0
+57.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+57.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,26.28106555116478,0.0,0.0,0.0
+57.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+57.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+57.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+57.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999957137393,0.0,0.0,0.0
+57.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+57.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,33.41273166041435,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,33.4127316607654,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,33.412731660765324,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,231.84040824606382,0.0,231.8403982460638
+57.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999942746243,0.0,0.0,0.0
+57.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+57.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+57.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+57.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+57.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+57.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999916342861,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,237.91440954323357,0.0,237.91439954323357
+57.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999965172632,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,33.41273166041438,0.0,0.0,0.0
+57.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,33.412731660414345,0.0,0.0,0.0
+57.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,33.41273166076628,0.0,0.0,0.0
+57.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+57.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+57.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999947322723,0.0,0.0,0.0
+57.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+57.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+57.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999974157517,0.0,0.0,0.0
+57.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+57.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+57.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+58.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+58.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,27.16706769252104,0.0,0.0,0.0
+58.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+58.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+58.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,27.167067692873125,0.0,0.0,0.0
+58.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+58.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+58.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+58.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999957945743,0.0,0.0,0.0
+58.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+58.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,34.29931086891946,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,34.299310869270776,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,34.299310869270705,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,140.19309534023358,0.0,140.19308534023358
+58.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999944021314,0.0,0.0,0.0
+58.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+58.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+58.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+58.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+58.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+58.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999944694687,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,140.1930953245901,0.0,140.1930853245901
+58.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999957625438,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,34.29931086891949,0.0,0.0,0.0
+58.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,34.29931086891945,0.0,0.0,0.0
+58.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,34.29931086927167,0.0,0.0,0.0
+58.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+58.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+58.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999938910306,0.0,0.0,0.0
+58.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+58.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+58.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997414209,0.0,0.0,0.0
+58.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+58.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+58.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+59.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+59.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,28.056336022454847,0.0,0.0,0.0
+59.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.0,0.0,0.0,0.0
+59.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+59.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+59.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,28.056336022807272,0.0,0.0,0.0
+59.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+59.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+59.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+59.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999958737393,0.0,0.0,0.0
+59.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+59.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,35.189122973151434,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,35.18912297350308,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,35.18912297350302,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,63.16798580704344,0.0,63.16797580704344
+59.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999940139621,0.0,0.0,0.0
+59.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+59.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+59.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+59.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+59.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+59.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999944864865,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,63.167985794958526,0.0,63.16797579495852
+59.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999954654495,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,35.18912297315145,0.0,0.0,0.0
+59.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,35.18912297315142,0.0,0.0,0.0
+59.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,35.189122973503984,0.0,0.0,0.0
+59.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+59.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+59.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999945018194,0.0,0.0,0.0
+59.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+59.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+59.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973801485,0.0,0.0,0.0
+59.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+59.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+59.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+60.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+60.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,28.948739174337195,0.0,0.0,0.0
+60.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.5888218580782548e-14,0.0,0.0,0.0
+60.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+60.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+60.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,28.948739174690086,0.0,0.0,0.0
+60.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+60.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+60.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+60.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999955528194,0.0,0.0,0.0
+60.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+60.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,36.0820393246515,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,36.08203932500359,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,36.082039325003535,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.0,11.156216251436074,0.0,11.156206251436075
+60.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999945814256,0.0,0.0,0.0
+60.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+60.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+60.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+60.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+60.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+60.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939728689,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.0,11.156216244614484,0.0,11.156206244614484
+60.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999958829625,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,36.08203932465152,0.0,0.0,0.0
+60.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,36.08203932465148,0.0,0.0,0.0
+60.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,36.0820393250045,0.0,0.0,0.0
+60.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+60.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+60.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999956528809,0.0,0.0,0.0
+60.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+60.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+60.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997283344,0.0,0.0,0.0
+60.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+60.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+60.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+61.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+61.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,29.844152387280232,0.0,0.0,0.0
+61.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.6280579355608324e-14,0.0,0.0,0.0
+61.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+61.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+61.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,29.84415238763354,0.0,0.0,0.0
+61.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+61.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+61.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+61.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999959137276,0.0,0.0,0.0
+61.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+61.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,36.97793759708503,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,36.97793759743755,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,36.977937597437496,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,0.4998113199808062,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999947179654,0.0,0.0,0.0
+61.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+61.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+61.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+61.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+61.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+61.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939631776,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,0.49981132016159485,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999967111398,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,36.97793759708505,0.0,0.0,0.0
+61.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,36.977937597085024,0.0,0.0,0.0
+61.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,36.97793759743847,0.0,0.0,0.0
+61.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+61.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+61.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999957234015,0.0,0.0,0.0
+61.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+61.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+61.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973823402,0.0,0.0,0.0
+61.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+61.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+61.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+62.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+62.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,30.74245711445233,0.0,0.0,0.0
+62.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.9131948672901813e-14,0.0,0.0,0.0
+62.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+62.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+62.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,30.74245711480619,0.0,0.0,0.0
+62.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,1.1234667099445444e-14,0.0,0.0,0.0
+62.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+62.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+62.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999960687254,0.0,0.0,0.0
+62.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+62.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,37.876701430543456,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,37.876701430896524,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,37.87670143089648,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,1.4146951505668595,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999948134902,0.0,0.0,0.0
+62.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+62.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+62.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+62.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+62.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+62.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0999999993955647,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,1.4146951507464633,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999972613716,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,37.876701430543484,0.0,0.0,0.0
+62.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,37.876701430543456,0.0,0.0,0.0
+62.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,37.87670143089746,0.0,0.0,0.0
+62.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+62.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+62.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999959646078,0.0,0.0,0.0
+62.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+62.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+62.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973831947,0.0,0.0,0.0
+62.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+62.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+62.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+63.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+63.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,31.643540658447606,0.0,0.0,0.0
+63.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,2.4613922385709617e-14,0.0,0.0,0.0
+63.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+63.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+63.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,31.643540658801953,0.0,0.0,0.0
+63.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+63.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+63.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+63.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.0999999996124798,0.0,0.0,0.0
+63.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+63.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,38.77822009732871,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,38.77822009768226,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,38.77822009768221,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,2.301768732236133,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999948298773,0.0,0.0,0.0
+63.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+63.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+63.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+63.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+63.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+63.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0999999993949188,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,2.301768732414491,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999972028756,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,38.778220097328735,0.0,0.0,0.0
+63.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,38.778220097328706,0.0,0.0,0.0
+63.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,38.77822009768319,0.0,0.0,0.0
+63.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+63.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+63.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999960703289,0.0,0.0,0.0
+63.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+63.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+63.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997383751,0.0,0.0,0.0
+63.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+63.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+63.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+64.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+64.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,32.54729583120667,0.0,0.0,0.0
+64.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.464821375527116e-14,0.0,0.0,0.0
+64.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+64.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+64.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,32.547295831561605,0.0,0.0,0.0
+64.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,7.944109290391274e-15,0.0,0.0,0.0
+64.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+64.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+64.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999961806466,0.0,0.0,0.0
+64.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+64.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,39.68238818793704,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,39.68238818829116,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,39.68238818829113,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,3.162986745402618,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999949479607,0.0,0.0,0.0
+64.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+64.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+64.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+64.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+64.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+64.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939444389,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,3.1629867455797487,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999972683486,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,39.68238818793706,0.0,0.0,0.0
+64.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,39.682388187937015,0.0,0.0,0.0
+64.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,39.68238818829211,0.0,0.0,0.0
+64.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+64.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+64.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.0999999995812748,0.0,0.0,0.0
+64.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+64.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+64.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973841796,0.0,0.0,0.0
+64.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+64.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+64.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+65.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+65.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,33.453620636565624,0.0,0.0,0.0
+65.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+65.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+65.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,33.453620636921116,0.0,0.0,0.0
+65.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,7.944109290391274e-15,0.0,0.0,0.0
+65.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+65.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+65.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999961845693,0.0,0.0,0.0
+65.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+65.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,40.589105316026775,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,40.58910531638145,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,40.58910531638141,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,3.999999999900651,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999950651378,0.0,0.0,0.0
+65.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+65.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+65.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+65.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+65.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+65.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939405088,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,4.000000000076496,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999968522007,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,40.589105316026796,0.0,0.0,0.0
+65.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,40.58910531602675,0.0,0.0,0.0
+65.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,40.589105316382394,0.0,0.0,0.0
+65.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+65.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+65.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.0999999995045588,0.0,0.0,0.0
+65.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+65.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+65.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973846549,0.0,0.0,0.0
+65.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+65.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+65.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+66.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+66.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,34.362417973693844,0.0,0.0,0.0
+66.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.5888218580782548e-14,0.0,0.0,0.0
+66.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+66.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+66.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,34.36241797404995,0.0,0.0,0.0
+66.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.0,0.0,0.0,0.0
+66.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+66.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+66.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999962580275,0.0,0.0,0.0
+66.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+66.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,41.4982758412094,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,41.49827584156468,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,41.49827584156465,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,4.814211389822859,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999949346408,0.0,0.0,0.0
+66.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+66.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+66.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+66.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+66.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+66.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939380058,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,4.814211389997435,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999960357417,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,41.49827584120942,0.0,0.0,0.0
+66.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,41.498275841209384,0.0,0.0,0.0
+66.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,41.49827584156564,0.0,0.0,0.0
+66.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+66.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+66.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.0999999994863191,0.0,0.0,0.0
+66.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+66.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+66.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973848589,0.0,0.0,0.0
+66.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+66.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+66.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+67.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+67.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+67.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,35.27359535985052,0.0,0.0,0.0
+67.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,1.5888218580782548e-14,0.0,0.0,0.0
+67.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+67.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,35.27359536020726,0.0,0.0,0.0
+67.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,7.944109290391274e-15,0.0,0.0,0.0
+67.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+67.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+67.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999963310706,0.0,0.0,0.0
+67.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+67.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,42.40980860857061,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,42.40980860892653,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,42.40980860892651,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,5.606819207284645,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999949665185,0.0,0.0,0.0
+67.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+67.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+67.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+67.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+67.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+67.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939369994,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,5.606819207457914,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999960357682,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,42.40980860857063,0.0,0.0,0.0
+67.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,42.40980860857059,0.0,0.0,0.0
+67.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,42.409808608927506,0.0,0.0,0.0
+67.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+67.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+67.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999954475337,0.0,0.0,0.0
+67.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+67.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+67.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973851022,0.0,0.0,0.0
+67.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+67.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+67.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+68.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+68.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+68.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,36.18706467102866,0.0,0.0,0.0
+68.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.025852248685503416,0.0,0.0,0.0
+68.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+68.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,36.18706467138597,0.0,0.0,0.0
+68.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.025852248723865802,0.0,0.0,0.0
+68.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+68.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+68.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999960929223,0.0,0.0,0.0
+68.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+68.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,43.323616703883815,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,43.32361670424029,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,43.32361670424027,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,6.378851122201883,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999953888086,0.0,0.0,0.0
+68.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+68.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+68.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+68.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+68.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+68.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939358734,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,6.378851122373813,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999964424348,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,43.323616703883836,0.0,0.0,0.0
+68.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,43.32361670388379,0.0,0.0,0.0
+68.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,43.323616704241275,0.0,0.0,0.0
+68.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+68.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+68.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999964757796,0.0,0.0,0.0
+68.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+68.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+68.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999972980107,0.0,0.0,0.0
+68.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+68.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+68.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+69.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+69.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+69.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,37.10274189918249,0.0,0.0,0.0
+69.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.4009768348540081,0.0,0.0,0.0
+69.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,2.842170943040401e-14,0.0,0.0,0.0
+69.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,37.10274189954045,0.0,0.0,0.0
+69.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.4009768349735361,0.0,0.0,0.0
+69.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+69.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+69.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999964634823,0.0,0.0,0.0
+69.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+69.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,44.239617223539,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,44.23961722389612,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,44.239617223896104,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,7.131191159661306,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000128,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.09999999954853903,0.0,0.0,0.0
+69.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+69.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+69.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+69.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+69.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+69.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939365255,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,7.131191159831856,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999971994743,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,44.23961722353901,0.0,0.0,0.0
+69.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,44.23961722353898,0.0,0.0,0.0
+69.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,44.23961722389709,0.0,0.0,0.0
+69.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+69.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+69.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999965343873,0.0,0.0,0.0
+69.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+69.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+69.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0999999997297881,0.0,0.0,0.0
+69.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+69.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+69.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
+70.0,fixed,4010电机,left_proximal_negative,大腿,True,0.0,0.0,0.0,0.0,0.0
+70.0,fixed,4010电机001,left_proximal_positive,大腿垫高,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+70.0,fixed,4010电机,left_distal_positive,小腿004,False,0.0,38.020546924846684,0.0,0.0,0.0
+70.0,fixed,4010电机001,left_distal_positive,小腿004,False,0.0,0.9849075000606671,0.0,0.0,0.0
+70.0,fixed,4010电机003,right_proximal_negative,大腿垫高001,True,2.842170943040401e-14,0.0,0.0,0.0,0.0
+70.0,fixed,4010电机002,right_proximal_positive,大腿002,True,1.4210854715202004e-14,0.0,0.0,0.0,0.0
+70.0,fixed,4010电机002,right_distal_negative,小腿010,False,0.0,38.02054692520528,0.0,0.0,0.0
+70.0,fixed,4010电机003,right_distal_negative,小腿010,False,0.0,0.9849075002069501,0.0,0.0,0.0
+70.0,left_proximal_negative,大腿,left_distal_negative,推力轴承,True,0.0,1.2789769243681803e-13,0.0,0.0,0.0
+70.0,left_proximal_negative,大腿,left_distal_negative,小腿001,True,1.0000000000001137,1.000000000000142,0.0,0.0,0.0
+70.0,left_proximal_negative,大腿,left_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C,True,0.0,0.09999999965204757,0.0,0.0,0.0
+70.0,left_proximal_negative,大腿,left_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C",True,0.0,1.1368683772161603e-13,0.0,0.0,0.0
+70.0,left_proximal_negative,大腿,left_distal_positive,小腿004,False,0.0,45.15773105826796,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿垫高,left_distal_negative,小腿001,False,0.0,45.15773105862572,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿001,left_distal_negative,小腿001,False,0.0,45.15773105862571,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿垫高,left_distal_positive,小腿004,True,0.0,7.864601348359739,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿001,left_distal_positive,小腿004,True,1.0000000000000995,1.000000000000142,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿001,left_distal_positive,推力轴承001,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿001,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,True,0.0,0.0999999995582872,0.0,0.0,0.0
+70.0,left_proximal_positive,大腿001,left_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C001",True,0.0,5.684341886080802e-14,0.0,0.0,0.0
+70.0,left_distal_negative,小腿001,left_distal_positive,小腿004,True,0.9999999999999858,0.9999999999999858,0.0,0.0,0.0
+70.0,left_distal_negative,小腿001,left_wheel,推力轴承002,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+70.0,left_distal_negative,小腿001,left_wheel,驱动板004,True,0.4999999999998721,0.4999999999998863,0.0,0.0,0.0
+70.0,left_distal_negative,小腿001,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.0,0.0,0.0,0.0
+70.0,left_distal_positive,小腿004,left_wheel,推力轴承002,True,0.0,0.0,0.0,0.0,0.0
+70.0,left_distal_positive,小腿004,left_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+70.0,left_distal_positive,小腿004,left_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）,True,0.0,0.09999999939378884,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿垫高001,right_distal_negative,小腿010,True,0.0,7.864601348528958,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_negative,推力轴承004,True,0.0,1.4210854715202004e-13,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_negative,小腿009,True,2.0,2.0,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_negative,小腿010,True,1.0,1.0,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_negative,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C005",True,1.1368683772161603e-13,1.4210854715202004e-13,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,True,0.0,0.09999999975589108,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿垫高001,right_distal_positive,小腿007,False,0.0,45.15773105826799,0.0,0.0,0.0
+70.0,right_proximal_negative,大腿003,right_distal_positive,小腿007,False,0.0,45.15773105826794,0.0,0.0,0.0
+70.0,right_proximal_positive,大腿002,right_distal_negative,小腿010,False,0.0,45.157731058626716,0.0,0.0,0.0
+70.0,right_proximal_positive,大腿002,right_distal_positive,推力轴承003,True,0.0,0.0,0.0,0.0,0.0
+70.0,right_proximal_positive,大腿002,right_distal_positive,小腿007,True,1.0,1.0000000000000142,0.0,0.0,0.0
+70.0,right_proximal_positive,大腿002,right_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C002,True,0.0,0.09999999967403003,0.0,0.0,0.0
+70.0,right_proximal_positive,大腿002,right_distal_positive,"hex nuts, style 1-grades ab gb_GB_FASTENER_NUT_SNAB1 M4-C003",True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+70.0,right_distal_negative,小腿010,right_distal_positive,小腿007,True,1.0000000000000142,1.0000000000000142,0.0,0.0,0.0
+70.0,right_distal_negative,小腿010,right_wheel,推力轴承005,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+70.0,right_distal_negative,小腿010,right_wheel,MISUMI_C-SE604ZZ_不锈钢小径滚珠轴承004,True,0.0,1.4210854715202004e-14,0.0,0.0,0.0
+70.0,right_distal_negative,小腿010,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.09999999973849585,0.0,0.0,0.0
+70.0,right_distal_positive,小腿007,right_wheel,推力轴承005,True,0.0,0.0,0.0,0.0,0.0
+70.0,right_distal_positive,小腿007,right_wheel,驱动板005,True,0.4999999999998863,0.49999999999991473,0.0,0.0,0.0
+70.0,right_distal_positive,小腿007,right_wheel,MISUMI_CBSTSR4-16_内六角螺栓（盖螺栓）001,True,0.0,0.0,0.0,0.0,0.0
