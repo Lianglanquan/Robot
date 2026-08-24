@@ -17,6 +17,21 @@ The upstream `matlab/README.md` is retained for context. Only files required to
 understand or execute this phase's reference model are included here; the full
 upstream repository was inspected at the commit above.
 
+## Qualified neutral CAD exports
+
+`cad/` contains the two frozen neutral exports used by the real mechanical
+envelope study:
+
+- `foc-wheel-legged-robot_full_assembly_AP214.step` — the AP214 assembly export
+  used for geometry and collision calculations;
+- `foc-wheel-legged-robot_full_assembly.x_t` — the Parasolid 37.1 export retained
+  as an independent frozen CAD source.
+
+Their exact hashes and verification status are recorded in
+`artifacts/mechanical_envelope/source_manifest.json`. These files are derived
+from the pinned upstream SolidWorks assembly; they are not additional geometry
+or a modified mechanism.
+
 ## Phase 3 evidence audit
 
 The continuous-stroke study also inspected the complete upstream tree at the

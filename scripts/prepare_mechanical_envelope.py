@@ -26,9 +26,11 @@ EDULITE_STEP_SHA256 = (
 ORIGINAL_AP214_SHA256 = (
     "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4"
 )
+ORIGINAL_AP214 = "reference/cad/foc-wheel-legged-robot_full_assembly_AP214.step"
 ORIGINAL_PARASOLID_SHA256 = (
     "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82"
 )
+ORIGINAL_PARASOLID = "reference/cad/foc-wheel-legged-robot_full_assembly.x_t"
 EDULITE_MANUAL = "产品资料/EL05/EL05使用说明书260713.pdf"
 EDULITE_MANUAL_SHA256 = (
     "a1c258af2b907ff81cb410302bbbc20b2e1f7c6fe1c0b78b02ac7584f27d1cdc"
@@ -127,10 +129,12 @@ def main() -> None:
             "verification": None,
             "neutral_exports": {
                 "ap214": {
+                    "path": ORIGINAL_AP214,
                     "sha256": ORIGINAL_AP214_SHA256,
                     "verification": None,
                 },
                 "parasolid_37_1": {
+                    "path": ORIGINAL_PARASOLID,
                     "sha256": ORIGINAL_PARASOLID_SHA256,
                     "verification": None,
                 },

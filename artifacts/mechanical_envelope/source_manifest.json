@@ -33,6 +33,7 @@
     },
     "neutral_exports": {
       "ap214": {
+        "path": "reference/cad/foc-wheel-legged-robot_full_assembly_AP214.step",
         "sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4",
         "verification": {
           "verified": true,
@@ -41,6 +42,7 @@
         }
       },
       "parasolid_37_1": {
+        "path": "reference/cad/foc-wheel-legged-robot_full_assembly.x_t",
         "sha256": "b439fc9bc335800fb499c121d606e23b7612285c394d0771d47cf28113991a82",
         "verification": {
           "verified": true,
