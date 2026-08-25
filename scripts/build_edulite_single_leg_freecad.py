@@ -21,6 +21,7 @@ import analyze_mechanical_envelope_freecad as envelope  # noqa: E402
 
 from src.edulite_joint import (  # noqa: E402
     ACTIVE_AXIS_Z_MM,
+    BASE_M3_TAPPED_DIAMETER_MM,
     BRACKET_FOOT_Y_MM,
     BRACKET_PLATE_THICKNESS_MM,
     BRACKET_PLATE_Y_MM,
@@ -50,7 +51,6 @@ EDULITE_STEP_SHA256 = (
     "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3"
 )
 OUTPUT_FACE_LOCAL_MM = 39.75
-BASE_HOLE_CLEARANCE_DIAMETER_MM = 3.4
 REAR_BOLT_CLEARANCE_DIAMETER_MM = 3.4
 FOOT_X_MM = (-60.0, -8.0)
 GUSSET_Z_MM = ((-58.0, -54.0), (-2.0, 2.0), (54.0, 58.0))
@@ -190,7 +190,7 @@ def triangular_gusset(z_min: float, z_max: float) -> Any:
     return Part.Face(wire).extrude(FreeCAD.Vector(0.0, 0.0, z_max - z_min))
 
 
-def build_bracket() -> Any:
+def build_bracket(*, rear_pattern_mirror_y: bool = False) -> Any:
     plate = Part.makeBox(
         BRACKET_PLATE_THICKNESS_MM,
         BRACKET_PLATE_Y_MM[1] - BRACKET_PLATE_Y_MM[0],
@@ -217,7 +217,10 @@ def build_bracket() -> Any:
         EDULITE_REAR_PATTERN_CLOCK_DEG,
     )
     rear_holes = tuple(
-        (HIP_Y_MM + offset_y, axis_z - offset_x)
+        (
+            HIP_Y_MM + (-offset_y if rear_pattern_mirror_y else offset_y),
+            axis_z - offset_x,
+        )
         for axis_z in ACTIVE_AXIS_Z_MM
         for offset_x, offset_y in rear_offsets
     )
@@ -230,7 +233,7 @@ def build_bracket() -> Any:
     base_cutters = Part.makeCompound(
         [
             Part.makeCylinder(
-                BASE_HOLE_CLEARANCE_DIAMETER_MM / 2.0,
+                BASE_M3_TAPPED_DIAMETER_MM / 2.0,
                 BRACKET_FOOT_Y_MM[1] - BRACKET_FOOT_Y_MM[0] + 2.0,
                 FreeCAD.Vector(x, BRACKET_FOOT_Y_MM[0] - 1.0, z),
                 FreeCAD.Vector(0.0, 1.0, 0.0),
@@ -559,6 +562,12 @@ def main() -> None:
             "reused_base_holes_xz_mm": [
                 list(point) for point in REUSED_BASE_HOLES_XZ_MM
             ],
+            "base_mount": {
+                "thread": "M3 tapped in bracket foot",
+                "modeled_tap_drill_diameter_mm": BASE_M3_TAPPED_DIAMETER_MM,
+                "foot_thickness_mm": BRACKET_FOOT_Y_MM[1]
+                - BRACKET_FOOT_Y_MM[0],
+            },
         },
         "checks": {
             "all_custom_shapes_valid": all(
@@ -589,7 +598,6 @@ def main() -> None:
             "18-solid STEP."
         ),
         "open_items": [
-            "70--120 mm exact collision scan has not yet been run for the custom parts",
             "fastener strength, bracket stiffness and fatigue are not yet validated",
             "connector clock and cable keep-out are not frozen",
             "internal battery and compute layout is intentionally excluded",

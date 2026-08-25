@@ -19,6 +19,12 @@ sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
 import analyze_mechanical_envelope_freecad as envelope  # noqa: E402
 import build_edulite_single_leg_freecad as design  # noqa: E402
+import build_edulite_vehicle_freecad as vehicle  # noqa: E402
+
+from src.edulite_joint import (  # noqa: E402
+    DIRECT_OUTPUT_M4_SCREW_LENGTH_MM,
+    OFFSET_OUTPUT_M4_SCREW_LENGTH_MM,
+)
 
 STANDARD_ADJACENT_GROUPS = {
     frozenset(("left_proximal_negative", "left_distal_negative")),
@@ -57,10 +63,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=PROJECT_ROOT
-        / "artifacts"
-        / "edulite_joint_module"
-        / "scan_70_120",
+        default=PROJECT_ROOT / "artifacts" / "edulite_joint_module" / "scan_70_120",
     )
     parser.add_argument("--start-mm", type=float, default=70.0)
     parser.add_argument("--stop-mm", type=float, default=120.0)
@@ -78,9 +81,9 @@ def is_designed_adjacent(
 ) -> bool:
     if frozenset((group_a, group_b)) in STANDARD_ADJACENT_GROUPS:
         return True
-    return (
-        group_a == "fixed" and OWN_MOTOR_GROUP.get(entity_a) == group_b
-    ) or (group_b == "fixed" and OWN_MOTOR_GROUP.get(entity_b) == group_a)
+    return (group_a == "fixed" and OWN_MOTOR_GROUP.get(entity_a) == group_b) or (
+        group_b == "fixed" and OWN_MOTOR_GROUP.get(entity_b) == group_a
+    )
 
 
 def component_pairs(
@@ -125,9 +128,7 @@ def scan_pose(
         if distance < best_distance:
             best_distance = distance
             best_pair = (group_a, entity_a, group_b, entity_b)
-        volume = (
-            float(left.common(right).Volume) if distance <= 1e-7 else 0.0
-        )
+        volume = float(left.common(right).Volume) if distance <= 1e-7 else 0.0
         if volume > maximum_volume:
             maximum_volume = volume
             maximum_pair = (group_a, entity_a, group_b, entity_b)
@@ -189,13 +190,29 @@ def main() -> None:
         name: {label: features[label] for label in labels}
         for name, labels in envelope.MOVING_LABELS.items()
     }
-    source_groups["left_proximal_negative"] = {
-        "大腿_EduLite": rebuilt["大腿_EduLite"]
-    }
+    source_groups["left_proximal_negative"] = {"大腿_EduLite": rebuilt["大腿_EduLite"]}
     source_groups["left_proximal_positive"] = {
         "大腿垫高_EduLite": rebuilt["大腿垫高_EduLite"],
         "大腿001_EduLite": rebuilt["大腿001_EduLite"],
     }
+    direct_screws = vehicle.output_screws(
+        rebuilt["大腿_EduLite"],
+        reference["pivots_yz_mm"]["a"],
+        "left",
+        DIRECT_OUTPUT_M4_SCREW_LENGTH_MM,
+    )
+    offset_screws = vehicle.output_screws(
+        rebuilt["大腿001_EduLite"],
+        reference["pivots_yz_mm"]["e"],
+        "left",
+        OFFSET_OUTPUT_M4_SCREW_LENGTH_MM,
+    )
+    source_groups["left_proximal_negative"]["M4_output_screws"] = Part.makeCompound(
+        list(direct_screws.values())
+    )
+    source_groups["left_proximal_positive"]["M4_output_screws"] = Part.makeCompound(
+        list(offset_screws.values())
+    )
     bracket = design.build_bracket()
     lengths = envelope.scan_lengths(args.start_mm, args.stop_mm, args.step_mm)
     summaries: list[dict[str, Any]] = []
@@ -205,14 +222,15 @@ def main() -> None:
     for l0_mm in lengths:
         envelope.validate_kinematic_placement(features, reference, l0_mm)
         placed = envelope.place_groups(source_groups, reference, l0_mm)
-        target = envelope.target_geometry(
-            l0_mm, reference["pivots_yz_mm"]["a"][0]
-        )
+        target = envelope.target_geometry(l0_mm, reference["pivots_yz_mm"]["a"][0])
         lower_group = copy_group(base_motors["edulite_left_negative"])
         upper_group = copy_group(base_motors["edulite_left_positive"])
         direct_link = placed["left_proximal_negative"]["大腿_EduLite"]
         offset_stack = Part.makeCompound(
-            list(placed["left_proximal_positive"].values())
+            [
+                placed["left_proximal_positive"]["大腿垫高_EduLite"],
+                placed["left_proximal_positive"]["大腿001_EduLite"],
+            ]
         )
         lower_rotation = design.align_output_rotor(
             lower_group, direct_link, target["a"]
@@ -226,12 +244,8 @@ def main() -> None:
             "l0_mm": l0_mm,
             "lower_rotor_deg": lower_rotation,
             "upper_rotor_deg": upper_rotation,
-            "lower_common_volume_mm3": design.common_volume(
-                lower_motor, direct_link
-            ),
-            "upper_common_volume_mm3": design.common_volume(
-                upper_motor, offset_stack
-            ),
+            "lower_common_volume_mm3": design.common_volume(lower_motor, direct_link),
+            "upper_common_volume_mm3": design.common_volume(upper_motor, offset_stack),
         }
         output_fit.append(fit)
         groups = {
@@ -268,9 +282,7 @@ def main() -> None:
     with (args.output_dir / "pair_events.csv").open(
         "w", newline="", encoding="utf-8"
     ) as stream:
-        writer = csv.DictWriter(
-            stream, fieldnames=PAIR_FIELDS, lineterminator="\n"
-        )
+        writer = csv.DictWriter(stream, fieldnames=PAIR_FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(pair_events)
     with (args.output_dir / "output_fit.csv").open(
@@ -315,13 +327,13 @@ def main() -> None:
         },
         "method_note": (
             "Original designed revolute-joint contact pairs are excluded; all new "
-            "bracket, motor and modified-hub pairs are checked explicitly."
+            "bracket, motor, modified-hub and moving M4 output-screw-head pairs "
+            "are checked explicitly."
         ),
         "open_items": [
             "bracket stiffness and fastener loads",
             "connector orientation and cable keep-out",
-            "mirrored right-side module",
-            "full vehicle packaging",
+            "battery and controller packaging",
         ],
     }
     audit_path = args.output_dir / "scan_audit.json"

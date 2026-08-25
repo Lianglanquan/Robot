@@ -13,11 +13,10 @@
     "minimum_pair": "fixed / EduLite_upper_product / left_distal_positive / 小腿004",
     "maximum_output_fit_common_volume_mm3": 0.0
   },
-  "method_note": "Original designed revolute-joint contact pairs are excluded; all new bracket, motor and modified-hub pairs are checked explicitly.",
+  "method_note": "Original designed revolute-joint contact pairs are excluded; all new bracket, motor, modified-hub and moving M4 output-screw-head pairs are checked explicitly.",
   "open_items": [
     "bracket stiffness and fastener loads",
     "connector orientation and cable keep-out",
-    "mirrored right-side module",
-    "full vehicle packaging"
+    "battery and controller packaging"
   ]
 }

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "STRUCTURAL_CONNECTION_BASELINE",
+  "scope": "baseplate, both original five-bar legs and wheels, four EduLite active joints, two shared brackets and explicit simplified fasteners",
+  "pose_mm": 90.0,
+  "part_quality": {
+    "all_custom_parts_valid": true,
+    "all_custom_parts_single_solid": true,
+    "export_reimport": {
+      "feature_count": 111,
+      "solid_count": 111,
+      "invalid_features": [],
+      "non_single_solid_features": []
+    }
+  },
+  "connections": {
+    "bracket_to_baseplate": {
+      "method": "16 x M3x10 from below into tapped bracket feet",
+      "hole_center_max_error_mm": {
+        "left_mm": 0.0,
+        "right_mm": 0.0
+      },
+      "thread_engagement_mm": 6.0,
+      "state": "DEFINED"
+    },
+    "motor_stator_to_bracket": {
+      "method": "4 x M3x10 per motor through bracket into EL05 rear M3",
+      "fastener_count": 16,
+      "thread_engagement_mm": 6.0,
+      "hole_center_max_error_mm": {
+        "edulite_left_negative": 5.6568547175426e-09,
+        "edulite_left_positive": 5.6568547175426e-09,
+        "edulite_right_negative": 5.6568547175426e-09,
+        "edulite_right_positive": 5.6568547175426e-09
+      },
+      "state": "DEFINED"
+    },
+    "motor_output_to_direct_link": {
+      "method": "6 x M4x8 plus the EL05 three output dowels",
+      "motor_count": 2,
+      "thread_engagement_mm": 3.0,
+      "state": "DEFINED"
+    },
+    "motor_output_to_offset_stack": {
+      "method": "6 x M4x14 clamp spacer and link; EL05 dowels locate spacer",
+      "motor_count": 2,
+      "thread_engagement_mm": 3.0,
+      "state": "DEFINED"
+    },
+    "output_interface_common_volume_mm3": {
+      "edulite_left_negative": 0.0,
+      "edulite_left_positive": 0.0,
+      "edulite_right_positive": 0.0,
+      "edulite_right_negative": 0.0
+    },
+    "output_rotor_alignment_deg": {
+      "edulite_left_negative": 78.41139384756968,
+      "edulite_left_positive": -19.704673858435868,
+      "edulite_right_positive": -20.588390211359567,
+      "edulite_right_negative": 77.52767749464599
+    },
+    "new_part_connection_graph_reaches_baseplate": true
+  },
+  "fastener_bill": {
+    "M3x10_base": 16,
+    "M3x10_motor_rear": 16,
+    "M4x8_direct_output": 12,
+    "M4x14_offset_output": 12
+  },
+  "deliberately_omitted_for_relayout": [
+    "battery and battery bracket/standoffs",
+    "NanoPi and NanoPi bracket",
+    "main controller plate and standoffs",
+    "camera",
+    "the four original 4010 motors, brackets and separate leg driver boards"
+  ],
+  "exports": {
+    "left_bracket": {
+      "path": "artifacts/edulite_vehicle/edulite_left_shared_bracket.step",
+      "sha256": "b74322e1b6e4f3335ebbadd22dcdce08ab7d91e9ca2e244a91e79271175421a6",
+      "bytes": 45525
+    },
+    "right_bracket": {
+      "path": "artifacts/edulite_vehicle/edulite_right_shared_bracket.step",
+      "sha256": "30df340e3b8c8a01ccada6b3d24fe62854ea6a158944737bfabcd3547b73fb88",
+      "bytes": 45527
+    },
+    "vehicle": {
+      "path": "artifacts/edulite_vehicle/edulite_vehicle_structural_90mm.step",
+      "sha256": "feb81723d9839466aedb31324d9e87dfd4ec49fda9c96062b667a2a875ec5bed",
+      "bytes": 2475006
+    }
+  },
+  "evidence_limit": "The committed vehicle STEP uses nominal 46 x 44 mm motor bodies. All interface alignment and collision evidence uses the hash-qualified official EL05 STEP; strength is not claimed."
+}
