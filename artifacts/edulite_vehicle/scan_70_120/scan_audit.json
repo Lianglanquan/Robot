@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR",
+  "scope": "both five-bar legs and four EduLite joints; internal packaging excluded",
+  "scan": {
+    "start_mm": 70.0,
+    "stop_mm": 120.0,
+    "step_mm": 1.0,
+    "pose_count": 51,
+    "clear_count": 51,
+    "minimum_clearance_mm": 0.9151696463916381,
+    "minimum_pose_mm": 70.0,
+    "minimum_pair": "fixed / EduLite_left_upper_product / left_distal_positive / 小腿004",
+    "maximum_output_fit_common_volume_mm3": 0.0
+  },
+  "method_note": "Original designed revolute-joint contact pairs are excluded; all new bracket, motor, modified-hub and moving M4 output-screw-head pairs are checked explicitly.",
+  "open_items": [
+    "bracket stiffness and fastener loads",
+    "connector orientation and cable keep-out"
+  ]
+}

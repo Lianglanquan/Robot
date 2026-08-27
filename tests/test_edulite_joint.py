@@ -8,6 +8,7 @@ from src.edulite_joint import (
     BASE_M3_TAPPED_DIAMETER_MM,
     BASE_M3_THREAD_ENGAGEMENT_MM,
     BASEPLATE_THICKNESS_MM,
+    BRACKET_FOOT_X_MM,
     BRACKET_FOOT_Y_MM,
     BRACKET_REAR_FACE_X_MM,
     DIRECT_LINK_X_MM,
@@ -99,7 +100,11 @@ def test_bracket_reuses_existing_base_holes_without_moving_axes() -> None:
     assert len(REUSED_BASE_HOLES_XZ_MM) == 8
     assert {abs(x) for x, _z in REUSED_BASE_HOLES_XZ_MM} == {37.75, 57.5}
     assert BASE_M3_TAPPED_DIAMETER_MM == pytest.approx(2.5)
-    assert BRACKET_FOOT_Y_MM[1] - BRACKET_FOOT_Y_MM[0] == pytest.approx(7.0)
+    assert BRACKET_FOOT_Y_MM[1] - BRACKET_FOOT_Y_MM[0] == pytest.approx(6.0)
     assert BASE_M3_SCREW_LENGTH_MM - BASEPLATE_THICKNESS_MM == pytest.approx(
         BASE_M3_THREAD_ENGAGEMENT_MM
     )
+    outer_hole_x = min(x for x, _z in REUSED_BASE_HOLES_XZ_MM)
+    m3_major_radius = 1.5
+    edge_ligament = outer_hole_x - BRACKET_FOOT_X_MM[0] - m3_major_radius
+    assert edge_ligament >= 3.0

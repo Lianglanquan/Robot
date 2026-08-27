@@ -11,6 +11,16 @@
       "solid_count": 111,
       "invalid_features": [],
       "non_single_solid_features": []
+    },
+    "bracket_x_bounds_mm": {
+      "left": [
+        -62.0,
+        -8.0
+      ],
+      "right": [
+        8.0,
+        62.0
+      ]
     }
   },
   "connections": {
@@ -32,6 +42,12 @@
         "edulite_left_positive": 5.6568547175426e-09,
         "edulite_right_negative": 5.6568547175426e-09,
         "edulite_right_positive": 5.6568547175426e-09
+      },
+      "mating_face_x_max_error_mm": {
+        "edulite_left_negative": 2.0839792114202282e-08,
+        "edulite_left_positive": 2.0839792114202282e-08,
+        "edulite_right_negative": 2.083979921962964e-08,
+        "edulite_right_positive": 2.083979921962964e-08
       },
       "state": "DEFINED"
     },
@@ -61,6 +77,28 @@
     },
     "new_part_connection_graph_reaches_baseplate": true
   },
+  "assembly_readiness": {
+    "motor_body_to_foot_minimum_clearance_mm": {
+      "edulite_left_negative": 0.9999999957056467,
+      "edulite_left_positive": 0.9999999957056467,
+      "edulite_right_negative": 0.9999999957056467,
+      "edulite_right_positive": 0.9999999957056467
+    },
+    "base_tapped_hole_minimum_edge_ligament_mm": 3.0,
+    "assembly_sequence": [
+      "fasten each EduLite rear face to its side bracket",
+      "fasten each bracket to the original baseplate from below",
+      "fasten the direct and offset active-link stacks from outboard",
+      "connect the unchanged distal links and wheel assemblies"
+    ],
+    "tool_access_basis": "rear screws are installed before the bracket reaches the baseplate; base screws remain accessible from below; output screws remain accessible from outboard",
+    "output_screw_bottoming_margin_mm": {
+      "M4x8_direct_nominal": 0.0,
+      "M4x14_offset_nominal": 0.0
+    },
+    "output_screw_release_gate": "measure actual under-head screw length and usable EL05 thread depth on first hardware; add a thin shim washer if needed",
+    "state": "GEOMETRICALLY_ASSEMBLABLE_NOT_PRODUCTION_RELEASED"
+  },
   "fastener_bill": {
     "M3x10_base": 16,
     "M3x10_motor_rear": 16,
@@ -77,18 +115,18 @@
   "exports": {
     "left_bracket": {
       "path": "artifacts/edulite_vehicle/edulite_left_shared_bracket.step",
-      "sha256": "b74322e1b6e4f3335ebbadd22dcdce08ab7d91e9ca2e244a91e79271175421a6",
-      "bytes": 45525
+      "sha256": "49d990e4cd538367e96d53aadb69041480006a4c5167b67252c64cfc69a1565e",
+      "bytes": 45177
     },
     "right_bracket": {
       "path": "artifacts/edulite_vehicle/edulite_right_shared_bracket.step",
-      "sha256": "30df340e3b8c8a01ccada6b3d24fe62854ea6a158944737bfabcd3547b73fb88",
-      "bytes": 45527
+      "sha256": "99f05f5a40a5470a7717f2e98e6b02941868f8305827be89eb4ceb3264f24e3d",
+      "bytes": 45251
     },
     "vehicle": {
       "path": "artifacts/edulite_vehicle/edulite_vehicle_structural_90mm.step",
-      "sha256": "feb81723d9839466aedb31324d9e87dfd4ec49fda9c96062b667a2a875ec5bed",
-      "bytes": 2475006
+      "sha256": "d7a1104009b1ff8c65007771a931c8c31c3a2048c8679437f0654d7085dfe51e",
+      "bytes": 2474382
     }
   },
   "evidence_limit": "The committed vehicle STEP uses nominal 46 x 44 mm motor bodies. All interface alignment and collision evidence uses the hash-qualified official EL05 STEP; strength is not claimed."

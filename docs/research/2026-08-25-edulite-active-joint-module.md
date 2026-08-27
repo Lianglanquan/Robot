@@ -52,9 +52,15 @@ EduLite 商品外形与原小腿之间。新支架和新轮毂没有缩短 Phase
 共用支架用 EduLite 后部四孔固定两台电机，输出安装面保持在原全局
 `x=-66.5 mm`，后安装面位于 `x=-22.5 mm`。支架底脚复用原底板左侧八个
 M3 孔。后续连接审计发现第一版底脚同样使用通孔时没有锁紧位置，因此已经改为
-7 mm 厚底脚中的 M3 攻牙孔，使用 M3x10 从底板下方固定，名义啮合 6 mm。
+6 mm 厚底脚中的 M3 攻牙孔，使用 M3x10 从底板下方固定，名义啮合 6 mm。
 支架用中部和两端三块肋板连接后安装板。当前几何是用于闭合空间和接口的单件
 加工概念，不是已经完成强度校核的加工图。
+
+后续整机连接复核又消除了两个容易被理想 CAD 隐藏的问题：底脚上表面从
+`y=11 mm` 降到 `y=10 mm`，使它与官方 EduLite 外形从零间隙相切改为
+`1.0 mm` 名义间隙；底脚外缘从 `x=-60 mm` 延伸到 `x=-62 mm`，使最外侧
+M3 攻牙孔按 Ø3 mm 大径计算的边缘余量从 `1.0 mm` 增至 `3.0 mm`。这两处
+只修改支架毛坯，不移动原底板孔和主动轴。
 
 可直接查看的中性 CAD：
 
@@ -109,5 +115,6 @@ snap run --shell freecad.cmd -c \
 ```
 
 输入和输出 SHA-256、孔系以及初始装配检查记录在
-`artifacts/edulite_joint_module/interface_audit.json`；逐姿态数据位于
-`artifacts/edulite_joint_module/scan_70_120/`。
+`artifacts/edulite_joint_module/interface_audit.json`。该阶段的左腿扫描仍保留在
+`artifacts/edulite_joint_module/scan_70_120/`；修正右支架后的正式整机双侧结果
+位于 `artifacts/edulite_vehicle/scan_70_120/`。

@@ -91,7 +91,7 @@
     "base_mount": {
       "thread": "M3 tapped in bracket foot",
       "modeled_tap_drill_diameter_mm": 2.5,
-      "foot_thickness_mm": 7.0
+      "foot_thickness_mm": 6.0
     }
   },
   "checks": {
@@ -108,34 +108,38 @@
       "lower_mm3": 0.0,
       "upper_mm3": 0.0
     },
+    "motor_to_foot_minimum_clearance_mm": {
+      "lower": 0.9999999957056467,
+      "upper": 0.9999999957056467
+    },
     "bracket_to_baseplate_common_volume_mm3": 0.0,
-    "bracket_to_moving_minimum_distance_mm": 6.499999999999844
+    "bracket_to_moving_minimum_distance_mm": 4.500000000000014
   },
   "exports": {
     "shared_bracket": {
       "path": "artifacts/edulite_joint_module/edulite_left_shared_bracket.step",
-      "sha256": "dc2e9fd481edf8371fdf5483e55b0bf7e1dc4261b7708743205d123a1e6e0ebf",
-      "bytes": 45525
+      "sha256": "27ab69b81ef846cf6999c4af87a3bc3c623f16adfdaf2a444a470f3835a7c77f",
+      "bytes": 45177
     },
     "direct_proximal_link": {
       "path": "artifacts/edulite_joint_module/edulite_direct_proximal_link.step",
-      "sha256": "96c8397156c0ad7ad25af92b814a00bc1dcb4cc07e702dea5783d7c8a6fb82ba",
+      "sha256": "509db37cdd3c78bdcdfd20a2b43a30e821ee8618f981ba30492b27fa16794983",
       "bytes": 82282
     },
     "offset_spacer": {
       "path": "artifacts/edulite_joint_module/edulite_offset_spacer.step",
-      "sha256": "bc063b86e34aedb87ff8178ac71060c0a418c4b5603ff181dd2f85abad28e391",
+      "sha256": "52e97f0245f591fe59a97771c1697944b9f1fb1f8a0c4630591f98ba59466f3a",
       "bytes": 25302
     },
     "offset_proximal_link": {
       "path": "artifacts/edulite_joint_module/edulite_offset_proximal_link.step",
-      "sha256": "096c19a870575801939cb21122e5118c99127aebd50eaff80dc704ac419d818d",
+      "sha256": "24b428a7bf1f5aa534bc25b554eddbe11d9493cabbb2fc4c52072fcfc91007f7",
       "bytes": 80185
     },
     "single_leg_reference": {
       "path": "artifacts/edulite_joint_module/edulite_single_leg_90mm.step",
-      "sha256": "fd88498008206c2a498a363fe3481b2df27f2fb86c15e44c4842d7b95db3ccf2",
-      "bytes": 1098857
+      "sha256": "b6f4cdc13e640d21a701b461f663ad59d3c999bd810f0f393718bfe5e49786cc",
+      "bytes": 1098509
     }
   },
   "single_leg_reference_note": "The assembly STEP contains nominal 46 x 44 mm motor cylinders for display only; all fit checks use the hash-qualified official 18-solid STEP.",

@@ -1,0 +1,52 @@
+state,minimum_clearance_mm,minimum_pair,maximum_common_volume_mm3,maximum_volume_pair,l0_mm
+CLEAR,0.9151696463916381,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,70.0
+CLEAR,1.6079726719694858,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,71.0
+CLEAR,2.2968486839919104,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,72.0
+CLEAR,2.9725669197143287,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,73.0
+CLEAR,3.633218971045189,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,74.0
+CLEAR,4.278330701268105,fixed / EduLite_left_upper_product / left_distal_positive / 小腿004,0.0, /  /  / ,75.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,76.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,77.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,78.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,79.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,80.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,81.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,82.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,83.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,84.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,85.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,86.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,87.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,88.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,89.0
+CLEAR,4.5,fixed / EduLite_right_shared_bracket / right_distal_negative / 小腿010,0.0, /  /  / ,90.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,91.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,92.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,93.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,94.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,95.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,96.0
+CLEAR,4.499999999999844,fixed / EduLite_left_shared_bracket / left_proximal_negative / 大腿_EduLite,0.0, /  /  / ,97.0
+CLEAR,4.1820799601946215,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,98.0
+CLEAR,3.7078561213138985,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,99.0
+CLEAR,3.2768916386990004,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,100.0
+CLEAR,2.880296409831183,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,101.0
+CLEAR,2.5219739286477623,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,102.0
+CLEAR,2.206073611498126,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,103.0
+CLEAR,1.9368450456076987,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,104.0
+CLEAR,1.7184289400294537,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,105.0
+CLEAR,1.554592248351391,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,106.0
+CLEAR,1.4557972253252949,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,107.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,108.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,109.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,110.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,111.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,112.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,113.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,114.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,115.0
+CLEAR,1.4430107000469192,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,116.0
+CLEAR,1.470277452497596,fixed / Original_baseplate / right_distal_negative / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,0.0, /  /  / ,117.0
+CLEAR,1.5630409629513837,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,118.0
+CLEAR,1.691581140557633,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,119.0
+CLEAR,1.8533827958616131,fixed / Original_baseplate / left_distal_positive / cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,0.0, /  /  / ,120.0

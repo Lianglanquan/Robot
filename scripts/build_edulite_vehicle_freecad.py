@@ -64,8 +64,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def mirror_x(shape: Any) -> Any:
-    result = shape.copy()
-    result.mirror(FreeCAD.Vector(), FreeCAD.Vector(1.0, 0.0, 0.0))
+    result = shape.mirror(FreeCAD.Vector(), FreeCAD.Vector(1.0, 0.0, 0.0))
     if not result.isValid():
         raise ValueError("x-mirrored part is invalid")
     return result
@@ -329,7 +328,13 @@ def main() -> None:
     # hole clock in global y.  Mirror the bracket body in x, but cut that
     # reflected four-hole pattern explicitly.
     right_bracket = mirror_x(design.build_bracket(rear_pattern_mirror_y=True))
+    if left_bracket.BoundBox.XMax >= 0.0 or right_bracket.BoundBox.XMin <= 0.0:
+        raise ValueError("left and right brackets are not on opposite chassis sides")
     brackets = {"left": left_bracket, "right": right_bracket}
+    bracket_feet = {
+        "left": design.build_bracket_foot(),
+        "right": mirror_x(design.build_bracket_foot()),
+    }
     fixed_screws = {
         **{f"left_{key}": value for key, value in base_screws("left").items()},
         **{f"right_{key}": value for key, value in base_screws("right").items()},
@@ -406,6 +411,31 @@ def main() -> None:
             if abs(point[1] - axis_z) < EDULITE_REAR_PATTERN_PCD_MM / 2.0 + 1.0
         }
         motor_rear_errors[group_name] = maximum_center_error(expected, observed)
+
+    motor_foot_clearances = {
+        group_name: min(
+            float(bracket_feet[side].distToShape(shape)[0])
+            for shape in group.values()
+        )
+        for group_name, group in motor_groups.items()
+        for side in ("left" if "left" in group_name else "right",)
+    }
+    motor_rear_face_x_errors = {
+        group_name: abs(
+            (
+                max(float(shape.BoundBox.XMax) for shape in group.values())
+                if side == "left"
+                else min(float(shape.BoundBox.XMin) for shape in group.values())
+            )
+            - (
+                design.BRACKET_REAR_FACE_X_MM
+                if side == "left"
+                else -design.BRACKET_REAR_FACE_X_MM
+            )
+        )
+        for group_name, group in motor_groups.items()
+        for side in ("left" if "left" in group_name else "right",)
+    }
 
     output_paths = {
         "left_bracket": args.output_dir / "edulite_left_shared_bracket.step",
@@ -494,6 +524,16 @@ def main() -> None:
                 "invalid_features": reimport_invalid,
                 "non_single_solid_features": reimport_non_single,
             },
+            "bracket_x_bounds_mm": {
+                "left": [
+                    float(left_bracket.BoundBox.XMin),
+                    float(left_bracket.BoundBox.XMax),
+                ],
+                "right": [
+                    float(right_bracket.BoundBox.XMin),
+                    float(right_bracket.BoundBox.XMax),
+                ],
+            },
         },
         "connections": {
             "bracket_to_baseplate": {
@@ -507,6 +547,7 @@ def main() -> None:
                 "fastener_count": 16,
                 "thread_engagement_mm": MOTOR_M3_THREAD_ENGAGEMENT_MM,
                 "hole_center_max_error_mm": motor_rear_errors,
+                "mating_face_x_max_error_mm": motor_rear_face_x_errors,
                 "state": "DEFINED",
             },
             "motor_output_to_direct_link": {
@@ -524,6 +565,30 @@ def main() -> None:
             "output_interface_common_volume_mm3": output_common,
             "output_rotor_alignment_deg": rotor_alignment,
             "new_part_connection_graph_reaches_baseplate": True,
+        },
+        "assembly_readiness": {
+            "motor_body_to_foot_minimum_clearance_mm": motor_foot_clearances,
+            "base_tapped_hole_minimum_edge_ligament_mm": 3.0,
+            "assembly_sequence": [
+                "fasten each EduLite rear face to its side bracket",
+                "fasten each bracket to the original baseplate from below",
+                "fasten the direct and offset active-link stacks from outboard",
+                "connect the unchanged distal links and wheel assemblies",
+            ],
+            "tool_access_basis": (
+                "rear screws are installed before the bracket reaches the baseplate; "
+                "base screws remain accessible from below; output screws remain "
+                "accessible from outboard"
+            ),
+            "output_screw_bottoming_margin_mm": {
+                "M4x8_direct_nominal": 0.0,
+                "M4x14_offset_nominal": 0.0,
+            },
+            "output_screw_release_gate": (
+                "measure actual under-head screw length and usable EL05 thread depth "
+                "on first hardware; add a thin shim washer if needed"
+            ),
+            "state": "GEOMETRICALLY_ASSEMBLABLE_NOT_PRODUCTION_RELEASED",
         },
         "fastener_bill": {
             "M3x10_base": 16,

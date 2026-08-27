@@ -1,0 +1,39 @@
+l0_mm,group_a,entity_a,group_b,entity_b,bbox_lower_bound_mm,distance_mm,common_volume_mm3
+70.0,fixed,EduLite_left_upper_product,left_distal_positive,小腿004,0.0,0.9151696463916381,0.0
+70.0,fixed,EduLite_right_lower_product,right_distal_negative,小腿010,0.0,0.9151696465516213,0.0
+71.0,fixed,EduLite_left_upper_product,left_distal_positive,小腿004,0.0,1.6079726719694858,0.0
+71.0,fixed,EduLite_right_lower_product,right_distal_negative,小腿010,0.0,1.607972672134513,0.0
+104.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.9368450456847264,0.0
+104.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.9368450456076987,0.0
+105.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.7460034031021718,0.0
+105.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.7184289400294537,0.0
+106.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.5858902230606466,0.0
+106.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.554592248351391,0.0
+107.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4794406065034407,0.0
+107.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4557972253252949,0.0
+108.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+108.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.443039500395965,0.0
+109.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+109.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+110.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+110.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+111.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+111.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+112.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+112.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+113.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+113.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+114.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+114.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+115.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+115.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+116.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4430107000469192,0.0
+116.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.4430107000470755,0.0
+117.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.4718517930098487,0.0
+117.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.470277452497596,0.0
+118.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.5630409629513837,0.0
+118.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.5630409629962176,0.0
+119.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.691581140557633,0.0
+119.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.6915811406169357,0.0
+120.0,fixed,Original_baseplate,left_distal_positive,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C001,1.3999999999999915,1.8533827958616131,0.0
+120.0,fixed,Original_baseplate,right_distal_negative,cross recessed pan head screws gb_GB_CROSS_SCREWS_TYPE1 M4X16-16  H type-C003,1.4000000000001336,1.8533827959345843,0.0

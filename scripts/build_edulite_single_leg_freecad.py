@@ -22,6 +22,7 @@ import analyze_mechanical_envelope_freecad as envelope  # noqa: E402
 from src.edulite_joint import (  # noqa: E402
     ACTIVE_AXIS_Z_MM,
     BASE_M3_TAPPED_DIAMETER_MM,
+    BRACKET_FOOT_X_MM,
     BRACKET_FOOT_Y_MM,
     BRACKET_PLATE_THICKNESS_MM,
     BRACKET_PLATE_Y_MM,
@@ -52,7 +53,6 @@ EDULITE_STEP_SHA256 = (
 )
 OUTPUT_FACE_LOCAL_MM = 39.75
 REAR_BOLT_CLEARANCE_DIAMETER_MM = 3.4
-FOOT_X_MM = (-60.0, -8.0)
 GUSSET_Z_MM = ((-58.0, -54.0), (-2.0, 2.0), (54.0, 58.0))
 OUTPUT_ROTOR_LABELS = {
     "000_1-4238_1_1",
@@ -182,12 +182,25 @@ def triangular_gusset(z_min: float, z_max: float) -> Any:
     wire = Part.makePolygon(
         [
             FreeCAD.Vector(plate_inner_x, BRACKET_FOOT_Y_MM[1], z_min),
-            FreeCAD.Vector(FOOT_X_MM[1], BRACKET_FOOT_Y_MM[1], z_min),
+            FreeCAD.Vector(
+                BRACKET_FOOT_X_MM[1], BRACKET_FOOT_Y_MM[1], z_min
+            ),
             FreeCAD.Vector(plate_inner_x, 24.0, z_min),
             FreeCAD.Vector(plate_inner_x, BRACKET_FOOT_Y_MM[1], z_min),
         ]
     )
     return Part.Face(wire).extrude(FreeCAD.Vector(0.0, 0.0, z_max - z_min))
+
+
+def build_bracket_foot() -> Any:
+    return Part.makeBox(
+        BRACKET_FOOT_X_MM[1] - BRACKET_FOOT_X_MM[0],
+        BRACKET_FOOT_Y_MM[1] - BRACKET_FOOT_Y_MM[0],
+        BRACKET_Z_MM[1] - BRACKET_Z_MM[0],
+        FreeCAD.Vector(
+            BRACKET_FOOT_X_MM[0], BRACKET_FOOT_Y_MM[0], BRACKET_Z_MM[0]
+        ),
+    )
 
 
 def build_bracket(*, rear_pattern_mirror_y: bool = False) -> Any:
@@ -201,12 +214,7 @@ def build_bracket(*, rear_pattern_mirror_y: bool = False) -> Any:
             BRACKET_Z_MM[0],
         ),
     )
-    foot = Part.makeBox(
-        FOOT_X_MM[1] - FOOT_X_MM[0],
-        BRACKET_FOOT_Y_MM[1] - BRACKET_FOOT_Y_MM[0],
-        BRACKET_Z_MM[1] - BRACKET_Z_MM[0],
-        FreeCAD.Vector(FOOT_X_MM[0], BRACKET_FOOT_Y_MM[0], BRACKET_Z_MM[0]),
-    )
+    foot = build_bracket_foot()
     bracket = plate.fuse(foot)
     for z_min, z_max in GUSSET_Z_MM:
         bracket = bracket.fuse(triangular_gusset(z_min, z_max))
@@ -417,6 +425,7 @@ def main() -> None:
     }
     placed = envelope.place_groups(source_groups, reference, args.pose_mm)
     bracket = build_bracket()
+    bracket_foot = build_bracket_foot()
     baseplate = features["底板"]
 
     direct_link = placed["left_proximal_negative"]["大腿_EduLite"]
@@ -577,6 +586,16 @@ def main() -> None:
             "motor_to_link_common_volume_mm3": motor_link_volume,
             "motor_to_link_overlap_details": motor_link_details,
             "bracket_to_motor_common_volume_mm3": bracket_motor_volume,
+            "motor_to_foot_minimum_clearance_mm": {
+                "lower": minimum_distance(
+                    bracket_foot,
+                    list(edulite_groups["edulite_left_negative"].values()),
+                ),
+                "upper": minimum_distance(
+                    bracket_foot,
+                    list(edulite_groups["edulite_left_positive"].values()),
+                ),
+            },
             "bracket_to_baseplate_common_volume_mm3": common_volume(
                 bracket, baseplate
             ),

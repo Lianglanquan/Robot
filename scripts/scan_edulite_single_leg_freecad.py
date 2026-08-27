@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan the custom EduLite single-leg module over the 70--120 mm path."""
+"""Scan the two-sided EduLite structure over the 70--120 mm path."""
 
 import argparse
 import csv
@@ -27,15 +27,21 @@ from src.edulite_joint import (  # noqa: E402
 )
 
 STANDARD_ADJACENT_GROUPS = {
-    frozenset(("left_proximal_negative", "left_distal_negative")),
-    frozenset(("left_proximal_positive", "left_distal_positive")),
-    frozenset(("left_distal_negative", "left_distal_positive")),
-    frozenset(("left_distal_negative", "left_wheel")),
-    frozenset(("left_distal_positive", "left_wheel")),
+    pair
+    for side in ("left", "right")
+    for pair in (
+        frozenset((f"{side}_proximal_negative", f"{side}_distal_negative")),
+        frozenset((f"{side}_proximal_positive", f"{side}_distal_positive")),
+        frozenset((f"{side}_distal_negative", f"{side}_distal_positive")),
+        frozenset((f"{side}_distal_negative", f"{side}_wheel")),
+        frozenset((f"{side}_distal_positive", f"{side}_wheel")),
+    )
 }
 OWN_MOTOR_GROUP = {
-    "EduLite_lower_product": "left_proximal_negative",
-    "EduLite_upper_product": "left_proximal_positive",
+    "EduLite_left_lower_product": "left_proximal_negative",
+    "EduLite_left_upper_product": "left_proximal_positive",
+    "EduLite_right_lower_product": "right_proximal_negative",
+    "EduLite_right_upper_product": "right_proximal_positive",
 }
 PAIR_FIELDS = (
     "l0_mm",
@@ -63,7 +69,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=PROJECT_ROOT / "artifacts" / "edulite_joint_module" / "scan_70_120",
+        default=PROJECT_ROOT / "artifacts" / "edulite_vehicle" / "scan_70_120",
     )
     parser.add_argument("--start-mm", type=float, default=70.0)
     parser.add_argument("--stop-mm", type=float, default=120.0)
@@ -185,6 +191,15 @@ def main() -> None:
         "大腿001_EduLite": design.rebuild_output_hub(
             features["大腿001"], reference["pivots_yz_mm"]["e"]
         ),
+        "大腿002_EduLite": design.rebuild_output_hub(
+            features["大腿002"], reference["pivots_yz_mm"]["e"]
+        ),
+        "大腿垫高001_EduLite": design.rebuild_output_hub(
+            features["大腿垫高001"], reference["pivots_yz_mm"]["a"]
+        ),
+        "大腿003_EduLite": design.rebuild_output_hub(
+            features["大腿003"], reference["pivots_yz_mm"]["a"]
+        ),
     }
     source_groups = {
         name: {label: features[label] for label in labels}
@@ -194,6 +209,13 @@ def main() -> None:
     source_groups["left_proximal_positive"] = {
         "大腿垫高_EduLite": rebuilt["大腿垫高_EduLite"],
         "大腿001_EduLite": rebuilt["大腿001_EduLite"],
+    }
+    source_groups["right_proximal_positive"] = {
+        "大腿002_EduLite": rebuilt["大腿002_EduLite"]
+    }
+    source_groups["right_proximal_negative"] = {
+        "大腿垫高001_EduLite": rebuilt["大腿垫高001_EduLite"],
+        "大腿003_EduLite": rebuilt["大腿003_EduLite"],
     }
     direct_screws = vehicle.output_screws(
         rebuilt["大腿_EduLite"],
@@ -213,7 +235,30 @@ def main() -> None:
     source_groups["left_proximal_positive"]["M4_output_screws"] = Part.makeCompound(
         list(offset_screws.values())
     )
-    bracket = design.build_bracket()
+    right_direct_screws = vehicle.output_screws(
+        rebuilt["大腿002_EduLite"],
+        reference["pivots_yz_mm"]["e"],
+        "right",
+        DIRECT_OUTPUT_M4_SCREW_LENGTH_MM,
+    )
+    right_offset_screws = vehicle.output_screws(
+        rebuilt["大腿003_EduLite"],
+        reference["pivots_yz_mm"]["a"],
+        "right",
+        OFFSET_OUTPUT_M4_SCREW_LENGTH_MM,
+    )
+    source_groups["right_proximal_positive"]["M4_output_screws"] = (
+        Part.makeCompound(list(right_direct_screws.values()))
+    )
+    source_groups["right_proximal_negative"]["M4_output_screws"] = (
+        Part.makeCompound(list(right_offset_screws.values()))
+    )
+    brackets = {
+        "left": design.build_bracket(),
+        "right": vehicle.mirror_x(
+            design.build_bracket(rear_pattern_mirror_y=True)
+        ),
+    }
     lengths = envelope.scan_lengths(args.start_mm, args.stop_mm, args.step_mm)
     summaries: list[dict[str, Any]] = []
     pair_events: list[dict[str, Any]] = []
@@ -223,43 +268,62 @@ def main() -> None:
         envelope.validate_kinematic_placement(features, reference, l0_mm)
         placed = envelope.place_groups(source_groups, reference, l0_mm)
         target = envelope.target_geometry(l0_mm, reference["pivots_yz_mm"]["a"][0])
-        lower_group = copy_group(base_motors["edulite_left_negative"])
-        upper_group = copy_group(base_motors["edulite_left_positive"])
-        direct_link = placed["left_proximal_negative"]["大腿_EduLite"]
-        offset_stack = Part.makeCompound(
-            [
-                placed["left_proximal_positive"]["大腿垫高_EduLite"],
-                placed["left_proximal_positive"]["大腿001_EduLite"],
-            ]
-        )
-        lower_rotation = design.align_output_rotor(
-            lower_group, direct_link, target["a"]
-        )
-        upper_rotation = design.align_output_rotor(
-            upper_group, offset_stack, target["e"]
-        )
-        lower_motor = Part.makeCompound(list(lower_group.values()))
-        upper_motor = Part.makeCompound(list(upper_group.values()))
-        fit = {
-            "l0_mm": l0_mm,
-            "lower_rotor_deg": lower_rotation,
-            "upper_rotor_deg": upper_rotation,
-            "lower_common_volume_mm3": design.common_volume(lower_motor, direct_link),
-            "upper_common_volume_mm3": design.common_volume(upper_motor, offset_stack),
+        motor_links = {
+            "left_lower": (
+                "edulite_left_negative",
+                placed["left_proximal_negative"]["大腿_EduLite"],
+                target["a"],
+            ),
+            "left_upper": (
+                "edulite_left_positive",
+                Part.makeCompound(
+                    [
+                        placed["left_proximal_positive"]["大腿垫高_EduLite"],
+                        placed["left_proximal_positive"]["大腿001_EduLite"],
+                    ]
+                ),
+                target["e"],
+            ),
+            "right_lower": (
+                "edulite_right_negative",
+                Part.makeCompound(
+                    [
+                        placed["right_proximal_negative"]["大腿垫高001_EduLite"],
+                        placed["right_proximal_negative"]["大腿003_EduLite"],
+                    ]
+                ),
+                target["a"],
+            ),
+            "right_upper": (
+                "edulite_right_positive",
+                placed["right_proximal_positive"]["大腿002_EduLite"],
+                target["e"],
+            ),
         }
+        fit: dict[str, Any] = {"l0_mm": l0_mm}
+        motors = {}
+        for name, (motor_group_name, link_stack, pivot) in motor_links.items():
+            motor_group = copy_group(base_motors[motor_group_name])
+            fit[f"{name}_rotor_deg"] = design.align_output_rotor(
+                motor_group, link_stack, pivot
+            )
+            motor = Part.makeCompound(list(motor_group.values()))
+            motors[name] = motor
+            fit[f"{name}_common_volume_mm3"] = design.common_volume(
+                motor, link_stack
+            )
         output_fit.append(fit)
         groups = {
             "fixed": {
                 "Original_baseplate": features["底板"],
-                "EduLite_left_shared_bracket": bracket,
-                "EduLite_lower_product": lower_motor,
-                "EduLite_upper_product": upper_motor,
+                "EduLite_left_shared_bracket": brackets["left"],
+                "EduLite_right_shared_bracket": brackets["right"],
+                **{
+                    f"EduLite_{name}_product": motor
+                    for name, motor in motors.items()
+                },
             },
-            **{
-                name: entities
-                for name, entities in placed.items()
-                if name.startswith("left_")
-            },
+            **placed,
         }
         summary, events = scan_pose(groups, args.near_mm)
         summary["l0_mm"] = l0_mm
@@ -301,13 +365,18 @@ def main() -> None:
             "CLEAR"
             if all(row["state"] == "CLEAR" for row in summaries)
             and all(
-                row["lower_common_volume_mm3"] <= 1e-5
-                and row["upper_common_volume_mm3"] <= 1e-5
+                all(
+                    value <= 1e-5
+                    for key, value in row.items()
+                    if key.endswith("_common_volume_mm3")
+                )
                 for row in output_fit
             )
             else "NOT_CLEAR"
         ),
-        "scope": "one left five-bar leg; internal vehicle packaging excluded",
+        "scope": (
+            "both five-bar legs and four EduLite joints; internal packaging excluded"
+        ),
         "scan": {
             "start_mm": args.start_mm,
             "stop_mm": args.stop_mm,
@@ -319,8 +388,9 @@ def main() -> None:
             "minimum_pair": minimum_row["minimum_pair"],
             "maximum_output_fit_common_volume_mm3": max(
                 max(
-                    row["lower_common_volume_mm3"],
-                    row["upper_common_volume_mm3"],
+                    value
+                    for key, value in row.items()
+                    if key.endswith("_common_volume_mm3")
                 )
                 for row in output_fit
             ),
@@ -333,7 +403,6 @@ def main() -> None:
         "open_items": [
             "bracket stiffness and fastener loads",
             "connector orientation and cable keep-out",
-            "battery and controller packaging",
         ],
     }
     audit_path = args.output_dir / "scan_audit.json"
