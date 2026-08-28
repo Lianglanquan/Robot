@@ -12,6 +12,8 @@ FloatArray = NDArray[np.float64]
 REFERENCE_LEG_MM = 90.0
 HIP_CAD_Y_MM = 34.0
 MODEL_ROOT_Z_M = 0.120
+WHEEL_RADIUS_M = 0.0257
+WHEEL_CENTER_X_M = 0.083
 
 
 @dataclass(frozen=True)
@@ -158,6 +160,8 @@ def _fixed_visual_geoms() -> str:
 
 
 def _leg_xml(side: str, reference: dict[str, Frame]) -> str:
+    side_x = -WHEEL_CENTER_X_M if side == "left" else WHEEL_CENTER_X_M
+    link_x = -0.070 if side == "left" else 0.070
     proximal_negative = reference["proximal_negative"]
     proximal_positive = reference["proximal_positive"]
     distal_negative = relative_frame(reference["distal_negative"], proximal_negative)
@@ -169,45 +173,52 @@ def _leg_xml(side: str, reference: dict[str, Frame]) -> str:
     return f"""
       <body name="{side}_proximal_negative" pos="{_numbers(proximal_negative.origin_m)}"
             quat="{_quaternion_x(proximal_negative.angle_x_rad)}">
-        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="{link_x:g} 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
         <joint name="{side}_hip_negative" type="hinge" axis="1 0 0"
                range="-0.8 0.8" damping="0.05"/>
         <geom class="visual" mesh="{side}_proximal_negative" material="active_link"/>
         <geom class="visual" mesh="edulite_{side}_negative_rotor" material="rotor"/>
-        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <geom class="collision" type="capsule"
+              fromto="{link_x:g} 0 0 {link_x:g} 0.05 0" size="0.009"/>
         <body name="{side}_distal_negative" pos="{_numbers(distal_negative.origin_m)}"
               quat="{_quaternion_x(distal_negative.angle_x_rad)}">
-          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <inertial pos="{link_x:g} 0.0525 0" mass="0.04"
+                    diaginertia="4e-5 5e-6 4e-5"/>
           <joint name="{side}_knee_negative" type="hinge" axis="1 0 0"
-                 range="-0.5 0.5" damping="0.03"/>
+                 range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="{side}_distal_negative" material="passive_link"/>
-          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <geom class="collision" type="capsule"
+                fromto="{link_x:g} 0 0 {link_x:g} 0.105 0" size="0.007"/>
           <body name="{side}_wheel" pos="{_numbers(wheel.origin_m)}"
                 quat="{_quaternion_x(wheel_relative_angle)}">
-            <inertial pos="0 0 0" mass="0.12" diaginertia="4e-5 7e-5 7e-5"/>
+            <inertial pos="{side_x:g} 0 0" mass="0.12"
+                      diaginertia="4e-5 7e-5 7e-5"/>
             <joint name="{side}_wheel_spin" type="hinge" axis="1 0 0" damping="0.01"/>
             <geom class="visual" mesh="{side}_wheel" material="tire"/>
-            <geom class="collision" type="cylinder" size="0.0257 0.023"
-                  quat="0.70710678 0.70710678 0 0"/>
+            <geom class="collision" type="cylinder" pos="{side_x:g} 0 0"
+                  size="0.0257 0.023" quat="0.70710678 0 0.70710678 0"/>
             <site name="{side}_wheel_center" size="0.003" rgba="0.1 0.8 1 0.8"/>
           </body>
         </body>
       </body>
       <body name="{side}_proximal_positive" pos="{_numbers(proximal_positive.origin_m)}"
             quat="{_quaternion_x(proximal_positive.angle_x_rad)}">
-        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="{link_x:g} 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
         <joint name="{side}_hip_positive" type="hinge" axis="1 0 0"
                range="-0.8 0.8" damping="0.05"/>
         <geom class="visual" mesh="{side}_proximal_positive" material="active_link"/>
         <geom class="visual" mesh="edulite_{side}_positive_rotor" material="rotor"/>
-        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <geom class="collision" type="capsule"
+              fromto="{link_x:g} 0 0 {link_x:g} 0.05 0" size="0.009"/>
         <body name="{side}_distal_positive" pos="{_numbers(distal_positive.origin_m)}"
               quat="{_quaternion_x(distal_positive.angle_x_rad)}">
-          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <inertial pos="{link_x:g} 0.0525 0" mass="0.04"
+                    diaginertia="4e-5 5e-6 4e-5"/>
           <joint name="{side}_knee_positive" type="hinge" axis="1 0 0"
-                 range="-0.5 0.5" damping="0.03"/>
+                 range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="{side}_distal_positive" material="passive_link"/>
-          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <geom class="collision" type="capsule"
+                fromto="{link_x:g} 0 0 {link_x:g} 0.105 0" size="0.007"/>
           <site name="{side}_closure" pos="0 0.105 0" size="0.003"
                 rgba="1 0.45 0.1 0.8"/>
         </body>

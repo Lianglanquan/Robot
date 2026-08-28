@@ -1,0 +1,288 @@
+{
+  "evidence_scope": {
+    "manufacturer_values": {
+      "EL05_unit_mass_kg": 0.242,
+      "EL05_peak_torque_nm": 6.0,
+      "QD4310_unit_mass_kg": 0.127,
+      "QD4310_peak_torque_nm": 0.3
+    },
+    "model_assumptions": [
+      "total robot mass is parameterized at 2.0, 2.3 and 2.5 kg",
+      "unmeasured fixed mass is lumped into the chassis",
+      "link, wheel, COM and inertia values are engineering estimates",
+      "actuators are ideal torque sources within peak torque clamps"
+    ]
+  },
+  "mass_budgets": {
+    "2.0": {
+      "total_mass_kg": 2.0,
+      "chassis_lumped_mass_kg": 1.286,
+      "unresolved_fixed_mass_kg": 0.31800000000000006,
+      "active_links_total_kg": 0.2,
+      "distal_links_total_kg": 0.16,
+      "wheel_assemblies_total_kg": 0.354,
+      "chassis_com_m": [
+        0.0,
+        0.0,
+        0.025
+      ],
+      "chassis_inertia_kg_m2": [
+        0.0030140625,
+        0.003346279166666667,
+        0.005154716666666667
+      ]
+    },
+    "2.3": {
+      "total_mass_kg": 2.3,
+      "chassis_lumped_mass_kg": 1.5859999999999999,
+      "unresolved_fixed_mass_kg": 0.6179999999999999,
+      "active_links_total_kg": 0.2,
+      "distal_links_total_kg": 0.16,
+      "wheel_assemblies_total_kg": 0.354,
+      "chassis_com_m": [
+        0.0,
+        0.0,
+        0.025
+      ],
+      "chassis_inertia_kg_m2": [
+        0.0037171874999999996,
+        0.004126904166666666,
+        0.006357216666666666
+      ]
+    },
+    "2.5": {
+      "total_mass_kg": 2.5,
+      "chassis_lumped_mass_kg": 1.7859999999999996,
+      "unresolved_fixed_mass_kg": 0.8179999999999996,
+      "active_links_total_kg": 0.2,
+      "distal_links_total_kg": 0.16,
+      "wheel_assemblies_total_kg": 0.354,
+      "chassis_com_m": [
+        0.0,
+        0.0,
+        0.025
+      ],
+      "chassis_inertia_kg_m2": [
+        0.004185937499999999,
+        0.004647320833333333,
+        0.007158883333333332
+      ]
+    }
+  },
+  "whole_robot_mass_properties_at_90mm": {
+    "2.0": {
+      "mass_kg": 2.0,
+      "com_m": [
+        -2.168404344971009e-19,
+        1.04934528948053e-12,
+        0.08874800989434063
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.006133492126585737,
+          -1.3552527156068805e-20,
+          -4.0657581468206416e-20
+        ],
+        [
+          -1.3552527156068805e-20,
+          0.0097578066774762,
+          1.3231832011908855e-13
+        ],
+        [
+          -4.0657581468206416e-20,
+          1.3231832011908855e-13,
+          0.010401514783121546
+        ]
+      ]
+    },
+    "2.3": {
+      "mass_kg": 2.3000000000000003,
+      "com_m": [
+        -1.885568995626964e-19,
+        9.124741647656782e-13,
+        0.09108957382116577
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.006920688591478004,
+          2.710505431213761e-20,
+          9.486769009248164e-20
+        ],
+        [
+          2.710505431213761e-20,
+          0.010622503142368464,
+          1.3723254778104203e-13
+        ],
+        [
+          9.486769009248164e-20,
+          1.3723254778104203e-13,
+          0.011604014783121546
+        ]
+      ]
+    },
+    "2.5": {
+      "mass_kg": 2.5,
+      "com_m": [
+        -1.7347234759768072e-19,
+        8.394762315844239e-13,
+        0.09233840791547251
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.007434276706087212,
+          1.3552527156068805e-20,
+          0.0
+        ],
+        [
+          1.3552527156068805e-20,
+          0.011187757922977675,
+          1.398534947246767e-13
+        ],
+        [
+          0.0,
+          1.398534947246767e-13,
+          0.012405681449121547
+        ]
+      ]
+    }
+  },
+  "2p5kg_posture_mass_properties": {
+    "70_mm": {
+      "mass_kg": 2.5,
+      "com_m": [
+        6.938893903907229e-19,
+        6.172449704133776e-13,
+        0.07697814282987489
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.006570110399691914,
+          -1.3552527156068805e-20,
+          -6.098637220230962e-20
+        ],
+        [
+          -1.3552527156068805e-20,
+          0.01025418705856646,
+          7.912790702616773e-14
+        ],
+        [
+          -6.098637220230962e-20,
+          7.912790702616773e-14,
+          0.012475086007137454
+        ]
+      ]
+    },
+    "90_mm": {
+      "mass_kg": 2.5,
+      "com_m": [
+        -1.7347234759768072e-19,
+        8.394762315844239e-13,
+        0.09233840791547251
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.007434276706087212,
+          1.3552527156068805e-20,
+          0.0
+        ],
+        [
+          1.3552527156068805e-20,
+          0.011187757922977675,
+          1.398534947246767e-13
+        ],
+        [
+          0.0,
+          1.398534947246767e-13,
+          0.012405681449121547
+        ]
+      ]
+    },
+    "120_mm": {
+      "mass_kg": 2.5,
+      "com_m": [
+        -1.2143064331837649e-18,
+        1.155894824300674e-12,
+        0.11579494945011963
+      ],
+      "inertia_at_com_kg_m2": [
+        [
+          0.009160580438797484,
+          -6.776263578034403e-20,
+          -5.421010862427522e-20
+        ],
+        [
+          -6.776263578034403e-20,
+          0.013149894341373682,
+          2.603506399725432e-13
+        ],
+        [
+          -5.421010862427522e-20,
+          2.603506399725432e-13,
+          0.012169848763435806
+        ]
+      ]
+    }
+  },
+  "balance_3deg": {
+    "final_pitch_deg": -0.06088623243357638,
+    "final_position_y_m": -0.00273789287214012,
+    "final_leg_length_mm": 89.39162281476688,
+    "max_abs_pitch_deg": 3.0000000000000004,
+    "max_abs_hip_torque_nm": 0.3499298564204708,
+    "max_abs_wheel_torque_nm": 0.1780235837034216,
+    "contact_observed": true
+  },
+  "leg_length_hold": {
+    "70_mm": {
+      "final_pitch_deg": -0.019854173085025566,
+      "final_position_y_m": -0.0013844378844752923,
+      "final_leg_length_mm": 69.6194490018836,
+      "max_abs_pitch_deg": 0.02773783603584015,
+      "max_abs_hip_torque_nm": 0.24929553414252678,
+      "max_abs_wheel_torque_nm": 0.0015760928638974504,
+      "contact_observed": true
+    },
+    "90_mm": {
+      "final_pitch_deg": -0.014258309638055374,
+      "final_position_y_m": -0.001010613286211384,
+      "final_leg_length_mm": 89.39166870414775,
+      "max_abs_pitch_deg": 0.021047195288694066,
+      "max_abs_hip_torque_nm": 0.32576455994454817,
+      "max_abs_wheel_torque_nm": 0.002127861742029899,
+      "contact_observed": true
+    },
+    "120_mm": {
+      "final_pitch_deg": -0.010304213857164764,
+      "final_position_y_m": -0.0007382503606948085,
+      "final_leg_length_mm": 119.44870017020394,
+      "max_abs_pitch_deg": 0.015950941135555632,
+      "max_abs_hip_torque_nm": 0.3112038921212619,
+      "max_abs_wheel_torque_nm": 0.0032712735441649534,
+      "contact_observed": true
+    }
+  },
+  "drop_50mm": {
+    "final_pitch_deg": -0.010820435014675518,
+    "final_position_y_m": 0.0008595659645777682,
+    "final_leg_length_mm": 89.39167338350572,
+    "max_abs_pitch_deg": 2.0,
+    "max_abs_hip_torque_nm": 2.208338987102393,
+    "max_abs_wheel_torque_nm": 0.11868238913561441,
+    "contact_observed": true
+  },
+  "step_contact_scenes": {
+    "5_cm": {
+      "wheel_step_contact_observed": true,
+      "first_contact_time_s": 0.7320000000000005
+    },
+    "10_cm": {
+      "wheel_step_contact_observed": true,
+      "first_contact_time_s": 0.7320000000000005
+    },
+    "15_cm": {
+      "wheel_step_contact_observed": true,
+      "first_contact_time_s": 0.7320000000000005
+    }
+  },
+  "claim_boundary": "flat standing and a 50 mm vertical drop are controller/model checks; step-climbing capability has not yet been demonstrated"
+}

@@ -1,9 +1,10 @@
-<mujoco model="EduLite wheel-legged robot visual checkpoint">
+<mujoco model="EduLite wheel-legged robot dynamic 2.3 kg">
   <compiler angle="radian" autolimits="true" balanceinertia="true"/>
-  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.80665"/>
-  <size njmax="1000" nconmax="400"/>
+  <option timestep="0.001" integrator="implicitfast" cone="elliptic"
+          gravity="0 0 -9.80665" impratio="10"/>
+  <size njmax="2000" nconmax="500"/>
   <visual>
-    <global azimuth="135" elevation="-18" offwidth="720" offheight="540"/>
+    <global azimuth="135" elevation="-18" offwidth="960" offheight="720"/>
     <headlight ambient="0.35 0.35 0.35" diffuse="0.75 0.75 0.75"
                specular="0.25 0.25 0.25"/>
     <quality shadowsize="4096" offsamples="4"/>
@@ -11,9 +12,6 @@
   <default>
     <default class="visual">
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0"/>
-    </default>
-    <default class="collision">
-      <geom contype="0" conaffinity="0" group="3" density="0" rgba="0.2 0.7 1 0.12"/>
     </default>
   </default>
   <asset>
@@ -52,15 +50,23 @@
     <texture name="ground_tex" type="2d" builtin="checker" rgb1="0.16 0.18 0.22"
              rgb2="0.08 0.09 0.11" width="512" height="512"/>
     <material name="ground" texture="ground_tex" texrepeat="4 4"
-              reflectance="0.12" roughness="0.72"/>
+              reflectance="0.08" roughness="0.8"/>
+    <material name="step_mat" rgba="0.82 0.30 0.07 1" metallic="0.1" roughness="0.75"/>
   </asset>
   <worldbody>
     <light pos="0 -0.5 1.2" dir="0 0.4 -1" diffuse="0.9 0.88 0.84" castshadow="true"/>
     <light pos="-0.7 0.4 0.6" dir="0.7 -0.2 -0.5" diffuse="0.35 0.42 0.55"/>
-    <geom name="display_floor" type="plane" pos="0 0 -0.04" size="1.5 1.5 0.05"
-          material="ground" contype="0" conaffinity="0"/>
-    <body name="chassis" pos="0 0 0.12">
-      <inertial pos="0 0.005 0" mass="1.9" diaginertia="0.012 0.018 0.02"/>
+    <geom name="ground" type="plane" size="2 2 0.05" material="ground"
+          contype="1" conaffinity="1" condim="4" friction="1.0 0.02 0.001"/>
+    <geom name="step" type="box" pos="0 -0.38 -1" size="0.40 0.25 0.075"
+          material="step_mat" contype="1" conaffinity="1" condim="4"
+          rgba="0.82 0.30 0.07 0"
+          friction="1.0 0.02 0.001"/>
+    <body name="chassis" pos="0 0 0.0817">
+      <freejoint name="chassis_free"/>
+      <inertial pos="0 0 0.025"
+                mass="1.586"
+                diaginertia="0.0037171875 0.004126904167 0.006357216667"/>
       <geom class="visual" mesh="baseplate" material="carbon"/>
       <geom class="visual" mesh="left_bracket" material="bracket"/>
       <geom class="visual" mesh="right_bracket" material="bracket"/>
@@ -69,55 +75,73 @@
       <geom class="visual" mesh="edulite_left_positive_stator" material="motor"/>
       <geom class="visual" mesh="edulite_right_negative_stator" material="motor"/>
       <geom class="visual" mesh="edulite_right_positive_stator" material="motor"/>
+      <geom name="chassis_collision" type="box" pos="0 0 0.025"
+            size="0.08 0.075 0.0375" density="0"
+            contype="2" conaffinity="1" group="3" rgba="0.1 0.65 1 0.12"/>
+      <site name="imu" pos="0 0 0.04" size="0.004" rgba="0.2 1 0.3 0.8"/>
 
       <body name="left_proximal_negative" pos="0 -0.03 0.034"
             quat="0.1848511965 -0.9827665212 0 0">
-        <inertial pos="-0.07 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="-0.07 0.025 0" mass="0.05"
+                  diaginertia="1.176666667e-05 1.95e-06 1.101666667e-05"/>
         <joint name="left_hip_negative" type="hinge" axis="1 0 0"
-               range="-0.8 0.8" damping="0.05"/>
+               range="-0.8 0.8" damping="0.08" armature="0.00008"/>
         <geom class="visual" mesh="left_proximal_negative" material="active_link"/>
         <geom class="visual" mesh="edulite_left_negative_rotor" material="rotor"/>
-        <geom class="collision" type="capsule"
-              fromto="-0.07 0 0 -0.07 0.05 0" size="0.009"/>
+        <geom name="left_proximal_negative_collision" type="capsule"
+              fromto="-0.07 0 0 -0.07 0.05 0" size="0.009"
+              density="0" contype="2" conaffinity="1" group="3"
+              rgba="0.1 0.65 1 0.15"/>
         <body name="left_distal_negative" pos="0 0.05 6.938893904e-18"
               quat="0.5334077329 0.8458582567 0 0">
           <inertial pos="-0.07 0.0525 0" mass="0.04"
-                    diaginertia="4e-5 5e-6 4e-5"/>
+                    diaginertia="3.740333333e-05 1.133333333e-06 3.723e-05"/>
           <joint name="left_knee_negative" type="hinge" axis="1 0 0"
                  range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="left_distal_negative" material="passive_link"/>
-          <geom class="collision" type="capsule"
-                fromto="-0.07 0 0 -0.07 0.105 0" size="0.007"/>
+          <geom name="left_distal_negative_collision" type="capsule"
+                fromto="-0.07 0 0 -0.07 0.105 0" size="0.007"
+                density="0" contype="2" conaffinity="1" group="3"
+                rgba="0.1 0.65 1 0.15"/>
           <body name="left_wheel" pos="0 0.105 0"
                 quat="0.929882234 0.3678573513 0 0">
-            <inertial pos="-0.083 0 0" mass="0.12"
-                      diaginertia="4e-5 7e-5 7e-5"/>
-            <joint name="left_wheel_spin" type="hinge" axis="1 0 0" damping="0.01"/>
+            <inertial pos="-0.083 0 0" mass="0.177"
+                      diaginertia="5.8453365e-05 6.04376825e-05 6.04376825e-05"/>
+            <joint name="left_wheel_spin" type="hinge" axis="1 0 0"
+                   damping="0.002" armature="0.00004"/>
             <geom class="visual" mesh="left_wheel" material="tire"/>
-            <geom class="collision" type="cylinder" pos="-0.083 0 0"
-                  size="0.0257 0.023" quat="0.70710678 0 0.70710678 0"/>
+            <geom name="left_wheel_collision" type="cylinder"
+                  pos="-0.083 0 0" size="0.0257 0.023"
+                  quat="0.70710678 0 0.70710678 0" contype="2" conaffinity="1"
+                  condim="4" friction="1.0 0.02 0.001" group="3"
+                  rgba="0.1 0.65 1 0.18"/>
             <site name="left_wheel_center" size="0.003" rgba="0.1 0.8 1 0.8"/>
           </body>
         </body>
       </body>
       <body name="left_proximal_positive" pos="0 0.03 0.034"
             quat="0.9827665212 -0.1848511965 0 0">
-        <inertial pos="-0.07 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="-0.07 0.025 0" mass="0.05"
+                  diaginertia="1.176666667e-05 1.95e-06 1.101666667e-05"/>
         <joint name="left_hip_positive" type="hinge" axis="1 0 0"
-               range="-0.8 0.8" damping="0.05"/>
+               range="-0.8 0.8" damping="0.08" armature="0.00008"/>
         <geom class="visual" mesh="left_proximal_positive" material="active_link"/>
         <geom class="visual" mesh="edulite_left_positive_rotor" material="rotor"/>
-        <geom class="collision" type="capsule"
-              fromto="-0.07 0 0 -0.07 0.05 0" size="0.009"/>
+        <geom name="left_proximal_positive_collision" type="capsule"
+              fromto="-0.07 0 0 -0.07 0.05 0" size="0.009"
+              density="0" contype="2" conaffinity="1" group="3"
+              rgba="0.1 0.65 1 0.15"/>
         <body name="left_distal_positive" pos="0 0.05 -3.469446952e-18"
               quat="0.5334077329 -0.8458582567 0 0">
           <inertial pos="-0.07 0.0525 0" mass="0.04"
-                    diaginertia="4e-5 5e-6 4e-5"/>
+                    diaginertia="3.740333333e-05 1.133333333e-06 3.723e-05"/>
           <joint name="left_knee_positive" type="hinge" axis="1 0 0"
                  range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="left_distal_positive" material="passive_link"/>
-          <geom class="collision" type="capsule"
-                fromto="-0.07 0 0 -0.07 0.105 0" size="0.007"/>
+          <geom name="left_distal_positive_collision" type="capsule"
+                fromto="-0.07 0 0 -0.07 0.105 0" size="0.007"
+                density="0" contype="2" conaffinity="1" group="3"
+                rgba="0.1 0.65 1 0.15"/>
           <site name="left_closure" pos="0 0.105 0" size="0.003"
                 rgba="1 0.45 0.1 0.8"/>
         </body>
@@ -125,67 +149,96 @@
 
       <body name="right_proximal_negative" pos="0 -0.03 0.034"
             quat="0.1848511965 -0.9827665212 0 0">
-        <inertial pos="0.07 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="0.07 0.025 0" mass="0.05"
+                  diaginertia="1.176666667e-05 1.95e-06 1.101666667e-05"/>
         <joint name="right_hip_negative" type="hinge" axis="1 0 0"
-               range="-0.8 0.8" damping="0.05"/>
+               range="-0.8 0.8" damping="0.08" armature="0.00008"/>
         <geom class="visual" mesh="right_proximal_negative" material="active_link"/>
         <geom class="visual" mesh="edulite_right_negative_rotor" material="rotor"/>
-        <geom class="collision" type="capsule"
-              fromto="0.07 0 0 0.07 0.05 0" size="0.009"/>
+        <geom name="right_proximal_negative_collision" type="capsule"
+              fromto="0.07 0 0 0.07 0.05 0" size="0.009"
+              density="0" contype="2" conaffinity="1" group="3"
+              rgba="0.1 0.65 1 0.15"/>
         <body name="right_distal_negative" pos="0 0.05 6.938893904e-18"
               quat="0.5334077329 0.8458582567 0 0">
           <inertial pos="0.07 0.0525 0" mass="0.04"
-                    diaginertia="4e-5 5e-6 4e-5"/>
+                    diaginertia="3.740333333e-05 1.133333333e-06 3.723e-05"/>
           <joint name="right_knee_negative" type="hinge" axis="1 0 0"
                  range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="right_distal_negative" material="passive_link"/>
-          <geom class="collision" type="capsule"
-                fromto="0.07 0 0 0.07 0.105 0" size="0.007"/>
+          <geom name="right_distal_negative_collision" type="capsule"
+                fromto="0.07 0 0 0.07 0.105 0" size="0.007"
+                density="0" contype="2" conaffinity="1" group="3"
+                rgba="0.1 0.65 1 0.15"/>
           <body name="right_wheel" pos="0 0.105 0"
                 quat="0.929882234 0.3678573513 0 0">
-            <inertial pos="0.083 0 0" mass="0.12"
-                      diaginertia="4e-5 7e-5 7e-5"/>
-            <joint name="right_wheel_spin" type="hinge" axis="1 0 0" damping="0.01"/>
+            <inertial pos="0.083 0 0" mass="0.177"
+                      diaginertia="5.8453365e-05 6.04376825e-05 6.04376825e-05"/>
+            <joint name="right_wheel_spin" type="hinge" axis="1 0 0"
+                   damping="0.002" armature="0.00004"/>
             <geom class="visual" mesh="right_wheel" material="tire"/>
-            <geom class="collision" type="cylinder" pos="0.083 0 0"
-                  size="0.0257 0.023" quat="0.70710678 0 0.70710678 0"/>
+            <geom name="right_wheel_collision" type="cylinder"
+                  pos="0.083 0 0" size="0.0257 0.023"
+                  quat="0.70710678 0 0.70710678 0" contype="2" conaffinity="1"
+                  condim="4" friction="1.0 0.02 0.001" group="3"
+                  rgba="0.1 0.65 1 0.18"/>
             <site name="right_wheel_center" size="0.003" rgba="0.1 0.8 1 0.8"/>
           </body>
         </body>
       </body>
       <body name="right_proximal_positive" pos="0 0.03 0.034"
             quat="0.9827665212 -0.1848511965 0 0">
-        <inertial pos="0.07 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <inertial pos="0.07 0.025 0" mass="0.05"
+                  diaginertia="1.176666667e-05 1.95e-06 1.101666667e-05"/>
         <joint name="right_hip_positive" type="hinge" axis="1 0 0"
-               range="-0.8 0.8" damping="0.05"/>
+               range="-0.8 0.8" damping="0.08" armature="0.00008"/>
         <geom class="visual" mesh="right_proximal_positive" material="active_link"/>
         <geom class="visual" mesh="edulite_right_positive_rotor" material="rotor"/>
-        <geom class="collision" type="capsule"
-              fromto="0.07 0 0 0.07 0.05 0" size="0.009"/>
+        <geom name="right_proximal_positive_collision" type="capsule"
+              fromto="0.07 0 0 0.07 0.05 0" size="0.009"
+              density="0" contype="2" conaffinity="1" group="3"
+              rgba="0.1 0.65 1 0.15"/>
         <body name="right_distal_positive" pos="0 0.05 -3.469446952e-18"
               quat="0.5334077329 -0.8458582567 0 0">
           <inertial pos="0.07 0.0525 0" mass="0.04"
-                    diaginertia="4e-5 5e-6 4e-5"/>
+                    diaginertia="3.740333333e-05 1.133333333e-06 3.723e-05"/>
           <joint name="right_knee_positive" type="hinge" axis="1 0 0"
                  range="-0.8 0.8" damping="0.03"/>
           <geom class="visual" mesh="right_distal_positive" material="passive_link"/>
-          <geom class="collision" type="capsule"
-                fromto="0.07 0 0 0.07 0.105 0" size="0.007"/>
+          <geom name="right_distal_positive_collision" type="capsule"
+                fromto="0.07 0 0 0.07 0.105 0" size="0.007"
+                density="0" contype="2" conaffinity="1" group="3"
+                rgba="0.1 0.65 1 0.15"/>
           <site name="right_closure" pos="0 0.105 0" size="0.003"
                 rgba="1 0.45 0.1 0.8"/>
         </body>
       </body>
     </body>
-    <camera name="overview" pos="0.31 -0.31 0.235"
-            xyaxes="0.707 0.707 0 -0.28 0.28 0.918"/>
-    <camera name="front" pos="0.38 0 0.14" xyaxes="0 1 0 -0.2 0 0.98"/>
-    <camera name="side" pos="0 -0.40 0.15" xyaxes="1 0 0 0 0.2 0.98"/>
+    <camera name="overview" mode="trackcom" target="chassis" pos="0.33 -0.42 0.26"
+            xyaxes="0.79 0.61 0 -0.22 0.29 0.93"/>
+    <camera name="side" mode="trackcom" target="chassis" pos="0 -0.48 0.17"
+            xyaxes="1 0 0 0 0.22 0.98"/>
   </worldbody>
   <equality>
-    <connect name="left_fivebar_closure" site1="left_closure" site2="left_wheel_center"
-             solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <connect name="left_fivebar_closure" site1="left_closure"
+             site2="left_wheel_center" solref="0.003 1"
+             solimp="0.97 0.995 0.0005"/>
     <connect name="right_fivebar_closure" site1="right_closure"
-             site2="right_wheel_center"
-             solref="0.004 1" solimp="0.95 0.99 0.001"/>
+             site2="right_wheel_center" solref="0.003 1"
+             solimp="0.97 0.995 0.0005"/>
   </equality>
+  <actuator>
+    <motor name="left_hip_negative_motor" joint="left_hip_negative"
+           ctrlrange="-6 6" forcerange="-6 6"/>
+    <motor name="left_hip_positive_motor" joint="left_hip_positive"
+           ctrlrange="-6 6" forcerange="-6 6"/>
+    <motor name="right_hip_negative_motor" joint="right_hip_negative"
+           ctrlrange="-6 6" forcerange="-6 6"/>
+    <motor name="right_hip_positive_motor" joint="right_hip_positive"
+           ctrlrange="-6 6" forcerange="-6 6"/>
+    <motor name="left_wheel_motor" joint="left_wheel_spin"
+           ctrlrange="-0.3 0.3" forcerange="-0.3 0.3"/>
+    <motor name="right_wheel_motor" joint="right_wheel_spin"
+           ctrlrange="-0.3 0.3" forcerange="-0.3 0.3"/>
+  </actuator>
 </mujoco>

@@ -547,4 +547,39 @@ python3 scripts/run_mujoco_viewer.py
 碰撞体和关节轴显示。当前底盘固定，质量惯量是明确标记的临时值，碰撞层默认关闭；
 这是外观/连接/连续运动检查点，不是越阶动力学结果。
 
+## MuJoCo 整机动力学检查点
+
+完整判定见
+[`docs/research/2026-08-28-mujoco-dynamics-checkpoint.md`](docs/research/2026-08-28-mujoco-dynamics-checkpoint.md)。
+
+动力学模型与上面的固定底盘展示模型相互独立。新模型已加入六自由度底盘、
+轮地摩擦、简化底盘/连杆碰撞体、四个 `±6 N·m` EL05 扭矩源和两个
+`±0.3 N·m` QD4310 轮端扭矩源。整机总质量可选 2.0/2.3/2.5 kg；EL05 和
+QD4310 使用厂家质量，其余未称重部分以集中质量和简化惯量明确参数化，没有伪装
+成最终实测 CAD 数据。
+
+2.5 kg 模型从 3° 初始俯仰能够恢复；70/90/120 mm 静态腿长保持误差均小于
+0.8 mm；90 mm 腿长从 5 cm 下落后能够重新站稳，本次最大 EL05/轮端命令约为
+2.208/0.119 N·m。5/10/15 cm 台阶已经通过真实轮缘接触测试，但尚未加入越阶
+动作，因此这些结果不等于机器人已通过台阶。
+
+![MuJoCo dynamics validation](artifacts/mujoco_dynamics/dynamics_validation.png)
+
+生成和验证：
+
+```bash
+python3 scripts/build_mujoco_model.py
+python3 scripts/validate_mujoco_dynamics.py
+```
+
+打开原生 MuJoCo Viewer 和中文动力学控制台：
+
+```bash
+python3 scripts/run_mujoco_dynamics.py --mass 2.5
+```
+
+界面可以直接改变腿长、暂停/复位、触发 5 cm 落地、切换 5/10/15 cm 台阶、
+驱动轮子接触台阶，并实时显示俯仰、位置、接触数和执行器命令。台阶动作轨迹是
+下一证据门，当前不会用“驶到台阶前”冒充“成功越阶”。
+
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。
