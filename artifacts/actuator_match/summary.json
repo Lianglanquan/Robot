@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "status": "PUBLIC_CAPABILITY_SCREENING_NOT_DYNAMIC_VALIDATION",
+  "source": {
+    "manual": "EL05使用说明书260713.pdf",
+    "sha256": "a1c258af2b907ff81cb410302bbbc20b2e1f7c6fe1c0b78b02ac7584f27d1cdc",
+    "pdf_pages": [
+      6,
+      7,
+      8,
+      30,
+      35
+    ]
+  },
+  "published_exact": {
+    "rated_voltage_v": 48.0,
+    "voltage_range_v": [
+      15.0,
+      60.0
+    ],
+    "no_load_speed_rpm": 430.0,
+    "rotating_rating": {
+      "torque_nm": 1.8,
+      "speed_rpm": 100.0,
+      "test_heat_sink_mm": [
+        70.0,
+        70.0
+      ],
+      "ambient_c": 25.0
+    },
+    "stall_continuous_torque_nm": 1.1,
+    "peak_torque_nm": 6.0,
+    "mass_per_actuator_kg": 0.242,
+    "rotating_overload_s": [
+      [
+        2.0,
+        300.0
+      ],
+      [
+        3.0,
+        44.0
+      ],
+      [
+        4.0,
+        14.0
+      ],
+      [
+        5.0,
+        7.0
+      ],
+      [
+        6.0,
+        5.0
+      ]
+    ],
+    "stall_overload_s": [
+      [
+        1.8,
+        175.0
+      ],
+      [
+        3.0,
+        13.0
+      ],
+      [
+        4.0,
+        6.0
+      ],
+      [
+        5.0,
+        2.0
+      ],
+      [
+        6.0,
+        1.0
+      ]
+    ],
+    "control": {
+      "bus": "CAN 2.0B extended frame, 1 Mbps",
+      "modes": [
+        "motion",
+        "Iq current",
+        "speed",
+        "PP",
+        "CSP"
+      ],
+      "motion_command_torque_nm": [
+        -6.0,
+        6.0
+      ],
+      "motion_command_speed_rad_per_s": [
+        -50.0,
+        50.0
+      ]
+    }
+  },
+  "approximate_48v_torque_speed_curve_rpm_nm": [
+    [
+      0.0,
+      6.0
+    ],
+    [
+      30.0,
+      6.0
+    ],
+    [
+      100.0,
+      5.55
+    ],
+    [
+      150.0,
+      5.25
+    ],
+    [
+      200.0,
+      4.9
+    ],
+    [
+      240.0,
+      4.45
+    ],
+    [
+      270.0,
+      3.95
+    ],
+    [
+      300.0,
+      3.2
+    ],
+    [
+      330.0,
+      2.65
+    ],
+    [
+      360.0,
+      2.15
+    ],
+    [
+      380.0,
+      1.6
+    ],
+    [
+      405.0,
+      1.0
+    ],
+    [
+      430.0,
+      0.0
+    ]
+  ],
+  "four_leg_actuator_mass": {
+    "kg": 0.968,
+    "fraction_of_2kg_robot": 0.484,
+    "fraction_of_2_5kg_robot": 0.3872
+  },
+  "static_two_leg_support": {
+    "2_kg": {
+      "maximum_joint_torque_required_nm": 0.3318592354451958,
+      "worst_l0_m": 0.1007,
+      "minimum_stall_continuous_margin": 3.314658392810217
+    },
+    "2.3_kg": {
+      "maximum_joint_torque_required_nm": 0.3816381207619751,
+      "worst_l0_m": 0.1007,
+      "minimum_stall_continuous_margin": 2.882311645921928
+    },
+    "2.5_kg": {
+      "maximum_joint_torque_required_nm": 0.4148240443064947,
+      "worst_l0_m": 0.1007,
+      "minimum_stall_continuous_margin": 2.6517267142481735
+    }
+  },
+  "peak_extension_snapshots": {
+    "70_mm": {
+      "0_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 0.0,
+        "joint_speed_rad_per_s": 0.0,
+        "joint_speed_rpm": 0.0,
+        "available_joint_torque_nm": 6.0,
+        "axial_force_per_leg_n": 229.66074490140005,
+        "total_axial_force_n": 459.3214898028001,
+        "total_mechanical_power_w": 0.0
+      },
+      "0.25_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 0.25,
+        "joint_speed_rad_per_s": 4.784598852112503,
+        "joint_speed_rpm": 45.68955348153079,
+        "available_joint_torque_nm": 5.899138584761587,
+        "axial_force_per_leg_n": 225.80009360882286,
+        "total_axial_force_n": 451.6001872176457,
+        "total_mechanical_power_w": 112.90004680441143
+      },
+      "0.5_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 0.5,
+        "joint_speed_rad_per_s": 9.569197704225006,
+        "joint_speed_rpm": 91.37910696306157,
+        "available_joint_torque_nm": 5.605420026666033,
+        "axial_force_per_leg_n": 214.5574898015578,
+        "total_axial_force_n": 429.1149796031156,
+        "total_mechanical_power_w": 214.5574898015578
+      },
+      "1_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 1.0,
+        "joint_speed_rad_per_s": 19.138395408450013,
+        "joint_speed_rpm": 182.75821392612315,
+        "available_joint_torque_nm": 5.0206925025171385,
+        "axial_force_per_leg_n": 192.17599667482673,
+        "total_axial_force_n": 384.35199334965347,
+        "total_mechanical_power_w": 384.35199334965347
+      },
+      "1.5_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 1.5,
+        "joint_speed_rad_per_s": 28.70759311267502,
+        "joint_speed_rpm": 274.13732088918476,
+        "available_joint_torque_nm": 3.8465669777703813,
+        "axial_force_per_leg_n": 147.23423957131214,
+        "total_axial_force_n": 294.4684791426243,
+        "total_mechanical_power_w": 441.7027187139364
+      },
+      "2_m_per_s": {
+        "l0_m": 0.07,
+        "extension_speed_m_per_s": 2.0,
+        "joint_speed_rad_per_s": 38.276790816900025,
+        "joint_speed_rpm": 365.5164278522463,
+        "available_joint_torque_nm": 1.998298234063227,
+        "axial_force_per_leg_n": 76.48844349501883,
+        "total_axial_force_n": 152.97688699003766,
+        "total_mechanical_power_w": 305.9537739800753
+      }
+    },
+    "90_mm": {
+      "0_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 0.0,
+        "joint_speed_rad_per_s": 0.0,
+        "joint_speed_rpm": 0.0,
+        "available_joint_torque_nm": 6.0,
+        "axial_force_per_leg_n": 181.95405180153577,
+        "total_axial_force_n": 363.90810360307154,
+        "total_mechanical_power_w": 0.0
+      },
+      "0.25_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 0.25,
+        "joint_speed_rad_per_s": 3.7907094125319962,
+        "joint_speed_rpm": 36.19860844976651,
+        "available_joint_torque_nm": 5.96015180282293,
+        "axial_force_per_leg_n": 180.74562831264336,
+        "total_axial_force_n": 361.4912566252867,
+        "total_mechanical_power_w": 90.37281415632168
+      },
+      "0.5_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 0.5,
+        "joint_speed_rad_per_s": 7.5814188250639925,
+        "joint_speed_rpm": 72.39721689953302,
+        "available_joint_torque_nm": 5.727446462788716,
+        "axial_force_per_leg_n": 173.68868173013016,
+        "total_axial_force_n": 347.3773634602603,
+        "total_mechanical_power_w": 173.68868173013016
+      },
+      "1_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 1.0,
+        "joint_speed_rad_per_s": 15.162837650127985,
+        "joint_speed_rpm": 144.79443379906604,
+        "available_joint_torque_nm": 5.281233397205604,
+        "axial_force_per_leg_n": 160.15696918852487,
+        "total_axial_force_n": 320.31393837704974,
+        "total_mechanical_power_w": 320.31393837704974
+      },
+      "1.5_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 1.5,
+        "joint_speed_rad_per_s": 22.74425647519198,
+        "joint_speed_rpm": 217.19165069859906,
+        "available_joint_torque_nm": 4.706593929640761,
+        "axial_force_per_leg_n": 142.73063928044147,
+        "total_axial_force_n": 285.46127856088293,
+        "total_mechanical_power_w": 428.1919178413244
+      },
+      "2_m_per_s": {
+        "l0_m": 0.09,
+        "extension_speed_m_per_s": 2.0,
+        "joint_speed_rad_per_s": 30.32567530025597,
+        "joint_speed_rpm": 289.5888675981321,
+        "available_joint_torque_nm": 3.4602783100466983,
+        "axial_force_per_leg_n": 104.9352764789946,
+        "total_axial_force_n": 209.8705529579892,
+        "total_mechanical_power_w": 419.7411059159784
+      }
+    },
+    "100_mm": {
+      "0_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 0.0,
+        "joint_speed_rad_per_s": 0.0,
+        "joint_speed_rpm": 0.0,
+        "available_joint_torque_nm": 6.0,
+        "axial_force_per_leg_n": 177.32166430777886,
+        "total_axial_force_n": 354.6433286155577,
+        "total_mechanical_power_w": 0.0
+      },
+      "0.25_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 0.25,
+        "joint_speed_rad_per_s": 3.694201339745394,
+        "joint_speed_rpm": 35.27702423983091,
+        "available_joint_torque_nm": 5.966076272743944,
+        "axial_force_per_leg_n": 176.31909567835103,
+        "total_axial_force_n": 352.63819135670207,
+        "total_mechanical_power_w": 88.15954783917552
+      },
+      "0.5_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 0.5,
+        "joint_speed_rad_per_s": 7.388402679490788,
+        "joint_speed_rpm": 70.55404847966182,
+        "available_joint_torque_nm": 5.739295402630745,
+        "axial_force_per_leg_n": 169.6169021247446,
+        "total_axial_force_n": 339.2338042494892,
+        "total_mechanical_power_w": 169.6169021247446
+      },
+      "1_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 1.0,
+        "joint_speed_rad_per_s": 14.776805358981576,
+        "joint_speed_rpm": 141.10809695932363,
+        "available_joint_torque_nm": 5.303351418244058,
+        "axial_force_per_leg_n": 156.73318331534264,
+        "total_axial_force_n": 313.4663666306853,
+        "total_mechanical_power_w": 313.4663666306853
+      },
+      "1.5_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 1.5,
+        "joint_speed_rad_per_s": 22.165208038472365,
+        "joint_speed_rpm": 211.66214543898542,
+        "available_joint_torque_nm": 4.768800863811414,
+        "axial_force_per_leg_n": 140.9352843205689,
+        "total_axial_force_n": 281.8705686411378,
+        "total_mechanical_power_w": 422.8058529617067
+      },
+      "2_m_per_s": {
+        "l0_m": 0.1,
+        "extension_speed_m_per_s": 2.0,
+        "joint_speed_rad_per_s": 29.553610717963153,
+        "joint_speed_rpm": 282.21619391864726,
+        "available_joint_torque_nm": 3.6445951520338187,
+        "axial_force_per_leg_n": 107.71094634778318,
+        "total_axial_force_n": 215.42189269556636,
+        "total_mechanical_power_w": 430.8437853911327
+      }
+    },
+    "120_mm": {
+      "0_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 0.0,
+        "joint_speed_rad_per_s": 0.0,
+        "joint_speed_rpm": 0.0,
+        "available_joint_torque_nm": 6.0,
+        "axial_force_per_leg_n": 193.14643496102508,
+        "total_axial_force_n": 386.29286992205016,
+        "total_mechanical_power_w": 0.0
+      },
+      "0.25_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 0.25,
+        "joint_speed_rad_per_s": 4.0238840616880225,
+        "joint_speed_rpm": 38.42526233078051,
+        "available_joint_torque_nm": 5.945837599302125,
+        "axial_force_per_leg_n": 191.40288919373756,
+        "total_axial_force_n": 382.80577838747513,
+        "total_mechanical_power_w": 95.70144459686878
+      },
+      "0.5_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 0.5,
+        "joint_speed_rad_per_s": 8.047768123376045,
+        "joint_speed_rpm": 76.85052466156102,
+        "available_joint_torque_nm": 5.6988180557471075,
+        "axial_force_per_leg_n": 183.45106515984568,
+        "total_axial_force_n": 366.90213031969137,
+        "total_mechanical_power_w": 183.45106515984568
+      },
+      "1_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 1.0,
+        "joint_speed_rad_per_s": 16.09553624675209,
+        "joint_speed_rpm": 153.70104932312205,
+        "available_joint_torque_nm": 5.224092654738146,
+        "axial_force_per_leg_n": 168.16914536145836,
+        "total_axial_force_n": 336.3382907229167,
+        "total_mechanical_power_w": 336.3382907229167
+      },
+      "1.5_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 1.5,
+        "joint_speed_rad_per_s": 24.143304370128135,
+        "joint_speed_rpm": 230.55157398468307,
+        "available_joint_torque_nm": 4.556294792672316,
+        "axial_force_per_leg_n": 146.6720159726901,
+        "total_axial_force_n": 293.3440319453802,
+        "total_mechanical_power_w": 440.0160479180703
+      },
+      "2_m_per_s": {
+        "l0_m": 0.12,
+        "extension_speed_m_per_s": 2.0,
+        "joint_speed_rad_per_s": 32.19107249350418,
+        "joint_speed_rpm": 307.4020986462441,
+        "available_joint_torque_nm": 3.064294858152192,
+        "axial_force_per_leg_n": 98.64293792024931,
+        "total_axial_force_n": 197.28587584049862,
+        "total_mechanical_power_w": 394.57175168099724
+      }
+    }
+  },
+  "evidence_limits": [
+    "The T-N anchors are approximate visual digitization of the manual plot.",
+    "The 430 rpm zero-torque closure combines the plot with the textual no-load rating and is an inference.",
+    "The rotating rating requires the manufacturer's 70 x 70 mm heat sink test condition; the current robot bracket has not been thermally equated.",
+    "Peak force is an ideal kinematic upper envelope, not available impulse, jump height, traction, landing absorption or controller bandwidth.",
+    "The manual does not publish torque tracking bandwidth or impact accuracy.",
+    "The 48 V T-N curve cannot be applied unchanged to an unspecified bus."
+  ]
+}
