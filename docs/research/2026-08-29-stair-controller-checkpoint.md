@@ -72,3 +72,11 @@ python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 
 这是 MuJoCo 简化模型中的控制器检查。它不证明 CAD 无干涉、执行器真实峰值能力、
 摩擦系数准确性或实物越阶可靠性。
+
+## 模型验证修正
+
+本次检查补充了按高度静态编译的台阶模型：
+`robot_dynamic_*kg_step_{5,10,15}cm.xml`。此前仅在已经编译的 MuJoCo 模型上修改
+`geom_size`，会导致显示高度与碰撞常量不一致；现在越阶脚本直接加载对应高度的模型。
+这修正了验证输入，但没有把当前失败改写成成功：2.5 kg / 5 cm 仍未形成稳定的
+双轮顶面支撑，状态机结果仍为 `FAILED`。

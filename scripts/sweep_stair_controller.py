@@ -16,7 +16,6 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.mujoco_dynamics import (  # noqa: E402
     ControllerGains,
     initialize_dynamic_state,
-    set_step_height,
     set_wheel_torque_limit,
 )
 from src.stair_controller import StairController, StairControllerConfig  # noqa: E402
@@ -26,10 +25,14 @@ def run_case(
     mass_kg: float, height_m: float, wheel_torque_limit_nm: float
 ) -> dict[str, object]:
     label = str(mass_kg).replace(".", "p")
+    height_label = f"{height_m * 100:g}"
     model = mujoco.MjModel.from_xml_path(
-        str(PROJECT_ROOT / "mujoco" / f"robot_dynamic_{label}kg.xml")
+        str(
+            PROJECT_ROOT
+            / "mujoco"
+            / f"robot_dynamic_{label}kg_step_{height_label}cm.xml"
+        )
     )
-    set_step_height(model, height_m)
     set_wheel_torque_limit(model, wheel_torque_limit_nm)
     data = mujoco.MjData(model)
     initialize_dynamic_state(model, data, l0_mm=90.0)

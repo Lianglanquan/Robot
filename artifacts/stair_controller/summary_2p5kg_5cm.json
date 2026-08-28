@@ -1,10 +1,10 @@
 {
   "mass_kg": 2.5,
   "step_height_cm": 5.0,
-  "wheel_torque_limit_nm": 0.3,
+  "wheel_torque_limit_nm": 1.0,
   "final_phase": "FAILED",
   "failure_reason": "recovery did not establish two-wheel top contact",
-  "terminal_time_s": 3.8069999999996917,
+  "terminal_time_s": 3.3919999999997374,
   "phases_observed": [
     "APPROACH",
     "CROUCH",
@@ -15,7 +15,7 @@
     "FAILED"
   ],
   "max_hip_torque_nm": 6.0,
-  "max_wheel_torque_nm": 0.3,
+  "max_wheel_torque_nm": 1.0,
   "finite_state": true,
   "claim_boundary": "This is a first-pass controller/model result. SUCCESS would mean the simulated wheels held the step top; it is not a physical-robot claim."
 }

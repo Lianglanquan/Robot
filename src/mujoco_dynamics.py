@@ -220,13 +220,22 @@ def _dynamic_leg_xml(side: str, reference: dict[str, Frame]) -> str:
       </body>"""
 
 
-def build_dynamic_model_xml(asset_dir: Path, total_mass_kg: float = 2.5) -> str:
+def build_dynamic_model_xml(
+    asset_dir: Path,
+    total_mass_kg: float = 2.5,
+    step_height_m: float = 0.0,
+) -> str:
     import json
 
+    if step_height_m not in (0.0, 0.05, 0.10, 0.15):
+        raise ValueError("step height must be 0, 0.05, 0.10 or 0.15 m")
     manifest = json.loads((asset_dir / "manifest.json").read_text(encoding="utf-8"))
     asset_names = sorted(manifest["meshes"])
     reference = posture_frames(cad_pose(REFERENCE_LEG_MM))
     budget = mass_budget(total_mass_kg)
+    collision_step_height_m = step_height_m if step_height_m else 0.05
+    step_z_m = step_height_m / 2.0 if step_height_m else -1.0
+    step_alpha = 1 if step_height_m else 0
     return f"""<mujoco model="EduLite wheel-legged robot dynamic {total_mass_kg:g} kg">
   <compiler angle="radian" autolimits="true" balanceinertia="true"/>
   <option timestep="0.001" integrator="implicitfast" cone="elliptic"
@@ -266,9 +275,10 @@ def build_dynamic_model_xml(asset_dir: Path, total_mass_kg: float = 2.5) -> str:
     <light pos="-0.7 0.4 0.6" dir="0.7 -0.2 -0.5" diffuse="0.35 0.42 0.55"/>
     <geom name="ground" type="plane" size="2 2 0.05" material="ground"
           contype="1" conaffinity="1" condim="4" friction="1.0 0.02 0.001"/>
-    <geom name="step" type="box" pos="0 -0.38 -1" size="0.40 0.25 0.075"
+    <geom name="step" type="box" pos="0 -0.38 {step_z_m:g}"
+          size="0.40 0.25 {collision_step_height_m / 2.0:g}"
           material="step_mat" contype="1" conaffinity="1" condim="4"
-          rgba="0.82 0.30 0.07 0"
+          rgba="0.82 0.30 0.07 {step_alpha}"
           friction="1.0 0.02 0.001"/>
     <body name="chassis" pos="0 0 {DYNAMIC_REFERENCE_ROOT_Z_M:g}">
       <freejoint name="chassis_free"/>
@@ -439,6 +449,8 @@ def set_step_height(model: mujoco.MjModel, height_m: float) -> None:
         model.geom_pos[geom_id, 2] = -1.0
         model.geom_rgba[geom_id, 3] = 0.0
     else:
+        # Existing callers use this helper for visual/parameter sweeps.  For
+        # contact-accurate dynamics, load the matching statically-built model.
         model.geom_size[geom_id, 2] = height_m / 2.0
         model.geom_pos[geom_id, 2] = height_m / 2.0
         model.geom_rgba[geom_id, 3] = 1.0

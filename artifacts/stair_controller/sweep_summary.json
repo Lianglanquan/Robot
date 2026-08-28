@@ -2,9 +2,10 @@
   {
     "mass_kg": 2.0,
     "height_cm": 5.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.6809999999997056,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -14,16 +15,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.0,
     "height_cm": 10.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.6809999999997056,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -33,16 +35,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.0,
     "height_cm": 15.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.6809999999997056,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -52,16 +55,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.3,
     "height_cm": 5.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.667999999999707,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -71,16 +75,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.3,
     "height_cm": 10.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.667999999999707,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -90,16 +95,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.3,
     "height_cm": 15.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.667999999999707,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -109,16 +115,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.5,
     "height_cm": 5.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.660999999999708,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -128,16 +135,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.5,
     "height_cm": 10.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.6619999999997077,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -147,16 +155,17 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
   },
   {
     "mass_kg": 2.5,
     "height_cm": 15.0,
+    "wheel_torque_limit_nm": 0.3,
     "final_phase": "FAILED",
     "failure_reason": "recovery did not establish two-wheel top contact",
-    "terminal_time_s": 3.6619999999997077,
+    "terminal_time_s": 3.3929999999997373,
     "phases_observed": [
       "APPROACH",
       "CROUCH",
@@ -166,8 +175,188 @@
       "RECOVER",
       "FAILED"
     ],
-    "step_contact_observed": true,
+    "step_contact_observed": false,
     "max_hip_torque_nm": 6.0,
     "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.0,
+    "height_cm": 5.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.0,
+    "height_cm": 10.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.0,
+    "height_cm": 15.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 5.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 10.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 15.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 5.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 10.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 15.0,
+    "wheel_torque_limit_nm": 1.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.3929999999997373,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": false,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 1.0
   }
 ]

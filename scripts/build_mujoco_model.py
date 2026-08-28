@@ -36,6 +36,18 @@ def main() -> int:
             encoding="utf-8",
         )
         print(f"wrote {dynamic_path}")
+        for height_cm in (5, 10, 15):
+            step_path = (
+                args.output.parent
+                / f"robot_dynamic_{mass_label}kg_step_{height_cm}cm.xml"
+            )
+            step_path.write_text(
+                build_dynamic_model_xml(
+                    args.output.parent / "assets", mass, height_cm / 100.0
+                ),
+                encoding="utf-8",
+            )
+            print(f"wrote {step_path}")
     return 0
 
 

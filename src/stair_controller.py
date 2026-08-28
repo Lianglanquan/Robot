@@ -37,8 +37,8 @@ class StairPhase(str, Enum):
 @dataclass(frozen=True)
 class StairControllerConfig:
     step_height_m: float = 0.05
-    approach_target_y_m: float = -0.125
-    crouch_target_y_m: float = -0.20
+    approach_target_y_m: float = -0.16
+    crouch_target_y_m: float = -0.16
     push_target_y_m: float = -0.32
     landing_target_y_m: float = -0.32
     recover_target_y_m: float = -0.40
@@ -218,7 +218,7 @@ class StairController:
                 self.model, data, target_l0_mm=self.config.stand_l0_mm,
                 target_y_m=self.config.approach_target_y_m, gains=self.gains,
             )
-            if step_contacts:
+            if step_contacts or self.phase_elapsed_s > 0.80:
                 self._transition(StairPhase.CROUCH)
 
         elif self.phase == StairPhase.CROUCH:

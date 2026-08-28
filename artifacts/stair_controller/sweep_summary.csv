@@ -1,10 +1,19 @@
-mass_kg,height_cm,final_phase,failure_reason,terminal_time_s,phases_observed,step_contact_observed,max_hip_torque_nm,max_wheel_torque_nm
-2.0,5.0,FAILED,recovery did not establish two-wheel top contact,3.6809999999997056,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.0,10.0,FAILED,recovery did not establish two-wheel top contact,3.6809999999997056,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.0,15.0,FAILED,recovery did not establish two-wheel top contact,3.6809999999997056,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.3,5.0,FAILED,recovery did not establish two-wheel top contact,3.667999999999707,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.3,10.0,FAILED,recovery did not establish two-wheel top contact,3.667999999999707,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.3,15.0,FAILED,recovery did not establish two-wheel top contact,3.667999999999707,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.5,5.0,FAILED,recovery did not establish two-wheel top contact,3.660999999999708,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.5,10.0,FAILED,recovery did not establish two-wheel top contact,3.6619999999997077,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
-2.5,15.0,FAILED,recovery did not establish two-wheel top contact,3.6619999999997077,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",True,6.0,0.3
+mass_kg,height_cm,wheel_torque_limit_nm,final_phase,failure_reason,terminal_time_s,phases_observed,step_contact_observed,max_hip_torque_nm,max_wheel_torque_nm
+2.0,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.0,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.0,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.3,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.3,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.3,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.5,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.5,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.5,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
+2.0,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.0,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.0,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.3,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.3,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.3,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.5,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.5,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.5,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0

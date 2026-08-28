@@ -1,4 +1,4 @@
-<mujoco model="EduLite wheel-legged robot dynamic 2 kg">
+<mujoco model="EduLite wheel-legged robot dynamic 2.5 kg">
   <compiler angle="radian" autolimits="true" balanceinertia="true"/>
   <option timestep="0.001" integrator="implicitfast" cone="elliptic"
           gravity="0 0 -9.80665" impratio="10"/>
@@ -58,16 +58,16 @@
     <light pos="-0.7 0.4 0.6" dir="0.7 -0.2 -0.5" diffuse="0.35 0.42 0.55"/>
     <geom name="ground" type="plane" size="2 2 0.05" material="ground"
           contype="1" conaffinity="1" condim="4" friction="1.0 0.02 0.001"/>
-    <geom name="step" type="box" pos="0 -0.38 -1"
-          size="0.40 0.25 0.025"
+    <geom name="step" type="box" pos="0 -0.38 0.05"
+          size="0.40 0.25 0.05"
           material="step_mat" contype="1" conaffinity="1" condim="4"
-          rgba="0.82 0.30 0.07 0"
+          rgba="0.82 0.30 0.07 1"
           friction="1.0 0.02 0.001"/>
     <body name="chassis" pos="0 0 0.0817">
       <freejoint name="chassis_free"/>
       <inertial pos="0 0 0.025"
-                mass="1.286"
-                diaginertia="0.0030140625 0.003346279167 0.005154716667"/>
+                mass="1.786"
+                diaginertia="0.0041859375 0.004647320833 0.007158883333"/>
       <geom class="visual" mesh="baseplate" material="carbon"/>
       <geom class="visual" mesh="left_bracket" material="bracket"/>
       <geom class="visual" mesh="right_bracket" material="bracket"/>
