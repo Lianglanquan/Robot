@@ -1,6 +1,9 @@
 numpy>=1.24,<3
 sympy>=1.12,<2
 matplotlib>=3.6,<4
+mujoco>=3.3,<4
+trimesh>=4.5,<5
+fast-simplification>=0.1,<1
 pytest>=7.4,<9
 ruff>=0.5,<1
 mypy>=1.8,<2

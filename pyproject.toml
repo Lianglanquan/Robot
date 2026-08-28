@@ -7,6 +7,9 @@ dependencies = [
     "numpy>=1.24,<3",
     "sympy>=1.12,<2",
     "matplotlib>=3.6,<4",
+    "mujoco>=3.3,<4",
+    "trimesh>=4.5,<5",
+    "fast-simplification>=0.1,<1",
 ]
 
 [tool.pytest.ini_options]
@@ -28,6 +31,11 @@ warn_unused_ignores = true
 [[tool.mypy.overrides]]
 module = "matplotlib.*"
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["mujoco", "mujoco.*"]
+ignore_missing_imports = true
+follow_imports = "skip"
 
 [[tool.mypy.overrides]]
 module = ["pytest", "sympy"]

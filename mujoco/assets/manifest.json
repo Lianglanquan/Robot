@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "status": "REALTIME_CAD_VISUAL_ASSETS",
+  "reference_pose_mm": 90.0,
+  "coordinate_map": "mujoco_xyz_m = cad_xzy_mm / 1000",
+  "deflection_mm": 0.3,
+  "source": {
+    "assembly_step": "reference/cad/foc-wheel-legged-robot_full_assembly_AP214.step",
+    "assembly_sha256": "cdca79d8ed21ebf3462d4d65d81c4d7696d988069e280445a09181b2856e37c4",
+    "edulite_step": ".worktrees/edulite-reference/Product Literature/EL05/el05.stp",
+    "edulite_sha256": "3c970be58644420e97a332473e9b1d806601125c9e95c95743ddeb0c99e27ee3"
+  },
+  "frames": {
+    "identity": {
+      "origin_cad_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angle_mj_deg": 0.0
+    },
+    "proximal_negative": {
+      "origin_cad_mm": [
+        0.0,
+        34.0,
+        -30.0
+      ],
+      "angle_mj_deg": -158.69508609376877
+    },
+    "proximal_positive": {
+      "origin_cad_mm": [
+        0.0,
+        34.0,
+        30.0
+      ],
+      "angle_mj_deg": -21.304913906231246
+    },
+    "distal_negative": {
+      "origin_cad_mm": [
+        0.0,
+        15.833443272150497,
+        -76.58300351688183
+      ],
+      "angle_mj_deg": -43.16707027163909
+    },
+    "distal_positive": {
+      "origin_cad_mm": [
+        0.0,
+        15.83344327215049,
+        76.58300351688185
+      ],
+      "angle_mj_deg": -136.83292972836094
+    },
+    "wheel": {
+      "origin_cad_mm": [
+        0.0,
+        -55.999999999999986,
+        -3.552713678800501e-15
+      ],
+      "angle_mj_deg": 0.0
+    }
+  },
+  "meshes": {
+    "baseplate": {
+      "file": "baseplate.obj",
+      "frame": "identity",
+      "vertices": 5816,
+      "triangles": 11720,
+      "raw_vertices": 6060,
+      "raw_triangles": 12208
+    },
+    "left_bracket": {
+      "file": "left_bracket.obj",
+      "frame": "identity",
+      "vertices": 4060,
+      "triangles": 8180,
+      "raw_vertices": 4060,
+      "raw_triangles": 8180
+    },
+    "right_bracket": {
+      "file": "right_bracket.obj",
+      "frame": "identity",
+      "vertices": 4060,
+      "triangles": 8180,
+      "raw_vertices": 4060,
+      "raw_triangles": 8180
+    },
+    "fixed_fasteners": {
+      "file": "fixed_fasteners.obj",
+      "frame": "identity",
+      "vertices": 8608,
+      "triangles": 17088,
+      "raw_vertices": 16128,
+      "raw_triangles": 32128
+    },
+    "edulite_left_negative_stator": {
+      "file": "edulite_left_negative_stator.obj",
+      "frame": "identity",
+      "vertices": 16724,
+      "triangles": 33558,
+      "raw_vertices": 128018,
+      "raw_triangles": 256148
+    },
+    "edulite_left_negative_rotor": {
+      "file": "edulite_left_negative_rotor.obj",
+      "frame": "proximal_negative",
+      "vertices": 4261,
+      "triangles": 8522,
+      "raw_vertices": 18196,
+      "raw_triangles": 36392
+    },
+    "edulite_left_positive_stator": {
+      "file": "edulite_left_positive_stator.obj",
+      "frame": "identity",
+      "vertices": 16663,
+      "triangles": 33438,
+      "raw_vertices": 128018,
+      "raw_triangles": 256148
+    },
+    "edulite_left_positive_rotor": {
+      "file": "edulite_left_positive_rotor.obj",
+      "frame": "proximal_positive",
+      "vertices": 4309,
+      "triangles": 8618,
+      "raw_vertices": 18196,
+      "raw_triangles": 36392
+    },
+    "edulite_right_negative_stator": {
+      "file": "edulite_right_negative_stator.obj",
+      "frame": "identity",
+      "vertices": 16837,
+      "triangles": 33788,
+      "raw_vertices": 128017,
+      "raw_triangles": 256146
+    },
+    "edulite_right_negative_rotor": {
+      "file": "edulite_right_negative_rotor.obj",
+      "frame": "proximal_negative",
+      "vertices": 4252,
+      "triangles": 8504,
+      "raw_vertices": 18196,
+      "raw_triangles": 36392
+    },
+    "edulite_right_positive_stator": {
+      "file": "edulite_right_positive_stator.obj",
+      "frame": "identity",
+      "vertices": 16706,
+      "triangles": 33530,
+      "raw_vertices": 128017,
+      "raw_triangles": 256146
+    },
+    "edulite_right_positive_rotor": {
+      "file": "edulite_right_positive_rotor.obj",
+      "frame": "proximal_positive",
+      "vertices": 4293,
+      "triangles": 8586,
+      "raw_vertices": 18196,
+      "raw_triangles": 36392
+    },
+    "left_proximal_negative": {
+      "file": "left_proximal_negative.obj",
+      "frame": "proximal_negative",
+      "vertices": 6937,
+      "triangles": 13906,
+      "raw_vertices": 7272,
+      "raw_triangles": 14576
+    },
+    "left_distal_negative": {
+      "file": "left_distal_negative.obj",
+      "frame": "distal_negative",
+      "vertices": 5984,
+      "triangles": 12000,
+      "raw_vertices": 23756,
+      "raw_triangles": 47544
+    },
+    "left_proximal_positive": {
+      "file": "left_proximal_positive.obj",
+      "frame": "proximal_positive",
+      "vertices": 8796,
+      "triangles": 19468,
+      "raw_vertices": 10054,
+      "raw_triangles": 20176
+    },
+    "left_distal_positive": {
+      "file": "left_distal_positive.obj",
+      "frame": "distal_positive",
+      "vertices": 5984,
+      "triangles": 12000,
+      "raw_vertices": 23756,
+      "raw_triangles": 47544
+    },
+    "left_wheel": {
+      "file": "left_wheel.obj",
+      "frame": "wheel",
+      "vertices": 9967,
+      "triangles": 20000,
+      "raw_vertices": 34435,
+      "raw_triangles": 68906
+    },
+    "right_proximal_negative": {
+      "file": "right_proximal_negative.obj",
+      "frame": "proximal_negative",
+      "vertices": 8457,
+      "triangles": 19462,
+      "raw_vertices": 10054,
+      "raw_triangles": 20176
+    },
+    "right_distal_negative": {
+      "file": "right_distal_negative.obj",
+      "frame": "distal_negative",
+      "vertices": 5982,
+      "triangles": 12000,
+      "raw_vertices": 23756,
+      "raw_triangles": 47544
+    },
+    "right_proximal_positive": {
+      "file": "right_proximal_positive.obj",
+      "frame": "proximal_positive",
+      "vertices": 6917,
+      "triangles": 13864,
+      "raw_vertices": 7276,
+      "raw_triangles": 14584
+    },
+    "right_distal_positive": {
+      "file": "right_distal_positive.obj",
+      "frame": "distal_positive",
+      "vertices": 5983,
+      "triangles": 12000,
+      "raw_vertices": 23756,
+      "raw_triangles": 47544
+    },
+    "right_wheel": {
+      "file": "right_wheel.obj",
+      "frame": "wheel",
+      "vertices": 9974,
+      "triangles": 20000,
+      "raw_vertices": 34435,
+      "raw_triangles": 68906
+    }
+  },
+  "raw_asset_source": "temporary FreeCAD tessellation (not committed)"
+}

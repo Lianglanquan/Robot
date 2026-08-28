@@ -1,0 +1,177 @@
+<mujoco model="EduLite wheel-legged robot visual checkpoint">
+  <compiler angle="radian" autolimits="true" balanceinertia="true"/>
+  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.80665"/>
+  <size njmax="1000" nconmax="400"/>
+  <visual>
+    <global azimuth="135" elevation="-18" offwidth="720" offheight="540"/>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.75 0.75 0.75"
+               specular="0.25 0.25 0.25"/>
+    <quality shadowsize="4096" offsamples="4"/>
+  </visual>
+  <default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0"/>
+    </default>
+    <default class="collision">
+      <geom contype="0" conaffinity="0" group="3" density="0" rgba="0.2 0.7 1 0.12"/>
+    </default>
+  </default>
+  <asset>
+    <mesh name="baseplate" file="assets/baseplate.obj"/>
+    <mesh name="edulite_left_negative_rotor" file="assets/edulite_left_negative_rotor.obj"/>
+    <mesh name="edulite_left_negative_stator" file="assets/edulite_left_negative_stator.obj"/>
+    <mesh name="edulite_left_positive_rotor" file="assets/edulite_left_positive_rotor.obj"/>
+    <mesh name="edulite_left_positive_stator" file="assets/edulite_left_positive_stator.obj"/>
+    <mesh name="edulite_right_negative_rotor" file="assets/edulite_right_negative_rotor.obj"/>
+    <mesh name="edulite_right_negative_stator" file="assets/edulite_right_negative_stator.obj"/>
+    <mesh name="edulite_right_positive_rotor" file="assets/edulite_right_positive_rotor.obj"/>
+    <mesh name="edulite_right_positive_stator" file="assets/edulite_right_positive_stator.obj"/>
+    <mesh name="fixed_fasteners" file="assets/fixed_fasteners.obj"/>
+    <mesh name="left_bracket" file="assets/left_bracket.obj"/>
+    <mesh name="left_distal_negative" file="assets/left_distal_negative.obj"/>
+    <mesh name="left_distal_positive" file="assets/left_distal_positive.obj"/>
+    <mesh name="left_proximal_negative" file="assets/left_proximal_negative.obj"/>
+    <mesh name="left_proximal_positive" file="assets/left_proximal_positive.obj"/>
+    <mesh name="left_wheel" file="assets/left_wheel.obj"/>
+    <mesh name="right_bracket" file="assets/right_bracket.obj"/>
+    <mesh name="right_distal_negative" file="assets/right_distal_negative.obj"/>
+    <mesh name="right_distal_positive" file="assets/right_distal_positive.obj"/>
+    <mesh name="right_proximal_negative" file="assets/right_proximal_negative.obj"/>
+    <mesh name="right_proximal_positive" file="assets/right_proximal_positive.obj"/>
+    <mesh name="right_wheel" file="assets/right_wheel.obj"/>
+    <material name="carbon" rgba="0.055 0.065 0.08 1" metallic="0.45" roughness="0.38"/>
+    <material name="bracket" rgba="0.88 0.22 0.055 1" metallic="0.35" roughness="0.3"/>
+    <material name="motor" rgba="0.10 0.115 0.14 1" metallic="0.7" roughness="0.24"/>
+    <material name="rotor" rgba="0.33 0.36 0.41 1" metallic="0.8" roughness="0.2"/>
+    <material name="active_link" rgba="0.86 0.12 0.08 1"
+              metallic="0.65" roughness="0.25"/>
+    <material name="passive_link" rgba="0.66 0.69 0.74 1"
+              metallic="0.8" roughness="0.22"/>
+    <material name="steel" rgba="0.62 0.65 0.70 1" metallic="0.9" roughness="0.16"/>
+    <material name="tire" rgba="0.025 0.03 0.04 1" metallic="0.05" roughness="0.78"/>
+    <texture name="ground_tex" type="2d" builtin="checker" rgb1="0.16 0.18 0.22"
+             rgb2="0.08 0.09 0.11" width="512" height="512"/>
+    <material name="ground" texture="ground_tex" texrepeat="4 4"
+              reflectance="0.12" roughness="0.72"/>
+  </asset>
+  <worldbody>
+    <light pos="0 -0.5 1.2" dir="0 0.4 -1" diffuse="0.9 0.88 0.84" castshadow="true"/>
+    <light pos="-0.7 0.4 0.6" dir="0.7 -0.2 -0.5" diffuse="0.35 0.42 0.55"/>
+    <geom name="display_floor" type="plane" pos="0 0 -0.04" size="1.5 1.5 0.05"
+          material="ground" contype="0" conaffinity="0"/>
+    <body name="chassis" pos="0 0 0.12">
+      <inertial pos="0 0.005 0" mass="1.9" diaginertia="0.012 0.018 0.02"/>
+      <geom class="visual" mesh="baseplate" material="carbon"/>
+      <geom class="visual" mesh="left_bracket" material="bracket"/>
+      <geom class="visual" mesh="right_bracket" material="bracket"/>
+      <geom class="visual" mesh="fixed_fasteners" material="steel"/>
+      <geom class="visual" mesh="edulite_left_negative_stator" material="motor"/>
+      <geom class="visual" mesh="edulite_left_positive_stator" material="motor"/>
+      <geom class="visual" mesh="edulite_right_negative_stator" material="motor"/>
+      <geom class="visual" mesh="edulite_right_positive_stator" material="motor"/>
+
+      <body name="left_proximal_negative" pos="0 -0.03 0.034"
+            quat="0.1848511965 -0.9827665212 0 0">
+        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <joint name="left_hip_negative" type="hinge" axis="1 0 0"
+               range="-0.8 0.8" damping="0.05"/>
+        <geom class="visual" mesh="left_proximal_negative" material="active_link"/>
+        <geom class="visual" mesh="edulite_left_negative_rotor" material="rotor"/>
+        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <body name="left_distal_negative" pos="0 0.05 6.938893904e-18"
+              quat="0.5334077329 0.8458582567 0 0">
+          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <joint name="left_knee_negative" type="hinge" axis="1 0 0"
+                 range="-0.5 0.5" damping="0.03"/>
+          <geom class="visual" mesh="left_distal_negative" material="passive_link"/>
+          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <body name="left_wheel" pos="0 0.105 0"
+                quat="0.929882234 0.3678573513 0 0">
+            <inertial pos="0 0 0" mass="0.12" diaginertia="4e-5 7e-5 7e-5"/>
+            <joint name="left_wheel_spin" type="hinge" axis="1 0 0" damping="0.01"/>
+            <geom class="visual" mesh="left_wheel" material="tire"/>
+            <geom class="collision" type="cylinder" size="0.0257 0.023"
+                  quat="0.70710678 0.70710678 0 0"/>
+            <site name="left_wheel_center" size="0.003" rgba="0.1 0.8 1 0.8"/>
+          </body>
+        </body>
+      </body>
+      <body name="left_proximal_positive" pos="0 0.03 0.034"
+            quat="0.9827665212 -0.1848511965 0 0">
+        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <joint name="left_hip_positive" type="hinge" axis="1 0 0"
+               range="-0.8 0.8" damping="0.05"/>
+        <geom class="visual" mesh="left_proximal_positive" material="active_link"/>
+        <geom class="visual" mesh="edulite_left_positive_rotor" material="rotor"/>
+        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <body name="left_distal_positive" pos="0 0.05 -3.469446952e-18"
+              quat="0.5334077329 -0.8458582567 0 0">
+          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <joint name="left_knee_positive" type="hinge" axis="1 0 0"
+                 range="-0.5 0.5" damping="0.03"/>
+          <geom class="visual" mesh="left_distal_positive" material="passive_link"/>
+          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <site name="left_closure" pos="0 0.105 0" size="0.003"
+                rgba="1 0.45 0.1 0.8"/>
+        </body>
+      </body>
+
+      <body name="right_proximal_negative" pos="0 -0.03 0.034"
+            quat="0.1848511965 -0.9827665212 0 0">
+        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <joint name="right_hip_negative" type="hinge" axis="1 0 0"
+               range="-0.8 0.8" damping="0.05"/>
+        <geom class="visual" mesh="right_proximal_negative" material="active_link"/>
+        <geom class="visual" mesh="edulite_right_negative_rotor" material="rotor"/>
+        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <body name="right_distal_negative" pos="0 0.05 6.938893904e-18"
+              quat="0.5334077329 0.8458582567 0 0">
+          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <joint name="right_knee_negative" type="hinge" axis="1 0 0"
+                 range="-0.5 0.5" damping="0.03"/>
+          <geom class="visual" mesh="right_distal_negative" material="passive_link"/>
+          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <body name="right_wheel" pos="0 0.105 0"
+                quat="0.929882234 0.3678573513 0 0">
+            <inertial pos="0 0 0" mass="0.12" diaginertia="4e-5 7e-5 7e-5"/>
+            <joint name="right_wheel_spin" type="hinge" axis="1 0 0" damping="0.01"/>
+            <geom class="visual" mesh="right_wheel" material="tire"/>
+            <geom class="collision" type="cylinder" size="0.0257 0.023"
+                  quat="0.70710678 0.70710678 0 0"/>
+            <site name="right_wheel_center" size="0.003" rgba="0.1 0.8 1 0.8"/>
+          </body>
+        </body>
+      </body>
+      <body name="right_proximal_positive" pos="0 0.03 0.034"
+            quat="0.9827665212 -0.1848511965 0 0">
+        <inertial pos="0 0.025 0" mass="0.05" diaginertia="2e-5 1e-5 2e-5"/>
+        <joint name="right_hip_positive" type="hinge" axis="1 0 0"
+               range="-0.8 0.8" damping="0.05"/>
+        <geom class="visual" mesh="right_proximal_positive" material="active_link"/>
+        <geom class="visual" mesh="edulite_right_positive_rotor" material="rotor"/>
+        <geom class="collision" type="capsule" fromto="0 0 0 0 0.05 0" size="0.009"/>
+        <body name="right_distal_positive" pos="0 0.05 -3.469446952e-18"
+              quat="0.5334077329 -0.8458582567 0 0">
+          <inertial pos="0 0.0525 0" mass="0.04" diaginertia="4e-5 5e-6 4e-5"/>
+          <joint name="right_knee_positive" type="hinge" axis="1 0 0"
+                 range="-0.5 0.5" damping="0.03"/>
+          <geom class="visual" mesh="right_distal_positive" material="passive_link"/>
+          <geom class="collision" type="capsule" fromto="0 0 0 0 0.105 0" size="0.007"/>
+          <site name="right_closure" pos="0 0.105 0" size="0.003"
+                rgba="1 0.45 0.1 0.8"/>
+        </body>
+      </body>
+    </body>
+    <camera name="overview" pos="0.31 -0.31 0.235"
+            xyaxes="0.707 0.707 0 -0.28 0.28 0.918"/>
+    <camera name="front" pos="0.38 0 0.14" xyaxes="0 1 0 -0.2 0 0.98"/>
+    <camera name="side" pos="0 -0.40 0.15" xyaxes="1 0 0 0 0.2 0.98"/>
+  </worldbody>
+  <equality>
+    <connect name="left_fivebar_closure" site1="left_closure" site2="left_wheel_center"
+             solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <connect name="right_fivebar_closure" site1="right_closure"
+             site2="right_wheel_center"
+             solref="0.004 1" solimp="0.95 0.99 0.001"/>
+  </equality>
+</mujoco>
