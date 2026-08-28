@@ -606,4 +606,16 @@ python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 控制器实现见 [`src/stair_controller.py`](src/stair_controller.py)，对应测试见
 [`tests/test_stair_controller.py`](tests/test_stair_controller.py)。
 
+对 2.0/2.3/2.5 kg 与 5/10/15 cm 的统一扫描：
+
+```bash
+python3 scripts/sweep_stair_controller.py
+```
+
+当前九个场景都能观察到轮-台阶真实接触，但都在恢复阶段失败；没有任何场景被误判为
+成功。这个结果说明当前控制器、接触检测和失败判定链路是完整的，同时也说明在当前
+简化模型和 `±0.3 N·m` 轮端限制下，不能直接声称已经具备越阶能力。详细结果在
+`artifacts/stair_controller/sweep_summary.json`，研究边界记录在
+[`docs/research/2026-08-29-stair-controller-checkpoint.md`](docs/research/2026-08-29-stair-controller-checkpoint.md)。
+
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。

@@ -49,7 +49,7 @@ def run(mass_kg: float, height_cm: float) -> tuple[list[Row], StairController]:
         telemetry = controller.step(data)
         mujoco.mj_step(model, data)
         if not np.all(np.isfinite(data.qpos)) or not np.all(np.isfinite(data.qvel)):
-            controller._fail("non-finite state")
+            controller.fail("non-finite state")
         row: Row = telemetry.__dict__.copy()
         row["phase"] = telemetry.phase.value
         rows.append(row)

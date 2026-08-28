@@ -38,6 +38,7 @@ class StairPhase(str, Enum):
 class StairControllerConfig:
     step_height_m: float = 0.05
     approach_target_y_m: float = -0.125
+    crouch_target_y_m: float = -0.20
     push_target_y_m: float = -0.32
     recover_target_y_m: float = -0.40
     stand_l0_mm: float = 90.0
@@ -46,6 +47,7 @@ class StairControllerConfig:
     tuck_l0_mm: float = 78.0
     landing_l0_mm: float = 105.0
     push_force_n: float = 80.0
+    push_wheel_torque_nm: float = 0.30
     push_duration_s: float = 0.45
     crouch_timeout_s: float = 0.90
     flight_timeout_s: float = 0.80
@@ -111,7 +113,11 @@ def _wheel_top_flags(
         site_id = mujoco.mj_name2id(
             model, mujoco.mjtObj.mjOBJ_SITE, f"{side}_wheel_center"
         )
-        if not top_contact[side] or data.site_xpos[site_id, 2] < height_m - 0.005:
+        wheel_top_z = height_m + 0.0257
+        if (
+            not top_contact[side]
+            or data.site_xpos[site_id, 2] < wheel_top_z - 0.008
+        ):
             return False
     return True
 
@@ -156,6 +162,10 @@ class StairController:
     def _fail(self, reason: str) -> None:
         self.failure_reason = reason
         self._transition(StairPhase.FAILED)
+
+    def fail(self, reason: str) -> None:
+        """Stop the maneuver with an explicit externally detected failure."""
+        self._fail(reason)
 
     def _add_virtual_push(
         self, data: mujoco.MjData, force_n: float, l0_mm: float
@@ -211,7 +221,7 @@ class StairController:
         elif self.phase == StairPhase.CROUCH:
             apply_standing_controller(
                 self.model, data, target_l0_mm=self.config.crouch_l0_mm,
-                target_y_m=self.config.approach_target_y_m, gains=self.gains,
+                target_y_m=self.config.crouch_target_y_m, gains=self.gains,
             )
             if (
                 l0 < self.config.crouch_l0_mm + 3.0
@@ -227,7 +237,14 @@ class StairController:
             self._add_virtual_push(
                 data, self.config.push_force_n, self.config.push_l0_mm
             )
-            if ground_contacts == 0:
+            for side in ("left", "right"):
+                actuator_id = mujoco.mj_name2id(
+                    self.model,
+                    mujoco.mjtObj.mjOBJ_ACTUATOR,
+                    f"{side}_wheel_motor",
+                )
+                data.ctrl[actuator_id] = self.config.push_wheel_torque_nm
+            if ground_contacts == 0 and step_contacts == 0:
                 self.airborne_seen = True
                 self._transition(StairPhase.FLIGHT)
             elif self.phase_elapsed_s > self.config.push_duration_s:
@@ -238,7 +255,7 @@ class StairController:
                 self.model, data, target_l0_mm=self.config.tuck_l0_mm,
                 target_y_m=self.config.push_target_y_m, gains=self.gains,
             )
-            if ground_contacts == 0:
+            if ground_contacts == 0 and step_contacts == 0:
                 self.airborne_seen = True
             if self.airborne_seen and (ground_contacts > 0 or step_contacts > 0):
                 self._transition(StairPhase.LANDING)

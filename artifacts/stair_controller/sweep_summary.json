@@ -1,0 +1,173 @@
+[
+  {
+    "mass_kg": 2.0,
+    "height_cm": 5.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.6809999999997056,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.0,
+    "height_cm": 10.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.6809999999997056,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.0,
+    "height_cm": 15.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.6809999999997056,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 5.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.667999999999707,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 10.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.667999999999707,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.3,
+    "height_cm": 15.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.667999999999707,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 5.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.660999999999708,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 10.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.6619999999997077,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  },
+  {
+    "mass_kg": 2.5,
+    "height_cm": 15.0,
+    "final_phase": "FAILED",
+    "failure_reason": "recovery did not establish two-wheel top contact",
+    "terminal_time_s": 3.6619999999997077,
+    "phases_observed": [
+      "APPROACH",
+      "CROUCH",
+      "PUSH",
+      "FLIGHT",
+      "LANDING",
+      "RECOVER",
+      "FAILED"
+    ],
+    "step_contact_observed": true,
+    "max_hip_torque_nm": 6.0,
+    "max_wheel_torque_nm": 0.3
+  }
+]
