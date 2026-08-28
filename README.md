@@ -582,4 +582,28 @@ python3 scripts/run_mujoco_dynamics.py --mass 2.5
 驱动轮子接触台阶，并实时显示俯仰、位置、接触数和执行器命令。台阶动作轨迹是
 下一证据门，当前不会用“驶到台阶前”冒充“成功越阶”。
 
+## 第一版 5 cm 越阶状态机（当前验证门）
+
+现在已经把第一版越阶动作落成一个可复现的、由接触事件驱动的状态机：
+
+```text
+APPROACH → CROUCH → PUSH → FLIGHT → LANDING → RECOVER
+```
+
+它只控制已有的腿部目标、虚拟腿轴向蹬伸力和轮端扭矩；阶段切换读取真实 MuJoCo
+接触、腿长、底盘位置/速度和俯仰状态，不播放预先写死的底盘动画。运行：
+
+```bash
+python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
+```
+
+结果写入 `artifacts/stair_controller/`。在 2.5 kg、5 cm 场景的当前第一版参数下，
+状态机确实经历了接近、压腿、蹬伸、空中和落地阶段，但最后在 `RECOVER` 阶段
+因为没有建立“双轮位于台阶顶面且姿态稳定”的条件而判定失败。这个失败是有价值的：
+它证明控制器和判定链路已经接上了真实接触模型，同时也明确说明“发生台阶接触”
+仍不等于“完成越阶”。当前尚未宣称 5 cm 越阶成功。
+
+控制器实现见 [`src/stair_controller.py`](src/stair_controller.py)，对应测试见
+[`tests/test_stair_controller.py`](tests/test_stair_controller.py)。
+
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。
