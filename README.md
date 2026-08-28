@@ -618,4 +618,9 @@ python3 scripts/sweep_stair_controller.py
 `artifacts/stair_controller/sweep_summary.json`，研究边界记录在
 [`docs/research/2026-08-29-stair-controller-checkpoint.md`](docs/research/2026-08-29-stair-controller-checkpoint.md)。
 
+需要特别说明：`±0.3 N·m` 只是本次候选轮端参数，不是 EL05 的能力上限，也不是
+五连杆机构的物理极限。验证脚本支持通过 `--wheel-torque-limit` 改变该测试值。
+上游控制代码明确采用“离地关闭轮端、腿长切到 120 mm、触地缓冲”的策略；本仓库
+已按这一证据修正状态机。
+
 上游参考文件及来源说明位于 `reference/`，本项目按 GPL-3.0 发布。

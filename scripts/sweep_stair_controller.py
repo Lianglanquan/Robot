@@ -13,21 +13,33 @@ import mujoco
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.mujoco_dynamics import initialize_dynamic_state, set_step_height  # noqa: E402
+from src.mujoco_dynamics import (  # noqa: E402
+    ControllerGains,
+    initialize_dynamic_state,
+    set_step_height,
+    set_wheel_torque_limit,
+)
 from src.stair_controller import StairController, StairControllerConfig  # noqa: E402
 
 
-def run_case(mass_kg: float, height_m: float) -> dict[str, object]:
+def run_case(
+    mass_kg: float, height_m: float, wheel_torque_limit_nm: float
+) -> dict[str, object]:
     label = str(mass_kg).replace(".", "p")
     model = mujoco.MjModel.from_xml_path(
         str(PROJECT_ROOT / "mujoco" / f"robot_dynamic_{label}kg.xml")
     )
     set_step_height(model, height_m)
+    set_wheel_torque_limit(model, wheel_torque_limit_nm)
     data = mujoco.MjData(model)
     initialize_dynamic_state(model, data, l0_mm=90.0)
     controller = StairController(
         model,
-        StairControllerConfig(step_height_m=height_m),
+        StairControllerConfig(
+            step_height_m=height_m,
+            push_wheel_torque_nm=wheel_torque_limit_nm,
+        ),
+        gains=ControllerGains(wheel_torque_limit_nm=wheel_torque_limit_nm),
     )
     phases: list[str] = []
     max_hip = 0.0
@@ -47,6 +59,7 @@ def run_case(mass_kg: float, height_m: float) -> dict[str, object]:
     return {
         "mass_kg": mass_kg,
         "height_cm": height_m * 100.0,
+        "wheel_torque_limit_nm": wheel_torque_limit_nm,
         "final_phase": controller.phase.value,
         "failure_reason": controller.failure_reason,
         "terminal_time_s": float(data.time),
@@ -61,7 +74,8 @@ def main() -> int:
     output_dir = PROJECT_ROOT / "artifacts" / "stair_controller"
     output_dir.mkdir(parents=True, exist_ok=True)
     results = [
-        run_case(mass, height)
+        run_case(mass, height, wheel_limit)
+        for wheel_limit in (0.3, 1.0)
         for mass in (2.0, 2.3, 2.5)
         for height in (0.05, 0.10, 0.15)
     ]
@@ -72,7 +86,9 @@ def main() -> int:
     with (output_dir / "sweep_summary.csv").open(
         "w", newline="", encoding="utf-8"
     ) as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(results[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(results[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(results)
     for result in results:

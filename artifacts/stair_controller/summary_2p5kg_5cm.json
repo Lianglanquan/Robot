@@ -1,9 +1,10 @@
 {
   "mass_kg": 2.5,
   "step_height_cm": 5.0,
+  "wheel_torque_limit_nm": 0.3,
   "final_phase": "FAILED",
   "failure_reason": "recovery did not establish two-wheel top contact",
-  "terminal_time_s": 3.660999999999708,
+  "terminal_time_s": 3.8069999999996917,
   "phases_observed": [
     "APPROACH",
     "CROUCH",

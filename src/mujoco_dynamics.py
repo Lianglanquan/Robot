@@ -322,6 +322,7 @@ class ControllerGains:
     pitch_kd: float = 0.32
     position_kp: float = 0.95
     velocity_kd: float = 0.58
+    wheel_torque_limit_nm: float = 0.3
 
 
 def initialize_dynamic_state(
@@ -413,7 +414,21 @@ def apply_standing_controller(
         actuator_id = mujoco.mj_name2id(
             model, mujoco.mjtObj.mjOBJ_ACTUATOR, f"{side}_wheel_motor"
         )
-        data.ctrl[actuator_id] = np.clip(wheel_torque, -0.3, 0.3)
+        data.ctrl[actuator_id] = np.clip(
+            wheel_torque,
+            -gains.wheel_torque_limit_nm,
+            gains.wheel_torque_limit_nm,
+        )
+
+
+def set_wheel_torque_limit(
+    model: mujoco.MjModel, limit_nm: float
+) -> None:
+    """Change the wheel actuator clamp for a mechanism-feasibility test."""
+    if limit_nm <= 0.0:
+        raise ValueError("wheel torque limit must be positive")
+    model.actuator_ctrlrange[4:, :] = (-limit_nm, limit_nm)
+    model.actuator_forcerange[4:, :] = (-limit_nm, limit_nm)
 
 
 def set_step_height(model: mujoco.MjModel, height_m: float) -> None:

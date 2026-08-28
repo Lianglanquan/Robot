@@ -40,17 +40,20 @@ class StairControllerConfig:
     approach_target_y_m: float = -0.125
     crouch_target_y_m: float = -0.20
     push_target_y_m: float = -0.32
+    landing_target_y_m: float = -0.32
     recover_target_y_m: float = -0.40
     stand_l0_mm: float = 90.0
     crouch_l0_mm: float = 70.0
     push_l0_mm: float = 120.0
-    tuck_l0_mm: float = 78.0
-    landing_l0_mm: float = 105.0
+    tuck_l0_mm: float = 120.0
+    landing_l0_mm: float = 120.0
+    landing_compression_l0_mm: float = 108.0
     push_force_n: float = 80.0
     push_wheel_torque_nm: float = 0.30
     push_duration_s: float = 0.45
     crouch_timeout_s: float = 0.90
     flight_timeout_s: float = 0.80
+    min_flight_s: float = 0.15
     landing_timeout_s: float = 0.90
     recover_timeout_s: float = 1.50
     success_hold_s: float = 0.30
@@ -253,11 +256,16 @@ class StairController:
         elif self.phase == StairPhase.FLIGHT:
             apply_standing_controller(
                 self.model, data, target_l0_mm=self.config.tuck_l0_mm,
-                target_y_m=self.config.push_target_y_m, gains=self.gains,
+                target_y_m=y, gains=self.gains,
             )
+            data.ctrl[4:] = 0.0
             if ground_contacts == 0 and step_contacts == 0:
                 self.airborne_seen = True
-            if self.airborne_seen and (ground_contacts > 0 or step_contacts > 0):
+            if (
+                self.airborne_seen
+                and self.phase_elapsed_s >= self.config.min_flight_s
+                and (ground_contacts > 0 or step_contacts > 0)
+            ):
                 self._transition(StairPhase.LANDING)
             elif self.phase_elapsed_s > self.config.flight_timeout_s:
                 self._fail("no landing contact after push")
@@ -265,9 +273,13 @@ class StairController:
         elif self.phase == StairPhase.LANDING:
             apply_standing_controller(
                 self.model, data, target_l0_mm=self.config.landing_l0_mm,
-                target_y_m=self.config.recover_target_y_m, gains=self.gains,
+                target_y_m=y, gains=self.gains,
             )
-            if self.phase_elapsed_s > self.config.landing_timeout_s:
+            data.ctrl[4:] = 0.0
+            if (
+                l0 < self.config.landing_compression_l0_mm
+                or self.phase_elapsed_s > self.config.landing_timeout_s
+            ):
                 self._transition(StairPhase.RECOVER)
 
         elif self.phase == StairPhase.RECOVER:

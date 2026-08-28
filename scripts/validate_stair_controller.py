@@ -16,7 +16,12 @@ import mujoco
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.mujoco_dynamics import initialize_dynamic_state, set_step_height  # noqa: E402
+from src.mujoco_dynamics import (  # noqa: E402
+    ControllerGains,
+    initialize_dynamic_state,
+    set_step_height,
+    set_wheel_torque_limit,
+)
 from src.stair_controller import StairController, StairControllerConfig  # noqa: E402
 
 Row = dict[str, float | int | str | bool]
@@ -28,20 +33,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--height-cm", type=float, choices=(5.0, 10.0, 15.0), default=5.0
     )
+    parser.add_argument("--wheel-torque-limit", type=float, default=0.3)
     return parser.parse_args()
 
 
-def run(mass_kg: float, height_cm: float) -> tuple[list[Row], StairController]:
+def run(
+    mass_kg: float, height_cm: float, wheel_torque_limit_nm: float
+) -> tuple[list[Row], StairController]:
     label = str(mass_kg).replace(".", "p")
     model = mujoco.MjModel.from_xml_path(
         str(PROJECT_ROOT / "mujoco" / f"robot_dynamic_{label}kg.xml")
     )
+    set_wheel_torque_limit(model, wheel_torque_limit_nm)
     set_step_height(model, height_cm / 100.0)
     data = mujoco.MjData(model)
     initialize_dynamic_state(model, data, l0_mm=90.0)
     controller = StairController(
         model,
-        config=controller_config(height_cm / 100.0),
+        config=controller_config(height_cm / 100.0, wheel_torque_limit_nm),
+        gains=ControllerGains(wheel_torque_limit_nm=wheel_torque_limit_nm),
     )
     rows: list[Row] = []
     max_steps = round(8.0 / model.opt.timestep)
@@ -58,8 +68,13 @@ def run(mass_kg: float, height_cm: float) -> tuple[list[Row], StairController]:
     return rows, controller
 
 
-def controller_config(height_m: float) -> StairControllerConfig:
-    return StairControllerConfig(step_height_m=height_m)
+def controller_config(
+    height_m: float, wheel_torque_limit_nm: float
+) -> StairControllerConfig:
+    return StairControllerConfig(
+        step_height_m=height_m,
+        push_wheel_torque_nm=wheel_torque_limit_nm,
+    )
 
 
 def save_results(
@@ -67,19 +82,23 @@ def save_results(
     controller: StairController,
     mass_kg: float,
     height_cm: float,
+    wheel_torque_limit_nm: float,
 ) -> None:
     output_dir = PROJECT_ROOT / "artifacts" / "stair_controller"
     output_dir.mkdir(parents=True, exist_ok=True)
     suffix = f"{mass_kg:g}kg_{height_cm:g}cm".replace(".", "p")
     csv_path = output_dir / f"timeseries_{suffix}.csv"
     with csv_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(rows[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
 
     summary = {
         "mass_kg": mass_kg,
         "step_height_cm": height_cm,
+        "wheel_torque_limit_nm": wheel_torque_limit_nm,
         "final_phase": controller.phase.value,
         "failure_reason": controller.failure_reason,
         "terminal_time_s": float(cast(float, rows[-1]["time_s"])),
@@ -136,7 +155,8 @@ def save_results(
     for axis in axes:
         axis.grid(alpha=0.25)
     fig.suptitle(
-        f"5 cm 越阶状态机验证（{mass_kg:g} kg）: {controller.phase.value}"
+        f"{height_cm:g} cm 越阶状态机验证（{mass_kg:g} kg, "
+        f"轮端上限 {wheel_torque_limit_nm:g} N·m）: {controller.phase.value}"
     )
     fig.savefig(output_dir / f"plot_{suffix}.png", dpi=160)
     plt.close(fig)
@@ -145,8 +165,12 @@ def save_results(
 
 def main() -> int:
     args = parse_args()
-    rows, controller = run(args.mass, args.height_cm)
-    save_results(rows, controller, args.mass, args.height_cm)
+    rows, controller = run(
+        args.mass, args.height_cm, args.wheel_torque_limit
+    )
+    save_results(
+        rows, controller, args.mass, args.height_cm, args.wheel_torque_limit
+    )
     return 0
 
 
