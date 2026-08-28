@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "status": "IDEAL_1D_SCREENING_NOT_STEP_VALIDATION",
+  "model": {
+    "stroke_m": [
+      0.07,
+      0.12
+    ],
+    "masses_kg": [
+      2.0,
+      2.3,
+      2.5
+    ],
+    "post_takeoff_or_drop_heights_m": [
+      0.05,
+      0.1,
+      0.15
+    ],
+    "push": "constant net acceleration over the full 50 mm stroke",
+    "flight": "ballistic rise after takeoff",
+    "landing": "constant deceleration over the full 50 mm compression",
+    "actuator": "approximate public EL05 48 V peak T-N envelope"
+  },
+  "scenarios": {
+    "2_kg": {
+      "5_cm": {
+        "push": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 39.226600000000005,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 1.9613299999999998,
+          "peak_mechanical_power_magnitude_w": 38.84552583627782,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.6637181063704325,
+          "peak_torque_utilization": 0.12138840638638053,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 39.226600000000005,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 1.9613299999999998,
+          "peak_mechanical_power_magnitude_w": 38.84552583627782,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.6637181063704325,
+          "peak_torque_utilization": 0.12138840638638052,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "10_cm": {
+        "push": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 58.839900000000014,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 2.941995,
+          "peak_mechanical_power_magnitude_w": 82.40380421276785,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 0.995577159555649,
+          "peak_torque_utilization": 0.19383789901448178,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 58.839900000000014,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 2.941995,
+          "peak_mechanical_power_magnitude_w": 82.40380421276785,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 0.9955771595556487,
+          "peak_torque_utilization": 0.19383789901448173,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "15_cm": {
+        "push": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 78.45320000000001,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 3.9226599999999996,
+          "peak_mechanical_power_magnitude_w": 134.56484879032539,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.327436212740865,
+          "peak_torque_utilization": 0.3004226302702303,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 78.45320000000001,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 3.9226599999999996,
+          "peak_mechanical_power_magnitude_w": 134.56484879032539,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.327436212740865,
+          "peak_torque_utilization": 0.3004226302702303,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        }
+      }
+    },
+    "2.3_kg": {
+      "5_cm": {
+        "push": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 45.11059,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 2.2555294999999997,
+          "peak_mechanical_power_magnitude_w": 44.67235471171949,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.7632758223259973,
+          "peak_torque_utilization": 0.1395966673443376,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 45.11059,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 2.2555294999999997,
+          "peak_mechanical_power_magnitude_w": 44.67235471171949,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.7632758223259973,
+          "peak_torque_utilization": 0.1395966673443376,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "10_cm": {
+        "push": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 67.66588500000002,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 3.38329425,
+          "peak_mechanical_power_magnitude_w": 94.76437484468303,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 1.1449137334889963,
+          "peak_torque_utilization": 0.22291358386665405,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 67.66588500000002,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 3.38329425,
+          "peak_mechanical_power_magnitude_w": 94.76437484468303,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 1.144913733488996,
+          "peak_torque_utilization": 0.22291358386665402,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "15_cm": {
+        "push": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 90.22118,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 4.5110589999999995,
+          "peak_mechanical_power_magnitude_w": 154.74957610887418,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.5265516446519947,
+          "peak_torque_utilization": 0.3454860248107648,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 90.22118,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 4.5110589999999995,
+          "peak_mechanical_power_magnitude_w": 154.74957610887418,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.5265516446519947,
+          "peak_torque_utilization": 0.3454860248107648,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        }
+      }
+    },
+    "2.5_kg": {
+      "5_cm": {
+        "push": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 49.03325000000001,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 2.4516625,
+          "peak_mechanical_power_magnitude_w": 48.55690729534728,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.8296476329630408,
+          "peak_torque_utilization": 0.15173550798297566,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.10098099885512758,
+          "takeoff_or_impact_speed_m_per_s": 0.9902853124226371,
+          "acceleration_m_per_s2": 9.806650000000001,
+          "total_axial_force_n": 49.03325000000001,
+          "force_to_weight_ratio": 2.0000000000000004,
+          "ideal_mechanical_work_j": 2.4516625,
+          "peak_mechanical_power_magnitude_w": 48.55690729534728,
+          "peak_joint_speed_rad_per_s": 15.939173140724773,
+          "peak_joint_speed_rpm": 152.20789164863507,
+          "peak_required_joint_torque_nm": 0.8296476329630408,
+          "peak_torque_utilization": 0.15173550798297566,
+          "conservative_overload_time_s": "continuous",
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "10_cm": {
+        "push": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 73.54987500000001,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 3.67749375,
+          "peak_mechanical_power_magnitude_w": 103.0047552659598,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 1.244471449444561,
+          "peak_torque_utilization": 0.2422973737681022,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0714043490614517,
+          "takeoff_or_impact_speed_m_per_s": 1.400474919446971,
+          "acceleration_m_per_s2": 19.613300000000006,
+          "total_axial_force_n": 73.54987500000001,
+          "force_to_weight_ratio": 3.000000000000001,
+          "ideal_mechanical_work_j": 3.67749375,
+          "peak_mechanical_power_magnitude_w": 103.0047552659598,
+          "peak_joint_speed_rad_per_s": 22.541394828625936,
+          "peak_joint_speed_rpm": 215.2544646697143,
+          "peak_required_joint_torque_nm": 1.2444714494445608,
+          "peak_torque_utilization": 0.24229737376810218,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        }
+      },
+      "15_cm": {
+        "push": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 98.06650000000002,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 4.903325,
+          "peak_mechanical_power_magnitude_w": 168.20606098790674,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.6592952659260816,
+          "peak_torque_utilization": 0.3755282878377879,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        },
+        "landing": {
+          "duration_s": 0.0583014068720452,
+          "takeoff_or_impact_speed_m_per_s": 1.7152244751052266,
+          "acceleration_m_per_s2": 29.419950000000007,
+          "total_axial_force_n": 98.06650000000002,
+          "force_to_weight_ratio": 4.000000000000001,
+          "ideal_mechanical_work_j": 4.903325,
+          "peak_mechanical_power_magnitude_w": 168.20606098790674,
+          "peak_joint_speed_rad_per_s": 27.6074577103725,
+          "peak_joint_speed_rpm": 263.63180164837456,
+          "peak_required_joint_torque_nm": 1.6592952659260816,
+          "peak_torque_utilization": 0.3755282878377879,
+          "conservative_overload_time_s": 175.0,
+          "within_public_magnitude_envelope": true
+        }
+      }
+    }
+  },
+  "cross_scenario": {
+    "all_within_public_magnitude_envelope": true,
+    "maximum_peak_torque_utilization": 0.3755282878377879
+  },
+  "evidence_limits": [
+    "Ballistic rise is not the same as step height when the wheel contacts the edge or the body pitches.",
+    "The whole robot is treated as one vertical point mass; wheel and link inertia are omitted.",
+    "Both legs share load perfectly and remain centered and vertical.",
+    "Ground friction, forward speed and wheel-edge contact are omitted.",
+    "The EL05 T-N curve is approximate visual digitization at 48 V.",
+    "Landing checks torque-speed magnitude only; the public motoring curve does not prove braking energy handling or impact control bandwidth.",
+    "A result inside the envelope supports further work but does not prove a 150 mm stair maneuver."
+  ]
+}
