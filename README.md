@@ -608,6 +608,16 @@ python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 控制器实现见 [`src/stair_controller.py`](src/stair_controller.py)，对应测试见
 [`tests/test_stair_controller.py`](tests/test_stair_controller.py)。
 
+为避免依靠单次手工试错，当前还提供并行动作搜索：它在固定模型和安全判定下，批量改变
+蹲腿长度、蹬伸腿长、蹬伸时长、虚拟腿力、轮端扭矩和落地压缩腿长，并按安全裕度排序：
+
+```bash
+python3 scripts/search_stair_actions.py --samples 256 --workers 8
+```
+
+这仍然不是强化学习；它是可复现的参数搜索，用来先确认“当前动作族里是否存在安全解”。
+如果搜索仍无安全成功，下一步应检查动作策略和接触/姿态控制，而不是盲目扩大样本或直接训练神经网络。
+
 对 2.0/2.3/2.5 kg 与 5/10/15 cm 的统一扫描：
 
 ```bash
