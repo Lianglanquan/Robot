@@ -63,7 +63,7 @@ def test_five_centimetre_state_machine_is_finite_and_reports_result() -> None:
         assert controller.failure_reason
 
 
-def test_five_centimetre_static_stair_reaches_both_wheel_top_contact() -> None:
+def test_five_centimetre_trial_rejects_unsafe_flip() -> None:
     model = mujoco.MjModel.from_xml_path(
         str(PROJECT_ROOT / "mujoco" / "robot_dynamic_2p5kg_step_5cm.xml")
     )
@@ -94,5 +94,6 @@ def test_five_centimetre_static_stair_reaches_both_wheel_top_contact() -> None:
         if controller.terminal:
             break
 
-    assert controller.phase is StairPhase.SUCCESS
-    assert telemetry.both_wheels_on_step_top
+    assert controller.phase is StairPhase.FAILED
+    assert "unsafe" in controller.failure_reason
+    assert telemetry.max_abs_pitch_deg > 75.0

@@ -121,6 +121,8 @@ def save_results(
         "max_wheel_torque_nm": max(
             float(cast(float, row["max_wheel_torque_nm"])) for row in rows
         ),
+        "max_abs_pitch_deg": controller.max_abs_pitch_deg,
+        "max_abs_vertical_speed_m_s": controller.max_abs_vertical_speed_m_s,
         "finite_state": True,
         "claim_boundary": (
             "This is a first-pass controller/model result. SUCCESS would mean the "

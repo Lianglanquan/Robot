@@ -2,20 +2,20 @@
   "mass_kg": 2.5,
   "step_height_cm": 5.0,
   "wheel_torque_limit_nm": 1.0,
-  "final_phase": "SUCCESS",
-  "failure_reason": "",
-  "terminal_time_s": 6.206000000000407,
+  "final_phase": "FAILED",
+  "failure_reason": "unsafe pitch excursion: 75.0 deg > 75.0 deg",
+  "terminal_time_s": 1.2379999999999745,
   "phases_observed": [
     "APPROACH",
     "CROUCH",
     "PUSH",
     "FLIGHT",
-    "LANDING",
-    "RECOVER",
-    "SUCCESS"
+    "FAILED"
   ],
   "max_hip_torque_nm": 6.0,
-  "max_wheel_torque_nm": 1.0,
+  "max_wheel_torque_nm": 0.3,
+  "max_abs_pitch_deg": 75.00737463073563,
+  "max_abs_vertical_speed_m_s": 1.8820672462254489,
   "finite_state": true,
   "claim_boundary": "This is a first-pass controller/model result. SUCCESS would mean the simulated wheels held the step top; it is not a physical-robot claim."
 }

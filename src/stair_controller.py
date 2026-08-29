@@ -59,6 +59,8 @@ class StairControllerConfig:
     recover_timeout_s: float = 1.50
     success_hold_s: float = 0.30
     overall_timeout_s: float = 6.0
+    max_abs_pitch_deg: float = 75.0
+    max_landing_speed_m_s: float = 1.20
 
 
 @dataclass(frozen=True)
@@ -75,6 +77,9 @@ class StairTelemetry:
     both_wheels_on_step_top: bool
     max_hip_torque_nm: float
     max_wheel_torque_nm: float
+    max_abs_pitch_deg: float
+    max_abs_vertical_speed_m_s: float
+    safety_failure_reason: str
 
 
 def _geom_id(model: mujoco.MjModel, name: str) -> int:
@@ -146,6 +151,8 @@ class StairController:
         self.airborne_seen = False
         self.success_elapsed_s = 0.0
         self.failure_reason = ""
+        self.max_abs_pitch_deg = 0.0
+        self.max_abs_vertical_speed_m_s = 0.0
 
     @property
     def terminal(self) -> bool:
@@ -158,6 +165,8 @@ class StairController:
         self.airborne_seen = False
         self.success_elapsed_s = 0.0
         self.failure_reason = ""
+        self.max_abs_pitch_deg = 0.0
+        self.max_abs_vertical_speed_m_s = 0.0
 
     def _transition(self, phase: StairPhase) -> None:
         self.phase = phase
@@ -177,7 +186,7 @@ class StairController:
         posture = normal_vertical_posture(l0_mm / 1000.0, DEFAULT_PARAMETERS)
         torques = (
             analytic_jacobian(posture.phi1, posture.phi4, DEFAULT_PARAMETERS).T
-            @ np.array([force_n, 0.0])
+            @ np.array([-force_n, 0.0])
         )
         for side in ("left", "right"):
             for index, kind in enumerate(("negative", "positive")):
@@ -207,6 +216,25 @@ class StairController:
         pitch_deg = float(np.rad2deg(chassis_pitch(self.model, data)))
         l0 = leg_length_mm(self.model, data, "left")
         on_top = _wheel_top_flags(self.model, data, self.config.step_height_m)
+        self.max_abs_pitch_deg = max(self.max_abs_pitch_deg, abs(pitch_deg))
+        self.max_abs_vertical_speed_m_s = max(
+            self.max_abs_vertical_speed_m_s, abs(vz)
+        )
+
+        if not self.terminal and abs(pitch_deg) > self.config.max_abs_pitch_deg:
+            self._fail(
+                f"unsafe pitch excursion: {abs(pitch_deg):.1f} deg "
+                f"> {self.config.max_abs_pitch_deg:.1f} deg"
+            )
+        elif (
+            not self.terminal
+            and self.phase == StairPhase.LANDING
+            and abs(vz) > self.config.max_landing_speed_m_s
+        ):
+            self._fail(
+                f"unsafe landing speed: {abs(vz):.2f} m/s "
+                f"> {self.config.max_landing_speed_m_s:.2f} m/s"
+            )
 
         if (
             not self.terminal
@@ -221,7 +249,7 @@ class StairController:
             )
             if (
                 step_contacts
-                or y <= self.config.approach_target_y_m + 0.055
+                or y <= self.config.approach_target_y_m + 0.070
                 or self.phase_elapsed_s > self.config.approach_timeout_s
             ):
                 self._transition(StairPhase.CROUCH)
@@ -251,7 +279,10 @@ class StairController:
                     mujoco.mjtObj.mjOBJ_ACTUATOR,
                     f"{side}_wheel_motor",
                 )
-                data.ctrl[actuator_id] = -abs(self.config.push_wheel_torque_nm)
+                # Positive wheel torque drives the model toward the stair
+                # direction (negative chassis y); the previous negative sign
+                # drove the robot away from the stair during the push.
+                data.ctrl[actuator_id] = abs(self.config.push_wheel_torque_nm)
             if ground_contacts == 0 and step_contacts == 0:
                 self.airborne_seen = True
             if self.phase_elapsed_s > self.config.push_duration_s:
@@ -316,4 +347,7 @@ class StairController:
             step_wheel_contacts=step_contacts, both_wheels_on_step_top=on_top,
             max_hip_torque_nm=float(np.max(np.abs(data.ctrl[:4]))),
             max_wheel_torque_nm=float(np.max(np.abs(data.ctrl[4:]))),
+            max_abs_pitch_deg=self.max_abs_pitch_deg,
+            max_abs_vertical_speed_m_s=self.max_abs_vertical_speed_m_s,
+            safety_failure_reason=self.failure_reason,
         )

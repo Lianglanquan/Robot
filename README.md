@@ -596,10 +596,10 @@ APPROACH → CROUCH → PUSH → FLIGHT → LANDING → RECOVER
 python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 ```
 
-结果写入 `artifacts/stair_controller/`。在 2.5 kg、5 cm 场景的验证配置下，状态机
-经历接近、压腿、蹬伸、空中、落地和恢复，并在约 6.206 s 进入 `SUCCESS`。成功条件
-要求两侧轮子都与台阶顶面真实接触、轮心高度接近顶面且姿态/垂直速度稳定；台阶立面
-碰撞不会被计为成功。
+结果写入 `artifacts/stair_controller/`。复核发现原先的宽松判定虽然在约 6.206 s
+进入 `SUCCESS`，但过程中俯仰曾达到约 120°，不能视为有效越阶。当前判定增加了
+过程安全门：俯仰超过 75° 或着地速度超过 1.20 m/s 会立即判为失败。当前 2.5 kg /
+5 cm 参数会被安全门拒绝，说明需要先修正动作本身，而不是继续放宽成功条件。
 
 该配置使用轮端执行器限幅 1.0 N·m、蹬伸命令 0.3 N·m、蹬伸腿长 140 mm 和 120 ms
 蹬伸时长。140 mm 靠近数学连续范围上端，因此这是 MuJoCo 中的 5 cm 动作验证参数，
