@@ -32,7 +32,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--height-cm", type=float, choices=(5.0, 10.0, 15.0), default=5.0
     )
-    parser.add_argument("--wheel-torque-limit", type=float, default=0.3)
+    parser.add_argument("--wheel-torque-limit", type=float, default=1.0)
     return parser.parse_args()
 
 
@@ -76,7 +76,16 @@ def controller_config(
 ) -> StairControllerConfig:
     return StairControllerConfig(
         step_height_m=height_m,
-        push_wheel_torque_nm=wheel_torque_limit_nm,
+        # Keep the wheel drive at the upstream-scale 0.3 N·m command while
+        # allowing the validation harness to model a stronger actuator limit.
+        push_wheel_torque_nm=min(0.3, wheel_torque_limit_nm),
+        push_l0_mm=140.0,
+        tuck_l0_mm=140.0,
+        landing_l0_mm=140.0,
+        push_duration_s=0.12,
+        approach_timeout_s=4.0,
+        overall_timeout_s=10.0,
+        recover_timeout_s=4.0,
     )
 
 

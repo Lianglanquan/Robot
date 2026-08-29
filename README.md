@@ -579,8 +579,7 @@ python3 scripts/run_mujoco_dynamics.py --mass 2.5
 ```
 
 界面可以直接改变腿长、暂停/复位、触发 5 cm 落地、切换 5/10/15 cm 台阶、
-驱动轮子接触台阶，并实时显示俯仰、位置、接触数和执行器命令。台阶动作轨迹是
-下一证据门，当前不会用“驶到台阶前”冒充“成功越阶”。
+驱动轮子接触台阶，并实时显示俯仰、位置、接触数和执行器命令。
 
 ## 第一版 5 cm 越阶状态机（当前验证门）
 
@@ -597,11 +596,14 @@ APPROACH → CROUCH → PUSH → FLIGHT → LANDING → RECOVER
 python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 ```
 
-结果写入 `artifacts/stair_controller/`。在 2.5 kg、5 cm 场景的当前第一版参数下，
-状态机确实经历了接近、压腿、蹬伸、空中和落地阶段，但最后在 `RECOVER` 阶段
-因为没有建立“双轮位于台阶顶面且姿态稳定”的条件而判定失败。这个失败是有价值的：
-它证明控制器和判定链路已经接上了真实接触模型，同时也明确说明“发生台阶接触”
-仍不等于“完成越阶”。当前尚未宣称 5 cm 越阶成功。
+结果写入 `artifacts/stair_controller/`。在 2.5 kg、5 cm 场景的验证配置下，状态机
+经历接近、压腿、蹬伸、空中、落地和恢复，并在约 6.206 s 进入 `SUCCESS`。成功条件
+要求两侧轮子都与台阶顶面真实接触、轮心高度接近顶面且姿态/垂直速度稳定；台阶立面
+碰撞不会被计为成功。
+
+该配置使用轮端执行器限幅 1.0 N·m、蹬伸命令 0.3 N·m、蹬伸腿长 140 mm 和 120 ms
+蹬伸时长。140 mm 靠近数学连续范围上端，因此这是 MuJoCo 中的 5 cm 动作验证参数，
+不是实物保证，也不是长期推荐姿态。
 
 控制器实现见 [`src/stair_controller.py`](src/stair_controller.py)，对应测试见
 [`tests/test_stair_controller.py`](tests/test_stair_controller.py)。
@@ -612,13 +614,12 @@ python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 python3 scripts/sweep_stair_controller.py
 ```
 
-当前九个场景都能观察到轮-台阶真实接触，但都在恢复阶段失败；没有任何场景被误判为
-成功。这个结果说明当前控制器、接触检测和失败判定链路是完整的，同时也说明在当前
-简化模型和 `±0.3 N·m` 轮端限制下，不能直接声称已经具备越阶能力。详细结果在
+旧矩阵仍使用通用参数，不能替代上述 5 cm 专用成功配置；10 cm/15 cm 还没有成功结论。
+详细结果在
 `artifacts/stair_controller/sweep_summary.json`，研究边界记录在
 [`docs/research/2026-08-29-stair-controller-checkpoint.md`](docs/research/2026-08-29-stair-controller-checkpoint.md)。
 
-需要特别说明：`±0.3 N·m` 只是本次候选轮端参数，不是 EL05 的能力上限，也不是
+需要特别说明：这里的轮端限幅和蹬伸命令只是仿真测试参数，不是 EL05 的能力上限，也不是
 五连杆机构的物理极限。验证脚本支持通过 `--wheel-torque-limit` 改变该测试值。
 上游控制代码明确采用“离地关闭轮端、腿长切到 120 mm、触地缓冲”的策略；本仓库
 已按这一证据修正状态机。

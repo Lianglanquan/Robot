@@ -52,6 +52,7 @@ class StairControllerConfig:
     push_wheel_torque_nm: float = 0.30
     push_duration_s: float = 0.45
     crouch_timeout_s: float = 0.90
+    approach_timeout_s: float = 4.00
     flight_timeout_s: float = 0.80
     min_flight_s: float = 0.15
     landing_timeout_s: float = 0.90
@@ -218,7 +219,11 @@ class StairController:
                 self.model, data, target_l0_mm=self.config.stand_l0_mm,
                 target_y_m=self.config.approach_target_y_m, gains=self.gains,
             )
-            if step_contacts or self.phase_elapsed_s > 0.80:
+            if (
+                step_contacts
+                or y <= self.config.approach_target_y_m + 0.055
+                or self.phase_elapsed_s > self.config.approach_timeout_s
+            ):
                 self._transition(StairPhase.CROUCH)
 
         elif self.phase == StairPhase.CROUCH:
@@ -246,11 +251,10 @@ class StairController:
                     mujoco.mjtObj.mjOBJ_ACTUATOR,
                     f"{side}_wheel_motor",
                 )
-                data.ctrl[actuator_id] = self.config.push_wheel_torque_nm
+                data.ctrl[actuator_id] = -abs(self.config.push_wheel_torque_nm)
             if ground_contacts == 0 and step_contacts == 0:
                 self.airborne_seen = True
-                self._transition(StairPhase.FLIGHT)
-            elif self.phase_elapsed_s > self.config.push_duration_s:
+            if self.phase_elapsed_s > self.config.push_duration_s:
                 self._transition(StairPhase.FLIGHT)
 
         elif self.phase == StairPhase.FLIGHT:
@@ -275,7 +279,6 @@ class StairController:
                 self.model, data, target_l0_mm=self.config.landing_l0_mm,
                 target_y_m=y, gains=self.gains,
             )
-            data.ctrl[4:] = 0.0
             if (
                 l0 < self.config.landing_compression_l0_mm
                 or self.phase_elapsed_s > self.config.landing_timeout_s
