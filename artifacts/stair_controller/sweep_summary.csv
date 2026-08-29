@@ -1,19 +1,19 @@
 mass_kg,height_cm,wheel_torque_limit_nm,final_phase,failure_reason,terminal_time_s,phases_observed,step_contact_observed,max_hip_torque_nm,max_wheel_torque_nm
-2.0,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.0,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.0,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.3,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.3,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.3,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.5,5.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.5,10.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.5,15.0,0.3,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,0.3
-2.0,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.0,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.0,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.3,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.3,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.3,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.5,5.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.5,10.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
-2.5,15.0,1.0,FAILED,recovery did not establish two-wheel top contact,3.3929999999997373,"['APPROACH', 'CROUCH', 'PUSH', 'FLIGHT', 'LANDING', 'RECOVER', 'FAILED']",False,6.0,1.0
+2.0,5.0,0.3,FAILED,unsafe pitch excursion: 75.3 deg > 75.0 deg,1.1859999999999802,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.0,10.0,0.3,FAILED,unsafe pitch excursion: 75.1 deg > 75.0 deg,4.413999999999809,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.0,15.0,0.3,FAILED,unsafe pitch excursion: 75.5 deg > 75.0 deg,4.397999999999803,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.3,5.0,0.3,FAILED,unsafe pitch excursion: 75.1 deg > 75.0 deg,1.1939999999999793,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.3,10.0,0.3,FAILED,unsafe pitch excursion: 75.3 deg > 75.0 deg,4.41699999999981,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.3,15.0,0.3,FAILED,unsafe pitch excursion: 75.2 deg > 75.0 deg,4.445999999999819,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.5,5.0,0.3,FAILED,unsafe pitch excursion: 75.2 deg > 75.0 deg,1.1989999999999787,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.5,10.0,0.3,FAILED,unsafe pitch excursion: 75.3 deg > 75.0 deg,4.414999999999809,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.5,15.0,0.3,FAILED,unsafe pitch excursion: 75.2 deg > 75.0 deg,4.414999999999809,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,0.3
+2.0,5.0,1.0,FAILED,unsafe pitch excursion: 75.6 deg > 75.0 deg,1.1209999999999873,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.0,10.0,1.0,FAILED,unsafe pitch excursion: 75.9 deg > 75.0 deg,4.142999999999718,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.0,15.0,1.0,FAILED,unsafe pitch excursion: 75.7 deg > 75.0 deg,4.141999999999718,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.3,5.0,1.0,FAILED,unsafe pitch excursion: 75.1 deg > 75.0 deg,1.1269999999999867,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.3,10.0,1.0,FAILED,unsafe pitch excursion: 75.1 deg > 75.0 deg,4.145999999999719,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.3,15.0,1.0,FAILED,unsafe pitch excursion: 75.9 deg > 75.0 deg,4.145999999999719,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.5,5.0,1.0,FAILED,unsafe pitch excursion: 75.4 deg > 75.0 deg,1.1299999999999863,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.5,10.0,1.0,FAILED,unsafe pitch excursion: 75.7 deg > 75.0 deg,4.149999999999721,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0
+2.5,15.0,1.0,FAILED,unsafe pitch excursion: 75.8 deg > 75.0 deg,4.14899999999972,"['APPROACH', 'CROUCH', 'PUSH', 'FAILED']",True,6.0,1.0

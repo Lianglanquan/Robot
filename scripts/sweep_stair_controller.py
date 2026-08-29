@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Run the first stair-controller matrix across mass and stair height."""
 
+import argparse
 import csv
 import json
+import os
 import sys
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -73,15 +76,46 @@ def run_case(
     }
 
 
-def main() -> int:
+def _run_case_tuple(case: tuple[float, float, float]) -> dict[str, object]:
+    """Process-pool adapter that keeps each MuJoCo rollout isolated."""
+    return run_case(*case)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Run the stair-controller matrix sequentially or in parallel."
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help="number of independent MuJoCo worker processes (default: 1)",
+    )
+    args = parser.parse_args(argv)
+    if args.workers < 1:
+        parser.error("--workers must be >= 1")
+
     output_dir = PROJECT_ROOT / "artifacts" / "stair_controller"
     output_dir.mkdir(parents=True, exist_ok=True)
-    results = [
-        run_case(mass, height, wheel_limit)
+    cases = [
+        (mass, height, wheel_limit)
         for wheel_limit in (0.3, 1.0)
         for mass in (2.0, 2.3, 2.5)
         for height in (0.05, 0.10, 0.15)
     ]
+    worker_count = min(args.workers, len(cases))
+    if worker_count == 1:
+        results = [_run_case_tuple(case) for case in cases]
+    else:
+        # Each worker owns its MjModel/MjData.  Sharing either object between
+        # processes is unsafe and would defeat reproducible independent rollouts.
+        with ProcessPoolExecutor(max_workers=worker_count) as executor:
+            results = list(executor.map(_run_case_tuple, cases))
+
+    print(
+        f"completed {len(results)} rollouts with {worker_count} worker(s)"
+        f" (host CPUs: {os.cpu_count() or 1})"
+    )
     (output_dir / "sweep_summary.json").write_text(
         json.dumps(results, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",

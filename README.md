@@ -612,9 +612,13 @@ python3 scripts/validate_stair_controller.py --mass 2.5 --height-cm 5
 
 ```bash
 python3 scripts/sweep_stair_controller.py
+# 多进程批量运行（每个进程拥有独立的 MuJoCo 状态）
+python3 scripts/sweep_stair_controller.py --workers 8
 ```
 
-旧矩阵仍使用通用参数，不能替代上述 5 cm 专用成功配置；10 cm/15 cm 还没有成功结论。
+该矩阵使用通用参数，不能替代经过安全判定的动作验证；当前结果中 5/10/15 cm
+均因姿态安全门失败，不能视为已经越阶成功。`--workers` 只改变运行并行度，不改变模型、
+控制器或判定条件。
 详细结果在
 `artifacts/stair_controller/sweep_summary.json`，研究边界记录在
 [`docs/research/2026-08-29-stair-controller-checkpoint.md`](docs/research/2026-08-29-stair-controller-checkpoint.md)。
