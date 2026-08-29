@@ -1,0 +1,74 @@
+[
+  {
+    "torque_nm": 0.02,
+    "duration_s": 1.5,
+    "contact_observed": false,
+    "first_contact": null,
+    "max_abs_pitch_deg_before_contact": 52.59800559841381,
+    "max_abs_vertical_speed_m_s_before_contact": 0.3359192821459296
+  },
+  {
+    "torque_nm": 0.05,
+    "duration_s": 1.5,
+    "contact_observed": false,
+    "first_contact": null,
+    "max_abs_pitch_deg_before_contact": 51.59872674203453,
+    "max_abs_vertical_speed_m_s_before_contact": 0.3609919105607059
+  },
+  {
+    "torque_nm": 0.1,
+    "duration_s": 1.5,
+    "contact_observed": false,
+    "first_contact": null,
+    "max_abs_pitch_deg_before_contact": 51.45478630198197,
+    "max_abs_vertical_speed_m_s_before_contact": 0.41401666184577873
+  },
+  {
+    "torque_nm": 0.15,
+    "duration_s": 1.5,
+    "contact_observed": true,
+    "first_contact": {
+      "time_s": 0.36200000000000027,
+      "chassis_y_m": -0.06294952707473817,
+      "chassis_z_m": 0.06354537490209336,
+      "wheel_center_y_m": -0.10438617491313523,
+      "wheel_center_z_m": 0.025701006685830474,
+      "pitch_deg": -47.21294631680419,
+      "vertical_speed_m_s": 0.0035662200826448963
+    },
+    "max_abs_pitch_deg_before_contact": 52.07158507516057,
+    "max_abs_vertical_speed_m_s_before_contact": 0.4646218252455678
+  },
+  {
+    "torque_nm": 0.2,
+    "duration_s": 1.5,
+    "contact_observed": true,
+    "first_contact": {
+      "time_s": 0.32000000000000023,
+      "chassis_y_m": -0.0630294980726437,
+      "chassis_z_m": 0.0635287468139086,
+      "wheel_center_y_m": -0.10435891095007033,
+      "wheel_center_z_m": 0.02566617782378658,
+      "pitch_deg": -47.194673260724855,
+      "vertical_speed_m_s": -0.01419733848837857
+    },
+    "max_abs_pitch_deg_before_contact": 52.04512883948484,
+    "max_abs_vertical_speed_m_s_before_contact": 0.48010058844188047
+  },
+  {
+    "torque_nm": 0.3,
+    "duration_s": 1.5,
+    "contact_observed": true,
+    "first_contact": {
+      "time_s": 0.2790000000000002,
+      "chassis_y_m": -0.06299760501429016,
+      "chassis_z_m": 0.06355391692213841,
+      "wheel_center_y_m": -0.10442072688629256,
+      "wheel_center_z_m": 0.02573742484175605,
+      "pitch_deg": -47.273126107034464,
+      "vertical_speed_m_s": 0.029783018959750128
+    },
+    "max_abs_pitch_deg_before_contact": 52.328558246646374,
+    "max_abs_vertical_speed_m_s_before_contact": 0.4996713254835257
+  }
+]
