@@ -1,0 +1,110 @@
+[
+  {
+    "initial_l0_mm": 70.0,
+    "extension_l0_mm": 100.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.3090000000000002,
+      "chassis_y_m": -0.08312569836384597,
+      "chassis_z_m": 0.054550621730106864,
+      "pitch_deg": 36.35800303647597
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 64.98866085086274,
+    "max_abs_vertical_speed_m_s": 0.6916024569890449,
+    "terminal_chassis_y_m": -0.05311038905396223,
+    "terminal_chassis_z_m": 0.0664667832113137,
+    "safe_symmetric_success": false
+  },
+  {
+    "initial_l0_mm": 70.0,
+    "extension_l0_mm": 120.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.3090000000000002,
+      "chassis_y_m": -0.08312569836384597,
+      "chassis_z_m": 0.054550621730106864,
+      "pitch_deg": 36.35800303647597
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 90.27007762877682,
+    "max_abs_vertical_speed_m_s": 1.2129336299361042,
+    "terminal_chassis_y_m": 0.12573440335512034,
+    "terminal_chassis_z_m": 0.07490461245220509,
+    "safe_symmetric_success": false
+  },
+  {
+    "initial_l0_mm": 80.0,
+    "extension_l0_mm": 100.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.3090000000000002,
+      "chassis_y_m": -0.07327249273483914,
+      "chassis_z_m": 0.0596184379505383,
+      "pitch_deg": 42.18579364641806
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 58.678714976091285,
+    "max_abs_vertical_speed_m_s": 0.4255735539837261,
+    "terminal_chassis_y_m": -0.052714697374733145,
+    "terminal_chassis_z_m": 0.06638648466240711,
+    "safe_symmetric_success": false
+  },
+  {
+    "initial_l0_mm": 80.0,
+    "extension_l0_mm": 120.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.3090000000000002,
+      "chassis_y_m": -0.07327249273483914,
+      "chassis_z_m": 0.0596184379505383,
+      "pitch_deg": 42.18579364641806
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 90.14761626270823,
+    "max_abs_vertical_speed_m_s": 0.9624338166798092,
+    "terminal_chassis_y_m": 0.0877395658017238,
+    "terminal_chassis_z_m": 0.0749202394894627,
+    "safe_symmetric_success": false
+  },
+  {
+    "initial_l0_mm": 90.0,
+    "extension_l0_mm": 100.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.32000000000000023,
+      "chassis_y_m": -0.0630294980726437,
+      "chassis_z_m": 0.0635287468139086,
+      "pitch_deg": 47.194673260724855
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 53.79491963103019,
+    "max_abs_vertical_speed_m_s": 0.48010058844188047,
+    "terminal_chassis_y_m": -0.05297976684965393,
+    "terminal_chassis_z_m": 0.06644054074848262,
+    "safe_symmetric_success": false
+  },
+  {
+    "initial_l0_mm": 90.0,
+    "extension_l0_mm": 120.0,
+    "symmetric_commands": true,
+    "contact_observed": true,
+    "contact_state": {
+      "time_s": 0.32000000000000023,
+      "chassis_y_m": -0.0630294980726437,
+      "chassis_z_m": 0.0635287468139086,
+      "pitch_deg": 47.194673260724855
+    },
+    "top_contact_observed": false,
+    "max_abs_pitch_deg": 90.17723325117475,
+    "max_abs_vertical_speed_m_s": 0.6577950223368526,
+    "terminal_chassis_y_m": 0.05193359815204517,
+    "terminal_chassis_z_m": 0.07489706180105847,
+    "safe_symmetric_success": false
+  }
+]
